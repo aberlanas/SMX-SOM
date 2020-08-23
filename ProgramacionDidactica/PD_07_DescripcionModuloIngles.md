@@ -1,7 +1,7 @@
 \newpage
 # Docencia en Inglés
 
-Debido a que se va a impartir el módulo junto con el Módulo de **Inglés Técnico-I**, a lo largo de esta Programación Didáctica se hará referencia también a los contenidos de ese módulo, desde
+Debido a que se va a impartir el módulo junto con el Módulo de **Inglés Técnico-I-M**, a lo largo de esta Programación Didáctica se hará referencia también a los contenidos de ese módulo, desde
 
 El módulo de **Inglés Técnico I-M** presenta las siguientes características:
 

@@ -37,74 +37,103 @@ se presentan y estos contenidos.
 \newpage
 ## Contenidos del currículo
 
-| **Instalación de sistemas operativos en red** |
-|-----------------------------------------------|
-| Comprobación de los requisitos técnicos. |
-| Preparación de la instalación. Particiones y sistema de archivos.|
-|Componentes.|
-|Métodos y automatización de la instalación. |
-| Personalización del entorno de usuario. |
-| Actualización del sistema operativo en red. |
-| Elaboración de la documentación sobre la instalación y las incidencias surgidas en el proceso.|
-| Instalación de sistemas operativos en red en máquinas virtuales.|
+|**Caracterización de sistemas operativos**|
+|------------------------------------------|
+|El sistema informático.|
+| Sistemas de representación de la información.|
+| Componentes físicos del sistema informático.|
+| Software de base de un sistema informático.|
+| Concepto de sistema operativo. Elementos y estructura de un sistema operativo.|
+| Clasificación de los sistemas operativos.|
+| Funciones del sistema operativo. Recursos.|
+|Procesos del sistema operativo. Estados de los procesos. Prioridades.|
+| Sistemas de archivos: tipos y características.|
+| Transacciones. Sistemas transaccionales.|
+| Evolución de los sistemas operativos. Versiones.|
+| Sistemas operativos actuales.|
 
 ----
 
-| **Gestión de usuarios y grupos**                                             |
+| **Instalación de sistemas operativos libres y propietarios**|
 |------------------------------------------------------------------------------|
-| Cuenta de usuario y grupo.                                                   |
-| Tipos de perfiles de usuario. Perfiles móviles.                              |
-| Gestión de grupos. Tipos y ámbitos. Propiedades. Estrategias de utilización. |
-| Usuarios y grupos predeterminados y especiales del sistema.                  |
-| Cuentas de usuario. Plantillas.                                              |
-| Cuentas de sistema.                                                          |
+| Requisitos técnicos del sistema operativo.|
+| Planificación de la instalación.|
+| Particionado de los dispositivos de almacenamiento.|
+| Selección de un sistema de archivos.|
+| Gestores de arranque.|
+| Tipos de instalación: típica y personalizada.|
+| Controladores de dispositivos.|
+| Selección de aplicaciones básicas a instalar.|
+| Parámetros básicos de la instalación.|
 
 ----
 
-| **Gestión de dominios**|
+| **Realización de tareas básicas sobre sistemas operativos libres y
+propietarios**|
 |----------------------------|
-| Servicio de directorio y dominio.|
-| Elementos del servicio de directorio.|
-| Funciones del dominio.|
-| Instalación de un servicio de directorio. Configuración básica.|
-| Creación de dominios.|
-| Objetos que administra un dominio: usuarios globales, grupos, equipos entre otros.|
-| Creación de relaciones de confianza entre dominios.|
-| Creación de agrupaciones de elementos: nomenclatura.|
-| Utilización de herramientas de administración de dominios.|
-| Delegación de la administración.|
+– Arranque y parada del sistema. Sesiones.
+– Interfaces de usuario: tipos, propiedades y usos.
+– Utilización del sistema operativo: modo orden y modo grá-
+fico.
+– Explotación del sistema operativo.
+– Configuración de las preferencias de escritorio.
+– Estructura del árbol de directorios.
+– Archivo y directorio. Atributos y permisos.
+– Compresión y descompresión.
+– Actualización del sistema operativo y de los controladores
+de dispositivos.
+– Agregar y eliminar hardware del sistema operativo.
+– Agregar, eliminar y actualizar software del sistema operati-
+vo.
+– Operaciones de reparación del sistema operativo.
+– Configuración de la conexión a Internet.
+– Programación de tareas.
 
 ---
 
-| **Gestión de los recursos compartidos en red**|
+| **Administración de los sistemas operativos**|
 |-------------------------------------------|
-| Permisos y derechos.|
-| Compartir archivos y directorios a través de la red.|
-| Configuración de permisos de recurso compartido.|
-| Configuración de impresoras compartidas en red.|
-| Seguridad en el acceso a los recursos compartidos.|
-| Utilización en redes homogéneas.|
+– Gestión de perfiles de usuarios y grupos locales. Contrase-
+ñas.
+– Gestión del sistema de archivos.
+– Herramientas para la gestión de archivos y directorios.
+– Gestión de los procesos del sistema y del usuario.
+– Rendimiento del sistema. Seguimiento de la actividad del
+sistema.
+– Activación y desactivación de servicios.
+– Compartición de recursos.
+– Gestión de dispositivos de almacenamiento.
+– Gestión de impresoras.
+– Base de datos de configuración y comportamiento del siste-
+ma operativo, del hardware instalado y las aplicaciones.
 
 ---
 
-|**Monitorización y uso del sistema operativo en red**|
+|**Utilización de la línea de comandos**|
 |------------------------------------------------|
-| Arranque del sistema operativo en red.|
-| Descripción de los fallos producidos en el arranque: posibles soluciones.|
-| Utilización de herramientas para el control y seguimiento del rendimiento del sistema operativo en red.|
-| Gestión de discos. Cuotas.|
-|Gestión de los procesos relativos a los servicios del sistema operativo en red.|
-|Automatización de las tareas del sistema.|
+– Características de los intérpretes de comandos. Caracteres
+especiales.
+– Utilización de órdenes para la gestión de archivos y directo-
+rios.
+– Operación con archivos: nombre y extensión, comodines,
+atributos y tipos.
+– Operación con directorios: nombre, atributos y permisos.
+– Otras operaciones comunes para la línea de comandos.
+– Redirección de la entrada y la salida.
+– Activación de opciones de los comandos.
+– Utilización de la ayuda en línea.
 
 ---
 
-|**Integración de sistemas operativos en red libres y propietarios**|
+|**Configuración de máquinas virtuales**|
 |---------------------------------------------------------------|
-| Descripción de escenarios heterogéneos.|
-| Instalación, configuración y uso de servicios de red para compartir recursos.|
-| Configuración de recursos compartidos en red.|
-| Seguridad de los recursos compartidos en red.|
-| Terminales gráficos para acceso remoto.|
-| Utilización en redes heterogéneas.|
+– Virtualización y máquina virtual: ventajas e inconvenientes.
+– Software propietario y libre para la creación de máquinas
+virtuales: instalación.
+– Creación de máquinas virtuales para sistemas operativos
+propietarios y libres.
+– Configuración y utilización de máquinas virtuales.
+– Interrelación con el sistema operativo anfitrión.
+– Análisis de la actividad del sistema.
 
 ---
