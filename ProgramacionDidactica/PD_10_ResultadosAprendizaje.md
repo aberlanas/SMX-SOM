@@ -72,29 +72,32 @@ Realiza operaciones básicas de administración de sistemas operativos, interpre
 
 | Identificado | Criterio                                                                                                        |
 | -:           | --------                                                                                                        |
-| 04.a         |  |
-| 04.b         |  |
-| 04.c         |  |
-| 04.d         |  |
-| 04.e         |  |
-| 04.f         |  |
-| 04.g         |  |
+| 04.a         | Se han configurado perfiles de usuario y grupo. |
+| 04.b         | Se han utilizado herramientas gráficas para describir la organización de los archivos del sistema. |
+| 04.c         | Se ha actuado sobre los procesos del usuario en funcion de las necesidades puntuales.|
+| 04.d         | Se ha actuado sobre los servicios del usuario en funcion de las necesidades puntuales.| 
+| 04.e         | Se han aplicado criterios para la optimización de la memoria disponible. |
+| 04.f         | Se ha analizado la actividad del sistema a partir de las trazas generadas por el propio sistema.  |
+| 04.g         | Se ha optimizado el funcionamiento de los dispositivos de almacenamiento. |
+| 04.h         | Se han reconocido y configurado los recursos compartibles del sistema. |
+| 04.i         | Se ha interpretado la información de configuración del sistema operativo. |
 
 ---
 
 ## Resultado 05
 
-
+Crea máquinas virtuales identificando su campo de aplicación e instalando software específico.
 
 ### Criterios de evaluación
 
 | Identificado | Criterio                                                                                                            |
 | -:           | --------                                                                                                            |
-| 05.a         |  |
-| 05.b         |  |
-| 05.c         |  |
-| 05.d         |  |
-| 05.e         |  |
-| 05.f         |  |
+| 05.a         | Se ha diferenciado entre máquina real y máquina virtual. |
+| 05.b         | Se han establecido las ventajas e inconvenintes de la utilización de máquinas virtuales. |
+| 05.c         | Se ha instalado Software Libre y Propietario para la creación de máquinas virtuales. |
+| 05.d         | Se han creado máquinas virtuales a partir de sistemas operativos libres y propietarios. |
+| 05.e         | Se han configurado máquinas virtuales. |
+| 05.f         | Se ha relacionado la máquina virtual con el sistema operativo anfitrión. |
+| 05.f         | Se han realizado pruebas de rendimiento del sistema. |  
 
 ---
