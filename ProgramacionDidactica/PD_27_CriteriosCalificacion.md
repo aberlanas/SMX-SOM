@@ -10,8 +10,9 @@ sobre la nota final que las anteriores:
 
 | Evaluación | Peso | 
 |------------|------|
-| 1 Evaluación| 40% |
-| 2 Evaluación| 60% |
+| 1 Evaluación| 25% |
+| 2 Evaluación| 35% |
+| 3 Evaluación| 40% |
 
 
 Para la evaluación de la participación activa en clase, se tendrá en cuenta:
@@ -55,7 +56,7 @@ exámenes y la participación activa en clase.
 La nota de final de curso se calculará con los porcentajes que se han
 establecido anteriormente:
 
-FINAL = *(Nota 1 Eva. * 0,40)* + *(Nota 2 Eva. * 0,60)*
+FINAL = *(Nota 1 Eva. * 0,25)* + *(Nota 2 Eva. * 0,35)* +  *(Nota 3 Eva. * 0,40)* 
 
 Si la nota obtenida es igual o superior a 5 puntos, se habrá superado la materia.
 

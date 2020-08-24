@@ -1,6 +1,8 @@
 \newpage
 # Contenidos del Modulo Inglés Técnico - I
 
+Debido a que este módulo (*SOM*) va a ser impartido junto al módulo de Inglés Técnico, se tendrán en cuenta los diferentes contenidos del currículo para el diseño de las actividades y exposiciones durante las clases.
+
 ## Contenidos del currículo
 
 

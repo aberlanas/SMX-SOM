@@ -16,12 +16,8 @@ fomentando de esta manera su aprendizaje.
 
 * Unidad 01 : Introducción y Virtualización.
 * Unidad 02 : PowerShell y Bash.
-* Unidad 03 : Usuarios, Grupos y Permisos.
-* Unidad 04 : Sistemas de Ficheros.
-* Unidad 05 : Software y Actualizaciones.
-* Unidad 06 : Administración del Dominio.
-* Unidad 07 : Acceso al Dominio.
-* Unidad 08 : Recursos Compartidos.
-* Unidad 09 : Rendimiento y Auditorias.
-
-
+* Unidad 03 : Arranque.
+* Unidad 04 : Procesos y Red.
+* Unidad 05 : Usuarios, Grupos y Permisos.
+* Unidad 06 : Sistemas de Ficheros.
+* Unidad 07 : Software y Actualizaciones.

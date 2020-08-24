@@ -4,20 +4,23 @@
 
 ## Temporalización
 
-7 Sesiones
+24 Sesiones
 
 ## Contenidos
 
+* Sistemas Informáticos.
+* Sistemas Operativos.
+* Licencias.
 * Sistemas de Virtualización.
 * Instalación de VirtualBox.
-* Configuración de la red en entornos virtuales.
 * Recursos Compartidos
 * Exportación de servicios virtualizados.
 * Creación de Snapshots de Máquinas Virtuales.
-* Entornos de Virtualización en la nube.
 
 ## Actividades de Enseñanza-Aprendizaje
 
+* Presentar una breve história de los Sistemas Operativos.
+* Crear una comparativa de Licencias.
 * Presentar los entornos de virtualización más comunes.
 * Preparar las máquinas virtuales que alojarán los sistemas operativos.
 * Instalar Xubuntu Desktop.
@@ -28,5 +31,3 @@
 * Realizar cambios sobre el Hardware virtualizado.
 * Compartir recursos entre las máquinas virtuales y el anfitrión.
 * Exportar la instalación para posibles recuperaciones.
-* Investigar sobre virtualización mediante contenedores.
-* Buscar en Internet servicios de virtualización en la nube.
