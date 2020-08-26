@@ -4,16 +4,20 @@
 
 ## Temporalización
 
-14 Sesiones
+30 Sesiones
 
 ## Contenidos
 
-* La línea de comandos - Repaso.
-* PowerShell
-* BASH
+* En el principio...fué la línea de comandos.
+* BASH.
+* Estructura sencilla.
+* CMD y PowerShell.
+* La CLI como herramienta del Administrador.
 
 ## Actividades de Enseñanza-Aprendizaje
 
 * Presentación de los diferentes modos de trabajo.
 * Creación de pequeños Scripts de Shell.
+* Estructuras básicas de la programación estructurada.
+* Conceptos de permisos y ejecución.
 * Corregir scripts de Shell que contienen fallos.

@@ -1,10 +1,10 @@
 \newpage 
 
-# Unidad 04 : Sistemas de Ficheros
+# Unidad 06 : Sistemas de Ficheros
 
 ## Temporalización
 
-21 Sesiones
+30 Sesiones
 
 ## Contenidos
 

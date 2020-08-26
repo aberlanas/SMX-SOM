@@ -12,7 +12,7 @@ $endif$
 \fancyhead{} % clear all header fields
 \pagestyle{fancy}
 \fancyhead[R]{Angel Berlanas Vicente}
-\fancyhead[L]{Prog. Didáctica - [SMX - SOX]}
+\fancyhead[L]{Prog. Didáctica - [SMX - SOM]}
 %%\fancyfoot[L]{Angel Berlanas Vicente}
 
 % Logo superior izquierda

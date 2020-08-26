@@ -1,10 +1,10 @@
 \newpage 
 
-# Unidad 03 : Usuarios, Grupos y Permisos.
+# Unidad 05 : Usuarios, Grupos y Permisos.
 
 ## Temporalización
 
-14 Sesiones
+54 Sesiones
 
 ## Contenidos
 

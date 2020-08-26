@@ -1,10 +1,10 @@
 \newpage 
 
-# Unidad 05 : Software y Actualizaciones
+# Unidad 07 : Software y Actualizaciones
 
 ## Temporalización
 
-14 Sesiones
+42 Sesiones
 
 ## Contenidos
 
