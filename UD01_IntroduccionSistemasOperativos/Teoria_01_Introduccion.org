@@ -1,14 +1,30 @@
-#+Title: UD01 - Introducción y Funciones
+#+Title: Unidad 01 - Introducción y Virtualización
 #+Author: Angel Berlanas Vicente
 
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
 
-* Sistemas Operativos
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 01: Sistemas Operativos]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+
+* Introducción a los Sistemas Operativos
 
 ** Introducción
 
-   En este primer tema nos centraremos conocer bien ¿Qué es un /Sistema Operativo/?
+   En este primer tema nos centraremos conocer bien ¿Qué es un /Sistema Operativo/?, 
+   así como las funciones que tiene.
 
-** Objetivos del Sistema Operativo
+   Veremos que existen multitud de Sistemas Operativos, cada uno adaptado al propósito
+   que deben cumplir.
+
+** ¿Qué es un Sistema Operativo?
    :PROPERTIES:
    :CUSTOM_ID: objetivos-del-sistema-operativo
    :END:
@@ -43,12 +59,12 @@ o puedan forzar un incorrecto funcionamiento del sistema.
     :CUSTOM_ID: abstracción
     :END:
 
-La tendencia actual del software y de los lenguajes de programación es
-ocultar lo más posible los detalles de más bajo nivel, intentando dar a
-los niveles superiores una visión más sencilla, global y abstracta,
-ofreciéndoles operaciones para manipular dichas estructuras ocultas,
-desconociendo por completo la gestión interna de las mismas. Sobre estas
-estructuras se construyen otras que abstraen a las anteriores, y así
+La tendencia actual del software y de los lenguajes de programación, que iremos viendo 
+en otros cursos, es ocultar lo más posible los detalles de más bajo nivel, intentando dar a
+los niveles superiores una visión más sencilla, global y abstracta, ofreciéndoles operaciones 
+para manipular dichas estructuras ocultas, desconociendo por completo la gestión interna de las mismas. 
+
+Sobre estas estructuras se construyen otras que abstraen a las anteriores, y así
 sucesivamente. Gracias a la abstracción, los sistemas operativos
 enmascaran los recursos físicos, permitiendo su manejo con funciones más
 generales que ocultan las básicas, constituyendo verdaderos recursos
@@ -61,19 +77,41 @@ compartidas, los usuarios de red, las impresoras compartidas, etc.
 
 [[file:ArquitecturaSistemaOperativo/SO_MaquinaExtendida.PNG]]\\
 
-Desde el punto de vista del usuario, el sistema operativo proporciona
-servicios que no están presentes en la máquina subyacente. Estos
-servicios incluyen las facilidades de carga y ejecución de programas,
-interacción entre el usuario y los programas, permitiendo que se
-ejecuten varios al mismo tiempo, gestión de los servicios y
-almacenamiento de datos y programas.
-
 Como resumen, podemos decir que el sistema operativo persigue alcanzar
 la mayor eficiencia posible del hardware y facilitar el uso del mismo a
 los usuarios y a las aplicaciones
 
-\newpage
-** Funciones de los Sistemas Operativos
+** Aviso a Navegantes
+
+Lo descrito anteriormente da lugar a una situación para la mayor parte de los usuarios, que es la creencia de que 
+/todo es mágia/.
+
+[[./ArquitecturaSistemaOperativo/mago.jpg]]\\
+
+Como futuros Administradores de Sistemas debemos conseguir comprender el funcionamiento de dichos
+procesos, abstrayéndonos lo necesario en los primeros momentos, pero profundizando cada vez más 
+para comprender que es ~exactamente~ lo que ocurre cuando se producen eventos como :
+
+  - clicks de ratón.
+  - enviar a imprimir.
+  - crear carpetas.
+  - formatear discos.
+
+No seremos buenos profesionales si no tenemos conocimientos acerca de lo que esas acciones desencadenan 
+y cómo se realizan por parte del Sistema Operativo. 
+
+*¿Por qué esto es tan importante?*
+
+Porque muchas veces (/más de las que nos gustaría/), esos procesos fallarán y nos devolveran (/o nó :-)/)
+mensajes de error que nos permitirán averiguar /qué/ está pasando y poco a poco aprenderemos /cómo/ arreglarlos.
+
+A lo largo del curso nos veremos en más de una situación de estas características. No os preocupéis si no 
+sabéis como arreglar el problema (/para eso estais aquí/). Lo que se valorará es vuestra capacidad de analizarlo
+y plantear posibles soluciones, no la solución en si misma.
+
+** Tarea : 
+
+* Funciones de los Sistemas Operativos
    :PROPERTIES:
    :CUSTOM_ID: funciones-de-los-sistemas-operativos
    :END:
@@ -143,7 +181,7 @@ procesos a determinados recursos (ficheros, dispositivos de E/S, red,
 etc.).
 
 \newpage
-** Tipos de Sistemas Operativos
+* Tipos de Sistemas Operativos
    :PROPERTIES:
    :CUSTOM_ID: tipos-de-sistemas-operativos
    :END:
@@ -320,7 +358,7 @@ conjuntamente, a los que se les retiró simplemente la caja externa para
 dejar solo su contenido, a fin de aprovechar espacio en los armarios de
 comunicaciones.
 
-** Versiones en Windows
+* Versiones en Windows
    :PROPERTIES:
    :CUSTOM_ID: versiones-en-windows
    :END:
@@ -381,7 +419,7 @@ actualiza. Esto lo veremos más adelante en profundidad.
 
 [[file:Versiones/windows10-1809.png]]  
 
-** Distribuciones de GNU/LinuX
+* Distribuciones de GNU/LinuX
    :PROPERTIES:
    :CUSTOM_ID: distribuciones-de-gnulinux
    :END:
@@ -563,3 +601,4 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
 [[file:Versiones/alpine.png]]\\
 
 [[https://alpinelinux.org/][Alpine]]
+
