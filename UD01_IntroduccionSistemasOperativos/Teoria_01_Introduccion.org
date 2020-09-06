@@ -13,7 +13,7 @@
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
-
+\newpage
 * Introducción a los Sistemas Operativos
 
 ** Introducción
@@ -65,21 +65,26 @@ los niveles superiores una visión más sencilla, global y abstracta, ofreciénd
 para manipular dichas estructuras ocultas, desconociendo por completo la gestión interna de las mismas. 
 
 Sobre estas estructuras se construyen otras que abstraen a las anteriores, y así
-sucesivamente. Gracias a la abstracción, los sistemas operativos
-enmascaran los recursos físicos, permitiendo su manejo con funciones más
-generales que ocultan las básicas, constituyendo verdaderos recursos
-ficticios o virtuales, que mejoran y son más potentes que los físicos.
-Desde el punto de vista de un programa o usuario, la máquina física se
-convierte, en una máquina extendida, que presenta la ventaja respecto a
-la física de ofrecer más funciones de las que normalmente soportaría
-esta última. Entre las posibilidades de esto estarían las carpetas
-compartidas, los usuarios de red, las impresoras compartidas, etc.
+sucesivamente. 
+
+Gracias a la abstracción, los sistemas operativos enmascaran los recursos físicos, permitiendo su manejo con funciones más
+generales que ocultan las básicas, constituyendo verdaderos recursos ficticios o virtuales, que mejoran y son más potentes que los físicos.
+
+Desde el punto de vista de un programa o usuario, la máquina física se convierte, en una máquina extendida, que presenta la ventaja respecto a
+la física de ofrecer más funciones de las que normalmente soportaría esta última. 
+
+Entre las posibilidades de esto estarían:
+
+ - Las carpetas compartidas.
+ - Los usuarios en red.
+ - Las impresoras compartidas.
+ - Acceso a recursos ajenos al propio /hardware/.
 
 [[file:ArquitecturaSistemaOperativo/SO_MaquinaExtendida.PNG]]\\
 
-Como resumen, podemos decir que el sistema operativo persigue alcanzar
+A modo de resumen, podemos decir que el sistema operativo persigue alcanzar
 la mayor eficiencia posible del hardware y facilitar el uso del mismo a
-los usuarios y a las aplicaciones
+los usuarios y a las aplicaciones.
 
 ** Aviso a Navegantes
 
@@ -109,8 +114,17 @@ A lo largo del curso nos veremos en más de una situación de estas característ
 sabéis como arreglar el problema (/para eso estais aquí/). Lo que se valorará es vuestra capacidad de analizarlo
 y plantear posibles soluciones, no la solución en si misma.
 
-** Tarea : 
+** Tarea 01 : Introducción
 
+   Busca en Internet información acerca de los ficheros de texto plano.
+   Utilizando ~nano~, redacta un fichero que conteste a las siguientes preguntas:
+
+   - ¿Qué significa /abstracción/ si estamos hablando de Sistemas Operativos?
+   - ¿Qué es el /kernel/ de un Sistema Operativo?.
+   - ¿Qué Sistemas Operativos has utilizado?
+
+
+\newpage
 * Funciones de los Sistemas Operativos
    :PROPERTIES:
    :CUSTOM_ID: funciones-de-los-sistemas-operativos
@@ -128,7 +142,11 @@ enumerar las siguientes:
 
 Hay que diferenciar entre los conceptos programa y proceso. Un programa
 es un ente pasivo, que cuando se carga en memoria y comienza a
-ejecutarse, origina uno o varios procesos.
+ejecutarse, origina uno o varios procesos. Un *proceso* podríamos definirlo, como
+/parte de un programa en ejecución/.
+
+A lo largo de las unidades que vendrán, haremos muchos ejercicios para la gestión
+de los procesos.
 
 *** Gestión de la memoria
     :PROPERTIES:
@@ -141,6 +159,8 @@ exclusivas para él y cargarlo en ellas, cuando el proceso finalice su
 ejecución es necesario liberar las direcciones de memoria que estaba
 usando.
 
+[[./imgs/meme-chrome-ram.jpg]]\\
+
 *** Gestión de ficheros
     :PROPERTIES:
     :CUSTOM_ID: gestión-de-ficheros
@@ -149,18 +169,39 @@ usando.
 Un fichero es una abstracción para definir una colección de información
 no volátil. Su objetivo es proporcionar un modelo de trabajo sencillo
 con la información almacenada en los dispositivos de almacenamiento.
+
 Estos ficheros deben tener espacio asignado en los dispositivos, deben
 estar protegidos entre ellos, deben organizarse según unos determinados
 esquemas... todo esto es la gestión de ficheros.
+
+Parece mucho más difícil de lo que és en realidad. Sin embargo el diablo está en los detalles.
+
+Una de las máximas que aparecerán a lo largo de todo el curso es:
+
+    /Todo en GNU/LinuX es un fichero/. 
+
+O sea, que todo lo que se gestiona por parte de los Sistemas Operativos, incluido él mismo, son ficheros.
+
+Si aprendemos a manejarnos con los ficheros, aprenderemos a gestionar los Sistemas Operativos y por tanto
+los Ordenadores.
 
 *** Gestión de los dispositivos de E/S
     :PROPERTIES:
     :CUSTOM_ID: gestión-de-los-dispositivos-de-es
     :END:
 
-La gestión de la entrada salida (E/S) tiene como objetivo proporcionar
+La gestión de la entrada-salida (/aka/ /E/S/) tiene como objetivo proporcionar
 una interfaz de alto nivel de los dispositivos de E/S sencilla de
-utilizar.
+utilizar, tanto por parte de propio Sistema Operativo y los procesos que 
+se ejecutan en él, como por parte del usuario.
+
+Veremos en este punto conceptos como:
+
+ - Drivers (/controladores/).
+ - Discos.
+ - Impresoras.
+ - Monitores.
+ - Teclado y Ratón.
 
 *** Gestión de la red
     :PROPERTIES:
@@ -170,6 +211,10 @@ utilizar.
 El sistema operativo es el encargado de gestionar los distintos niveles
 de red, los drivers (controladores) de los dispositivos involucrados en
 la red, los protocolos de comunicación, las aplicaciones de red, etc.
+
+Muchas de las prácticas que haremos a lo largo del curso tienen que ver con este apartado,
+ya que en el mundo en el que vivimos, casi cualquier dispositivo /necesita/ de una 
+conexión a Internet (o al menos a una red local (/LAN/)).
 
 *** Protección y seguridad
     :PROPERTIES:
@@ -181,6 +226,7 @@ procesos a determinados recursos (ficheros, dispositivos de E/S, red,
 etc.).
 
 \newpage
+
 * Tipos de Sistemas Operativos
    :PROPERTIES:
    :CUSTOM_ID: tipos-de-sistemas-operativos
@@ -228,36 +274,7 @@ Sistemas Operativos Multiusuario:
 - UNIX-GNU/LinuX
 - Windows NT (en adelante)
 
-*** Según el número de tareas
-    :PROPERTIES:
-    :CUSTOM_ID: según-el-número-de-tareas
-    :END:
 
-**** Monotarea
-     :PROPERTIES:
-     :CUSTOM_ID: monotarea
-     :END:
-
-Los sistemas monotarea son aquellos que sólo permiten una tarea a la vez
-por usuario. Puede darse el caso de un sistema multiusuario y monotarea,
-en el cual se admiten varios usuarios al mismo tiempo pero cada uno de
-ellos puede estar haciendo solo una tarea a la vez.
-
-**** Multitarea
-     :PROPERTIES:
-     :CUSTOM_ID: multitarea
-     :END:
-
-Un sistema operativo multitarea es aquél que le permite al usuario estar
-realizando varias labores al mismo tiempo. Por ejemplo, puede estar
-editando el código fuente de un programa durante su depuración mientras
-compila otro programa, a la vez que está recibiendo correo electrónico
-en un proceso en background (segundo plano). Es común encontrar en ellos
-interfaces gráficas orientadas al uso de menús y el ratón, lo cual
-permite un rápido intercambio entre las tareas para el usuario,
-mejorando su productividad.
-
-\newpage
 *** Sistemas Operativos Distribuidos
     :PROPERTIES:
     :CUSTOM_ID: sistemas-operativos-distribuidos
@@ -296,7 +313,7 @@ Esta forma de computación se conoce como *grid*. Los grandes retos de
 cálculo de hoy en día, como el descubrimiento de medicamentos,
 simulación de terremotos, inundaciones y otras catástrofes naturales,
 modelización del clima/tiempo, grandes buscadores de internet, el
-programa [[http://setiweb.ssl.berkeley.edu/][Seti@Home]], etc. Son
+programa /[[http://setiweb.ssl.berkeley.edu/][Seti@Home/]], etc. Son
 posibles gracias a estos sistemas operativos distribuidos que permiten
 utilizar la computación distribuida.
 
@@ -313,7 +330,7 @@ capacidad de procesamiento. La consola PS3 también cuenta con una
 iniciativa de este tipo.
 
 Otro método similar para crear sistemas de supercomputadoras es el
-clustering
+*clustering*
 
 Un *cluster* o racimo de computadoras consiste en un grupo de
 computadoras de relativo bajo costo conectadas entre sí mediante un
@@ -358,6 +375,7 @@ conjuntamente, a los que se les retiró simplemente la caja externa para
 dejar solo su contenido, a fin de aprovechar espacio en los armarios de
 comunicaciones.
 
+
 * Versiones en Windows
    :PROPERTIES:
    :CUSTOM_ID: versiones-en-windows
@@ -379,9 +397,7 @@ ofrecen determinadas opciones y características.
 Aquí podéis ver una tabla resumen con las diferencias entre las
 versiones.
 
-[[https://www.microsoft.com/es-mx/cloud-platform/windows-server-comparison][Comparativa
-Windows Server]]
-
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/WindowsServer_cover.png]]  
 
 *** Windows <= 10
@@ -413,12 +429,13 @@ de Windows 10]]
 
 Windows 10 ha cambiado respecto a los sistemas anteriores de Windows,
 permitiendo siempre la actualización a la última versión disponible
-(actualmente estamos en la 1809). De esta manera ofrece características
+(actualmente estamos en la de mayo de 2020). De esta manera ofrece características
 de seguridad y no deben preocuparse de mantener software que no se
 actualiza. Esto lo veremos más adelante en profundidad.
 
 [[file:Versiones/windows10-1809.png]]  
 
+\newpage
 * Distribuciones de GNU/LinuX
    :PROPERTIES:
    :CUSTOM_ID: distribuciones-de-gnulinux
@@ -436,6 +453,7 @@ básico sobre el que las distribuciones y empresas trabajan.
 
 [[file:Versiones/Gnu-and-penguin-color.png]]  
 
+\newpage
 *** Un poco de historia
     :PROPERTIES:
     :CUSTOM_ID: un-poco-de-historia
@@ -447,12 +465,12 @@ industriales de la época.
 
 Su éxito es atribuido a :
 
-- la portabilidad
-- arquitectura simple
-- estable
-- prácticas liberales de distribución de software
-- regulaciones anti-monopolio, que obligaron durante un tiempo a su
-  propietario (AT&T) a ofrecer el código gratuitamente a diversas
+- La Portabilidad. 
+- Arquitectura Simple
+- Estable
+- Prácticas Liberales de Distribución de Software
+- Regulaciones /anti-monopolio/, que obligaron durante un tiempo a su
+  propietario (*AT&T*) a ofrecer el código gratuitamente a diversas
   instituciones.
 
 *** Richard Stallman
@@ -524,6 +542,7 @@ Por ejemplo, las basadas en Debian, siguen utilizando =.deb= como
 paquetes de instalación, así como repositorios que disponen de esos debs
 de una determinada estructura.
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/debian_ubuntu.jpg]]  
 
 El mundo de las distribuciones es muy complejo, y toca estar al dia de
@@ -543,7 +562,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :PROPERTIES:
      :CUSTOM_ID: debian
      :END:
-
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/debian.jpeg]]  
 
 [[https://www.debian.org/intro/about#what][Debian]]
@@ -553,6 +572,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: ubuntu
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/ubuntu-logo.png]]\\
 
 [[https://www.ubuntu.com/][Ubuntu]]
@@ -562,6 +582,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: fedora
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/fedora.png]]\\
 
 [[https://getfedora.org/es/][Fedora]]
@@ -571,6 +592,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: redhat
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/redhat.svg.png]]  
 
 [[https://www.redhat.com/es][Red Hat]]
@@ -580,6 +602,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: opensuse
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/opensuse.png]]  
 
 [[https://www.opensuse.org/][OpenSuse]]
@@ -589,6 +612,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: archlinux
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/archlinux.png]]  
 
 [[https://www.archlinux.org/][ArchLinux]]
@@ -598,7 +622,74 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
      :CUSTOM_ID: alpine
      :END:
 
+#+ATTR_LATEX: :width 5cm
 [[file:Versiones/alpine.png]]\\
 
 [[https://alpinelinux.org/][Alpine]]
 
+
+\newpage
+
+** Tarea 02 [ CLIL ] : Manual del nano.
+
+   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
+   preguntas que aparecen a continuación del mismo.
+   
+   #+ATTR_LATEX: :width 10cm
+   [[./imgs/nano-ejemplo.png]]
+
+   ...
+
+   ~nano is a small, free and friendly editor which aims to replace Pico,~ 
+   ~the default editor included in the non-free Pine package.~ 
+
+   ~Rather than just copying Pico's look and feel,~
+   ~nano also implements some missing (or disabled by default) features in Pico,~ 
+   ~such as "search and replace" and "go to line and column number".~
+
+   ... 
+   
+   /From :/  ~man nano~
+
+   Preguntas:
+   
+   1. ¿Qué quiere decir la expresión: /aims to replace Pico/.?
+   2. ¿Qué significa la palabra : /default/?.
+   3. ¿Por qué expresión sustituirías las palabras : /look and feel/RR?
+   4. ¿Qué significa la expresión : /missing features/?.
+   5. Utilizando el manual de nano:
+
+      - ¿Qué atajo de teclado nos permite realizar la acción de ~search and replace~?
+      - ¿Qué atajo de teclado nos permite realizar la acción de ~go to line and column number~?
+   
+
+** Tarea 03 - Ampliación [ CLIL ] : Fragmento de RMS 
+   
+   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
+   preguntas que aparecen a continuación del mismo:
+
+   ...
+
+   /Other users consider proprietary manuals acceptable for the same reason so many/
+/people consider proprietary software acceptable: they judge in purely practical/
+/terms, not using freedom as a criterion. These people are entitled to their opin-/
+/ions, but since those opinions spring from values which do not include freedom,/
+/they are no guide for those of us who do value freedom./
+   
+  ...
+
+  From : /Free Software needs Free Documentation/ by /Richard Stallman/.
+
+
+  1. ¿Qué quiere decir la expresión : /entitled to their opinions/?
+  2. En la última frase del texto, ¿qué nos indica la expresión : ... /spring from values/ ...?
+  3. La expresión "/Free as in freedom not as in free beer/" que se refiere en el mundo del Software Libre, ¿qué nos indica?.
+  4. ¿El autor valora la libertad?. Razona la respuesta.
+
+** Tarea 04 - Ampliación [ CLIL ] : Texto completo RMS 
+
+   Lee todo el artículo de Richard Stallman acerca de la documentación y formate una opinión acerca del tema.
+   Puedes estar deacuerdo o en desacuerdo con él, pero redacta en varias líneas tu postura. *En castellano*.
+
+   
+  
