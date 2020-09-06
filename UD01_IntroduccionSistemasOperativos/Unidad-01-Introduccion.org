@@ -52,6 +52,7 @@ programas de usuario y de aplicación. De esta manera se impide que los
 programas de los usuarios puedan tener contacto directo con el hardware,
 o puedan forzar un incorrecto funcionamiento del sistema.
 
+#+ATTR_LATEX: :width 5cm
 [[file:ArquitecturaSistemaOperativo/SO_Capas.PNG]]\\
 
 *** Abstracción
@@ -91,6 +92,8 @@ los usuarios y a las aplicaciones.
 Lo descrito anteriormente da lugar a una situación para la mayor parte de los usuarios, que es la creencia de que 
 /todo es mágia/.
 
+#+ATTR_LATEX: :width 10cm
+#+CAPTION: "Los ficheros los crea un mago"
 [[./ArquitecturaSistemaOperativo/mago.jpg]]\\
 
 Como futuros Administradores de Sistemas debemos conseguir comprender el funcionamiento de dichos
@@ -114,6 +117,7 @@ A lo largo del curso nos veremos en más de una situación de estas característ
 sabéis como arreglar el problema (/para eso estais aquí/). Lo que se valorará es vuestra capacidad de analizarlo
 y plantear posibles soluciones, no la solución en si misma.
 
+\newpage
 ** Tarea 01 : Introducción
 
    Busca en Internet información acerca de los ficheros de texto plano.
