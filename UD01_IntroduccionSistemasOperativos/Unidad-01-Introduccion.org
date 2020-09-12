@@ -389,7 +389,7 @@ Una vez tenemos claro que tipo de sistema operativo queremos instalar, y
 con qué propósito, es necesario hacer un pequeño estudio de que versión
 del mismo es la que más se adecua a nuestras necesidades.
 
-*** Server
+* Server
     :PROPERTIES:
     :CUSTOM_ID: server
     :END:
@@ -398,13 +398,16 @@ En los sistemas Windows, si optamos por la familia de sistemas
 operativos para servidores, contamos con una serie de versiones que nos
 ofrecen determinadas opciones y características.
 
-Aquí podéis ver una tabla resumen con las diferencias entre las
-versiones.
-
 #+ATTR_LATEX: :width 5cm
 [[file:Versiones/WindowsServer_cover.png]]  
 
-*** Windows <= 10
+
+** Tarea 02 : Versiones de Windows Server
+
+    Busca en Internet (preferentemente en la página oficial de Microsoft), cuáles han 
+    sido las tres últimas versiones de Windows Server que han sido lanzadas al mercado.
+
+* Windows 10
     :PROPERTIES:
     :CUSTOM_ID: windows-10
     :END:
@@ -416,7 +419,7 @@ apareciendo en el tiempo y su soporte por parte de Microsoft ha ido
 
 [[file:Versiones/fin-soporte-windows.png]]  
 
-*** Actualizaciones de Windows 10
+** Actualizaciones de Windows 10
     :PROPERTIES:
     :CUSTOM_ID: actualizaciones-de-windows-10
     :END:
@@ -439,7 +442,104 @@ actualiza. Esto lo veremos más adelante en profundidad.
 
 [[file:Versiones/windows10-1809.png]]  
 
+** Ediciones de Windows 10
+
+Los administradores de sistemas llevamos algún tiempo oyendo hablar de que Windows
+quería /homogeneizar/ sus diferentes versiones y presentar al público un modelo estándar,
+coherente y que fuera /versátil/. Aunque sí que han conseguido estabilizar las actualizaciones
+con el modelo que hemos descrito anteriormente, la cantidad de hardware y de /necesidades/ diferentes
+que tienen los diferentes /usuarios/ de los sistemas /Microsoft/, ha hecho que existan más de una decena 
+de *ediciones* de Windows 10.
+
+Cada una de ellas presenta una serie de ventajas y de desventajas, y debemos conocer 
+sus prestaciones para ser capaces de elegir la mejor solución para nuestros clientes.
+
+[[./imgs/ediciones-win10-01.png]]
+
+Y sigue en ...
+
+[[./imgs/ediciones-win10-02.png]]
+
 \newpage
+
+Vamos a desglosar las más importantes (/aunque esto no quiere decir que no tengamos que instalar/
+/las otras/ si son la solución más óptima a nuestro problema).
+
+*** Windows 10 Home
+
+La más *habitual*, se trata de la edición destinada los PCs de sobremesa y portátiles orientada
+al *usuario final*.
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/win10-home.jpg]]
+
+Algunas de las aplicaciones que podemos encontrar en esta edición nada más instalarla son:
+
+| Aplicaciones|
+|-------------|
+|             |
+
+\newpage
+*** Windows 10 Pro
+
+El hardware soportado es el mismo (/hardware support/) pero los usuarios son aquellos que requieren
+de prestaciones orientadas a un entorno mucho más profesional (*PYMES*).
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/win10-pro.jpg]]
+
+Destacaremos aquí no tanto las aplicaciones instaladas como las siguientes prestaciones:
+
+| Prestaciones |
+|--------------|
+| Unión de la máquina al dominio|
+| Gestión de GPO|
+| Bitlocker |
+| Escritorio Remoto|
+| Actualizaciones frecuentes |
+| Device Guard |
+
+\newpage
+*** Windows 10 Enterprise
+
+
+#+ATTR_LATEX: :width 7cm
+[[./imgs/win10-enterprise.jpg]]
+
+Además de ser el nombre de una de las más famosas naves de la historia de la Ciencia Ficción, 
+se trata de la versión orientada a las empresas más grandes, añadiendo protección a los equipos
+y a los datos que se manejan en los equipos.
+
+| Prestaciones Windows Enterprise|
+|--------------------------------|
+| DirectAccess (VPN) |
+| AppLocker|
+
+
+\newpage
+*** Windows 10 Mobile
+
+#+ATTR_LATEX: :width 10cm
+[[./imgs/win10-mobile.jpg]]
+
+Esta edición está orientada a Smartphones (¿con éxito?) y a tabletas (/Surface/). 
+De entre las diferentes prestaciones que se incluyen en esta edición, podemos destacar
+a [[https://www.microsoft.com/es-es/windows/continuum][Continuum]].
+
+\newpage
+*** Windows 10 IoT
+
+¿Qué es IoT?
+Soporte de Raspberry 2 y 3
+Descarga libre para desarrolladores.
+
+\newpage
+*** Windows 10 S
+
+Se trata de la versión orientada a ser ejecutada directamente desde /la nube/, al más puro estilo
+*chrome OS*. No nos permite instalar cualquier cosa (ya que debe funcionar en servidores que no
+son nuestras máquinas, con lo que las capas de indirección son cada vez mayores.
+
 * Distribuciones de GNU/LinuX
    :PROPERTIES:
    :CUSTOM_ID: distribuciones-de-gnulinux
