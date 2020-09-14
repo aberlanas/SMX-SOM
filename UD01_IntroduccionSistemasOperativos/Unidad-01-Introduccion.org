@@ -118,7 +118,7 @@ sabéis como arreglar el problema (/para eso estais aquí/). Lo que se valorará
 y plantear posibles soluciones, no la solución en si misma.
 
 \newpage
-** Tarea 01 : Introducción
+* Tarea 01 : Introducción
 
    Busca en Internet información acerca de los ficheros de texto plano.
    Utilizando ~nano~, redacta un fichero que conteste a las siguientes preguntas:
@@ -379,27 +379,53 @@ conjuntamente, a los que se les retiró simplemente la caja externa para
 dejar solo su contenido, a fin de aprovechar espacio en los armarios de
 comunicaciones.
 
-
-* Versiones en Windows
+* Versiones de Sistemas Operativos
    :PROPERTIES:
    :CUSTOM_ID: versiones-en-windows
    :END:
 
-Una vez tenemos claro que tipo de sistema operativo queremos instalar, y
-con qué propósito, es necesario hacer un pequeño estudio de que versión
-del mismo es la que más se adecua a nuestras necesidades.
+   Una vez tenemos claro que tipo de sistema operativo queremos instalar, y
+   con qué propósito, es necesario hacer un pequeño estudio de que versión
+   del mismo es la que más se adecua a nuestras necesidades.
 
-* Server
+   A lo largo del resto de la unidad, se plantearán diferentes Sistemas Operativos
+   que vienen de diferentes familias. No se trata de memorizar todo lo presentado,
+   pero si plantear un /paisaje/ de Sistemas Operativos que pueden ser instalados
+   en los ordenadores más habituales con las que nos encontraremos.
+
+* Sistemas para Servidores
     :PROPERTIES:
     :CUSTOM_ID: server
     :END:
 
-En los sistemas Windows, si optamos por la familia de sistemas
-operativos para servidores, contamos con una serie de versiones que nos
-ofrecen determinadas opciones y características.
+    Los Sistemas Operativos /para servidores/ son aquellos que cuyas funciones son 
+    de ofrecer prestaciones a otros /ordenadores/ de la red. En este curso veremos 
+    la parte /cliente/ de todo este *ecosistema*, pero vale la pena que vayáis hechándole
+    un ojo a todo este mundo cara al curso que viene, si queréis tener un conocimiento
+    claro acerca de como funciona esto de la informática.
 
-#+ATTR_LATEX: :width 5cm
-[[file:Versiones/WindowsServer_cover.png]]  
+    Existen multitud de Sistemas Operativos para servidores, que realizan funciones muy diversas, 
+    tales como:
+
+    + Servidores de Páginas Web.
+    + Servidores de Nombres.
+    + Servidores de Ficheros.
+    + Servidores de Hora.
+    + Servidores de Autenticación.
+    + ...
+
+    El /hardware/ sobre el que se instala un Sistema Operativo de servidor
+    suele tener prestaciones diferentes a las de un ordenador de sobremesa.
+
+    
+** Windows Server
+
+    En los sistemas Windows, si optamos por la familia de sistemas
+    operativos para servidores, contamos con una serie de versiones que nos
+    ofrecen determinadas opciones y características.
+
+    #+ATTR_LATEX: :width 5cm
+    [[file:Versiones/WindowsServer_cover.png]]  
 
 
 ** Tarea 02 : Versiones de Windows Server
@@ -407,6 +433,7 @@ ofrecen determinadas opciones y características.
     Busca en Internet (preferentemente en la página oficial de Microsoft), cuáles han 
     sido las tres últimas versiones de Windows Server que han sido lanzadas al mercado.
 
+\newpage
 * Windows 10
     :PROPERTIES:
     :CUSTOM_ID: windows-10
@@ -529,33 +556,40 @@ a [[https://www.microsoft.com/es-es/windows/continuum][Continuum]].
 \newpage
 *** Windows 10 IoT
 
-¿Qué es IoT?
-Soporte de Raspberry 2 y 3
-Descarga libre para desarrolladores.
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/raspberry-pi.jpg]]    
+
+    + ¿Qué es IoT?
+    + Soporte de Raspberry 2 y 3
+    + Descarga libre para desarrolladores.
 
 \newpage
 *** Windows 10 S
+    
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/win10-s.jpg
+]]
+    Se trata de la versión orientada a ser ejecutada directamente desde /la nube/, al más puro estilo
+    *Chrome OS*. No nos permite instalar cualquier cosa (ya que debe funcionar en servidores que no
+    son nuestras máquinas, con lo que las capas de indirección son cada vez mayores.
 
-Se trata de la versión orientada a ser ejecutada directamente desde /la nube/, al más puro estilo
-*chrome OS*. No nos permite instalar cualquier cosa (ya que debe funcionar en servidores que no
-son nuestras máquinas, con lo que las capas de indirección son cada vez mayores.
-
+\newpage
 * Distribuciones de GNU/LinuX
    :PROPERTIES:
    :CUSTOM_ID: distribuciones-de-gnulinux
    :END:
 
-Los sistemas GNU/LinuX son muy variados, ya que multitud de comunidades
-han realizado sus propias adaptaciones y selección de aplicaciones que
-desean llevar /por defecto/. Existen multitud de empresas que utilizan
-GNU/LinuX, desde Red Hat (IBM), Canonical (Ubuntu), Microsoft, y otras
-que aunque lo utilizan no ponen su marca en ella, uno de los ejemplos es
-Android y Google.
+   Los sistemas GNU/LinuX son muy variados, ya que multitud de comunidades
+   han realizado sus propias adaptaciones y selección de aplicaciones que
+   desean llevar /por defecto/. Existen multitud de empresas que utilizan
+   GNU/LinuX, desde Red Hat (IBM), Canonical (Ubuntu), Microsoft, y otras
+   que aunque lo utilizan no ponen su marca en ella, uno de los ejemplos es
+   Android y Google.
 
-El núcleo (LinuX) + Herramientas (GNU) es lo que da lugar al sistema
-básico sobre el que las distribuciones y empresas trabajan.
+   El núcleo (LinuX) + Herramientas (GNU) es lo que da lugar al sistema
+   básico sobre el que las distribuciones y empresas trabajan.
 
-[[file:Versiones/Gnu-and-penguin-color.png]]  
+   [[file:Versiones/Gnu-and-penguin-color.png]]  
 
 \newpage
 *** Un poco de historia
@@ -563,12 +597,12 @@ básico sobre el que las distribuciones y empresas trabajan.
     :CUSTOM_ID: un-poco-de-historia
     :END:
 
-En la década de 1970 =UNIX= era un sistema operativo no libre o
-privativo muy popular entre los reducidos usuarios académicos e
-industriales de la época.
+    En la década de 1970 =UNIX= era un sistema operativo no libre o
+    privativo muy popular entre los reducidos usuarios académicos e
+    industriales de la época.
 
-Su éxito es atribuido a :
-
+    Su éxito es atribuido a :
+    
 - La Portabilidad. 
 - Arquitectura Simple
 - Estable
@@ -604,58 +638,58 @@ aprovechando tanto el diseño modular y portable como sus usuarios.
     :CUSTOM_ID: linus-torvalds
     :END:
 
-Armado con las herramientas de GNU, en 1991 Linus Torvalds empezó a
-escribir el núcleo Linux inspirado en el libro de Minix de Andrew
-Tanenbaum (otro de los grandes).
+    Armado con las herramientas de GNU, en 1991 Linus Torvalds empezó a
+    escribir el núcleo Linux inspirado en el libro de Minix de Andrew
+    Tanenbaum (otro de los grandes).
 
-[[file:Versiones/Linus-Torvalds.jpg]]  
+    [[file:Versiones/Linus-Torvalds.jpg]]  
 
-En sus primeros anuncios públicos Torvalds le atribuía su acción a la
-frustración de no poder usar Minix comercialmente, y a la ausencia de
-núcleos libres tipo Unix como GNU Hurd​ o el de BSD. A pesar de sus
-desacuerdos suscitados a raíz de la publicación de Linux, tanto Torvalds
-como Tanenbaum pronosticaban que el superior núcleo de GNU eventualmente
-dejaría obsoletos a Linux y Minix.
+    En sus primeros anuncios públicos Torvalds le atribuía su acción a la
+    frustración de no poder usar Minix comercialmente, y a la ausencia de
+    núcleos libres tipo Unix como GNU Hurd​ o el de BSD. A pesar de sus
+    desacuerdos suscitados a raíz de la publicación de Linux, tanto Torvalds
+    como Tanenbaum pronosticaban que el superior núcleo de GNU eventualmente
+    dejaría obsoletos a Linux y Minix.
 
-En 1992 Torvalds decidió cambiar la licencia no comercial de Linux a la
-GPL. Rápidamente, múltiples programadores se unieron en el desarrollo,
-colaborando a través de Internet y consiguiendo que paulatinamente Linux
-fuera más serio, potente y compatible con UNIX.
+    En 1992 Torvalds decidió cambiar la licencia no comercial de Linux a la
+    GPL. Rápidamente, múltiples programadores se unieron en el desarrollo,
+    colaborando a través de Internet y consiguiendo que paulatinamente Linux
+    fuera más serio, potente y compatible con UNIX.
 
-Linux fue combinado con el resto del sistema GNU, resultando en un
-sistema operativo libre y completamente funcional que sigue usándose al
-día de hoy y en completa expansión.
-
-La combinación es conocida como "GNU/Linux" o como una "distribución
-Linux" y existen diversas variantes.
-
-A lo largo del módulo, veremos muchas veces =GNU/LinuX= y =LinuX= solo,
-pido disculpas a los puristas que puedan leer esta documentación. La
-nomenclatura =correcta= es *GNU/LinuX*.
+    Linux fue combinado con el resto del sistema GNU, resultando en un
+    sistema operativo libre y completamente funcional que sigue usándose al
+    día de hoy y en completa expansión.
+    
+    La combinación es conocida como "GNU/Linux" o como una "distribución
+    Linux" y existen diversas variantes.
+    
+    A lo largo del módulo, veremos muchas veces =GNU/LinuX= y =LinuX= solo,
+    pido disculpas a los puristas que puedan leer esta documentación. La
+    nomenclatura =correcta= es *GNU/LinuX*.
 
 *** Distribuciones y familias
     :PROPERTIES:
     :CUSTOM_ID: distribuciones-y-familias
     :END:
 
-Cuando una distribución se basa en una anterior, lo que normalmente
-=adopta= es la manera de empaquetar y distribuir las aplicaciones que
-hace disponibles para los usuarios.
+    Cuando una distribución se basa en una anterior, lo que normalmente
+    =adopta= es la manera de empaquetar y distribuir las aplicaciones que
+    hace disponibles para los usuarios.
+    
+    Por ejemplo, las basadas en Debian, siguen utilizando =.deb= como
+    paquetes de instalación, así como repositorios que disponen de esos debs
+    de una determinada estructura.
+    
+    #+ATTR_LATEX: :width 5cm
+    [[file:Versiones/debian_ubuntu.jpg]]  
+    
+    El mundo de las distribuciones es muy complejo, y toca estar al dia de
+    los movimientos de las comunidades y empresas que soportan estas
+    distribuciones.
+    
+    Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
 
-Por ejemplo, las basadas en Debian, siguen utilizando =.deb= como
-paquetes de instalación, así como repositorios que disponen de esos debs
-de una determinada estructura.
-
-#+ATTR_LATEX: :width 5cm
-[[file:Versiones/debian_ubuntu.jpg]]  
-
-El mundo de las distribuciones es muy complejo, y toca estar al dia de
-los movimientos de las comunidades y empresas que soportan estas
-distribuciones.
-
-Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
-
-[[https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg][Distribuciones]]
+    [[https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg][Distribuciones]]
 
 *** Distribuciones Famosas
     :PROPERTIES:
@@ -734,10 +768,29 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
 
 \newpage
 
-** Tarea 02 [ CLIL ] : Manual del nano.
+
+* Tarea 03 [ CLIL ] : Manual del nano.
+
+   En los Sistemas Operativos, la mayoría de los comandos (ya llegaremos 
+   a conocerlos más intensamente en las próximas semanas), disponen de un 
+   manual de uso, que puede ser consultado de manera interactiva, de tal 
+   manera que podamos conocer las opciones que tenemos disponibles y cómo utilizarlas.
+   
+   En los Sistemas GNU/LinuX podemos ver las diferentes /páginas de manual/ 
+   utilizando el comando =man=. 
+
+   Así, si queremos conocer como funciona el comando =mkdir=, podemos ejecutar 
+   la orden en la /Terminal/:
+
+#+BEGIN_SRC bash
+man mkdir
+#+END_SRC
+
+   Vamos a realizar ahora una pequeña tarea acerca del uso de este /manual/.
 
    Lee atentamente el texto siguiente y contesta en /castellano/ a las 
    preguntas que aparecen a continuación del mismo.
+
    
    #+ATTR_LATEX: :width 10cm
    [[./imgs/nano-ejemplo.png]]
@@ -766,8 +819,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
       - ¿Qué atajo de teclado nos permite realizar la acción de ~search and replace~?
       - ¿Qué atajo de teclado nos permite realizar la acción de ~go to line and column number~?
    
-
-** Tarea 03 - Ampliación [ CLIL ] : Fragmento de RMS 
+* Tarea 04 - Ampliación [ CLIL ] : Fragmento de RMS 
    
    Lee atentamente el texto siguiente y contesta en /castellano/ a las 
    preguntas que aparecen a continuación del mismo:
@@ -790,7 +842,7 @@ Aqui adjunto un enlace a las distribuciones de GNU/LinuX más famosas:
   3. La expresión "/Free as in freedom not as in free beer/" que se refiere en el mundo del Software Libre, ¿qué nos indica?.
   4. ¿El autor valora la libertad?. Razona la respuesta.
 
-** Tarea 04 - Ampliación [ CLIL ] : Texto completo RMS 
+* Tarea 05 - Ampliación [ CLIL ] : Texto completo RMS 
 
    Lee todo el artículo de Richard Stallman acerca de la documentación y formate una opinión acerca del tema.
    Puedes estar deacuerdo o en desacuerdo con él, pero redacta en varias líneas tu postura. *En castellano*.
