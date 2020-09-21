@@ -556,7 +556,7 @@ virtualizado.
 
 [[file:imgs/VBox_GuestAdd_LinuX_026.png]]\\
 
-* Portapapeles
+** Portapapeles
   :PROPERTIES:
   :CUSTOM_ID: portapapeles
   :END:
@@ -576,18 +576,14 @@ navegador abierto, para la elaboración de documentación, etc.
 
 [[file:imgs/VBox_GuestAdd_LinuX_027.png]]\\
 
-* Ejercicio
-  :PROPERTIES:
-  :CUSTOM_ID: ejercicio
-  :END:
+USTOM_ID: ejercicio
+  :EN
 
 Realiza todas las configuraciones que hemos visto en la tarea y avisa al
 profesor para que compruebe que todo funciona.
 
-
-
 \newpage
-* Tarea 08 [ CLIL ] : Why is Virtualization Useful?
+* Tarea 07 [ CLIL ] : Why is Virtualization Useful?
 
   Lee el texto que aparece a continuación y contexta a las preguntas:
   
