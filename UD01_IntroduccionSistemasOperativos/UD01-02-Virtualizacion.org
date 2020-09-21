@@ -6,7 +6,7 @@
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \fancyhead{} % clear all header fields
 #+LATEX_HEADER: \pagestyle{fancy}
-#+LATEX_HEADER: \fancyhead[R]{1-SMX}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM}
 #+LATEX_HEADER: \fancyhead[L]{Unidad 01: Sistemas Operativos]}
 
 #+LATEX_HEADER:\usepackage{wallpaper}
@@ -49,11 +49,11 @@
   muy vinculadas al Hardware, la instalación, desinstalación y configuración es al menos igual de complicada,
   /si no lo és mucho más/.
   
-  Para los Administradores de Sistemas (/aka./ vosotros :-), la realización de pruebas de instalación
+  Para los Administradores de Sistemas (/aka./ vosotros ;-) ), la realización de pruebas de instalación
   es algo que haréis muy habitualmente.
 
-  En cursos posteriores veréis no solo que se debe de instalar y adapatar el Sistema Operativo
-  si no también todas las aplicaciones y servicios que forman parte de la solución.
+  En cursos posteriores veréis no solo qué se debe de instalar y adapatar el Sistema Operativo
+  si no también todas las aplicaciones y servicios que forman parte de la solución al problema que os piden.
 
   Utilizando los Entornos de Virtualización, conseguimos emular el /Hardware/ para tratarlo
   en estas pruebas (o incluso en la entrega final), como /Software/. Nos permitirá, sobre un único 
@@ -414,7 +414,7 @@ hipervisor.
 
 \newpage
 
-
+\newpage
 * Tarea 06 : Compartir Recursos 1
   :PROPERTIES:
   :CUSTOM_ID: tarea-compartir-recursos-i
@@ -510,7 +510,11 @@ ya que en realidad estaremos configurando una serie de drivers que
 tienen que ver directamente con nuestro Kernel (/núcleo/) y con como van
 a interactuar con ese hardware.
 
-Introduciremos la contraseña de administrador.
+Introduciremos la contraseña de administrador. En este curso, por defecto se 
+ha decidido que sea:
+
+ + =Usuario: somadmin=
+ + =Password: s0m4dm1n=
 
 [[file:imgs/VBox_GuestAdd_LinuX_018.png]]\\
 
