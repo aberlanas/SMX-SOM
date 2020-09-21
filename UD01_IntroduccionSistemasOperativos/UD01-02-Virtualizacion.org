@@ -13,6 +13,7 @@
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
+\newpage
 * Virtualización
 
   La virtualización es la tecnlogía que nos permite trabajar con el /Hardware/
