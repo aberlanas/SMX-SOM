@@ -1,0 +1,25 @@
+#+Title: Unidad 01 - Practica 01 : Introducción
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 01 - Introducción}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 01 : Introducción
+
+   Busca en Internet información acerca de los ficheros de texto plano.
+   Utilizando ~nano~, redacta un fichero que conteste a las siguientes preguntas:
+
+   - ¿Qué significa /abstracción/ si estamos hablando de Sistemas Operativos?
+   - ¿Qué es el /kernel/ de un Sistema Operativo?.
+   - ¿Qué Sistemas Operativos has utilizado?
+

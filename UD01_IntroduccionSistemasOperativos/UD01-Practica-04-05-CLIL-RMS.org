@@ -1,0 +1,46 @@
+#+Title: Unidad 01 - Practicas 04 y 05
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practicas}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practicas 04 y 05}
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+
+* Tarea 04 - Ampliación [ CLIL ] : Fragmento de RMS 
+   
+   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
+   preguntas que aparecen a continuación del mismo:
+
+   ...
+
+   /Other users consider proprietary manuals acceptable for the same reason so many/
+/people consider proprietary software acceptable: they judge in purely practical/
+/terms, not using freedom as a criterion. These people are entitled to their opi/
+/nions, but since those opinions spring from values which do not include freedom,/
+/they are no guide for those of us who do value freedom./
+   
+  ...
+
+  From : /Free Software needs Free Documentation/ by /Richard Stallman/.
+
+
+  1. ¿Qué quiere decir la expresión : /entitled to their opinions/?
+  2. En la última frase del texto, ¿qué nos indica la expresión : ... /spring from values/ ...?
+  3. La expresión "/Free as in freedom not as in free beer/" que se refiere en el mundo del Software Libre, ¿qué nos indica?.
+  4. ¿El autor valora la libertad?. Razona la respuesta.
+
+* Tarea 05 - Ampliación [ CLIL ] : Texto completo RMS 
+
+   Lee todo el artículo de Richard Stallman acerca de la documentación y formate una opinión acerca del tema.
+   Puedes estar deacuerdo o en desacuerdo con él, pero redacta en varias líneas tu postura. *En castellano*.
+
+   
+  

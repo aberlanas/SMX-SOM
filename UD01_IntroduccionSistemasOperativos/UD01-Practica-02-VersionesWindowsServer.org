@@ -1,0 +1,20 @@
+#+Title: Unidad 01 - Practica 02 : Versiones Windows Server
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 02 - Windows Server}
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 02 : Versiones de Windows Server
+
+    Busca en Internet (preferentemente en la página oficial de Microsoft), cuáles han 
+    sido las tres últimas versiones de Windows Server que han sido lanzadas al mercado.
+

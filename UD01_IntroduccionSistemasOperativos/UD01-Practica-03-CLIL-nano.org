@@ -1,0 +1,65 @@
+#+Title: Unidad 01 - Practica 03 : Nano
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica 03}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica CLIL - nano}
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 03 [ CLIL ] : Manual del nano.
+
+   En los Sistemas Operativos, la mayoría de los comandos (ya llegaremos 
+   a conocerlos más intensamente en las próximas semanas), disponen de un 
+   manual de uso, que puede ser consultado de manera interactiva, de tal 
+   manera que podamos conocer las opciones que tenemos disponibles y cómo utilizarlas.
+   
+   En los Sistemas GNU/LinuX podemos ver las diferentes /páginas de manual/ 
+   utilizando el comando =man=. 
+
+   Así, si queremos conocer como funciona el comando =mkdir=, podemos ejecutar 
+   la orden en la /Terminal/:
+
+#+BEGIN_SRC bash
+man mkdir
+#+END_SRC
+
+   Vamos a realizar ahora una pequeña tarea acerca del uso de este /manual/.
+
+   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
+   preguntas que aparecen a continuación del mismo.
+
+   
+   #+ATTR_LATEX: :width 10cm
+   [[./imgs/nano-ejemplo.png]]
+
+   ...
+
+   ~nano is a small, free and friendly editor which aims to replace Pico,~ 
+   ~the default editor included in the non-free Pine package.~ 
+
+   ~Rather than just copying Pico's look and feel,~
+   ~nano also implements some missing (or disabled by default) features in Pico,~ 
+   ~such as "search and replace" and "go to line and column number".~
+
+   ... 
+   
+   /From :/  ~man nano~
+
+   Preguntas:
+   
+   1. ¿Qué quiere decir la expresión: /aims to replace Pico/.?
+   2. ¿Qué significa la palabra : /default/?.
+   3. ¿Por qué expresión sustituirías las palabras : /look and feel/RR?
+   4. ¿Qué significa la expresión : /missing features/?.
+   5. Utilizando el manual de nano:
+
+      - ¿Qué atajo de teclado nos permite realizar la acción de ~search and replace~?
+      - ¿Qué atajo de teclado nos permite realizar la acción de ~go to line and column number~?
+   
