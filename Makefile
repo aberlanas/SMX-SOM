@@ -7,6 +7,8 @@ PDF_PATH:=$(shell readlink -f PDFS)
 
 clean:
 	@echo " * Clean workspace "
+	rm UD01_IntroduccionSistemasOperativos/*.tex
+	rm UD01_IntroduccionSistemasOperativos/*.pdf
 
 files:
 	@echo " [ Step : files ]"

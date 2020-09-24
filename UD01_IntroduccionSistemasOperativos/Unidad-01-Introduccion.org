@@ -7,8 +7,7 @@
 #+LATEX_HEADER: \fancyhead{} % clear all header fields
 #+LATEX_HEADER: \pagestyle{fancy}
 #+LATEX_HEADER: \fancyhead[R]{1-SMX}
-#+LATEX_HEADER: \fancyhead[L]{Unidad 01: Sistemas Operativos]}
-
+#+LATEX_HEADER: \fancyhead[L]{UD01: Introducción y Virtualización}
 #+LATEX_HEADER:\usepackage{wallpaper}
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
@@ -116,17 +115,6 @@ mensajes de error que nos permitirán averiguar /qué/ está pasando y poco a po
 A lo largo del curso nos veremos en más de una situación de estas características. No os preocupéis si no 
 sabéis como arreglar el problema (/para eso estais aquí/). Lo que se valorará es vuestra capacidad de analizarlo
 y plantear posibles soluciones, no la solución en si misma.
-
-\newpage
-* Tarea 01 : Introducción
-
-   Busca en Internet información acerca de los ficheros de texto plano.
-   Utilizando ~nano~, redacta un fichero que conteste a las siguientes preguntas:
-
-   - ¿Qué significa /abstracción/ si estamos hablando de Sistemas Operativos?
-   - ¿Qué es el /kernel/ de un Sistema Operativo?.
-   - ¿Qué Sistemas Operativos has utilizado?
-
 
 \newpage
 * Funciones de los Sistemas Operativos
@@ -427,13 +415,6 @@ comunicaciones.
     #+ATTR_LATEX: :width 5cm
     [[file:Versiones/WindowsServer_cover.png]]  
 
-
-** Tarea 02 : Versiones de Windows Server
-
-    Busca en Internet (preferentemente en la página oficial de Microsoft), cuáles han 
-    sido las tres últimas versiones de Windows Server que han sido lanzadas al mercado.
-
-\newpage
 * Windows 10
     :PROPERTIES:
     :CUSTOM_ID: windows-10
@@ -768,84 +749,3 @@ aprovechando tanto el diseño modular y portable como sus usuarios.
 
 \newpage
 
-
-* Tarea 03 [ CLIL ] : Manual del nano.
-
-   En los Sistemas Operativos, la mayoría de los comandos (ya llegaremos 
-   a conocerlos más intensamente en las próximas semanas), disponen de un 
-   manual de uso, que puede ser consultado de manera interactiva, de tal 
-   manera que podamos conocer las opciones que tenemos disponibles y cómo utilizarlas.
-   
-   En los Sistemas GNU/LinuX podemos ver las diferentes /páginas de manual/ 
-   utilizando el comando =man=. 
-
-   Así, si queremos conocer como funciona el comando =mkdir=, podemos ejecutar 
-   la orden en la /Terminal/:
-
-#+BEGIN_SRC bash
-man mkdir
-#+END_SRC
-
-   Vamos a realizar ahora una pequeña tarea acerca del uso de este /manual/.
-
-   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
-   preguntas que aparecen a continuación del mismo.
-
-   
-   #+ATTR_LATEX: :width 10cm
-   [[./imgs/nano-ejemplo.png]]
-
-   ...
-
-   ~nano is a small, free and friendly editor which aims to replace Pico,~ 
-   ~the default editor included in the non-free Pine package.~ 
-
-   ~Rather than just copying Pico's look and feel,~
-   ~nano also implements some missing (or disabled by default) features in Pico,~ 
-   ~such as "search and replace" and "go to line and column number".~
-
-   ... 
-   
-   /From :/  ~man nano~
-
-   Preguntas:
-   
-   1. ¿Qué quiere decir la expresión: /aims to replace Pico/.?
-   2. ¿Qué significa la palabra : /default/?.
-   3. ¿Por qué expresión sustituirías las palabras : /look and feel/RR?
-   4. ¿Qué significa la expresión : /missing features/?.
-   5. Utilizando el manual de nano:
-
-      - ¿Qué atajo de teclado nos permite realizar la acción de ~search and replace~?
-      - ¿Qué atajo de teclado nos permite realizar la acción de ~go to line and column number~?
-   
-* Tarea 04 - Ampliación [ CLIL ] : Fragmento de RMS 
-   
-   Lee atentamente el texto siguiente y contesta en /castellano/ a las 
-   preguntas que aparecen a continuación del mismo:
-
-   ...
-
-   /Other users consider proprietary manuals acceptable for the same reason so many/
-/people consider proprietary software acceptable: they judge in purely practical/
-/terms, not using freedom as a criterion. These people are entitled to their opi/
-/nions, but since those opinions spring from values which do not include freedom,/
-/they are no guide for those of us who do value freedom./
-   
-  ...
-
-  From : /Free Software needs Free Documentation/ by /Richard Stallman/.
-
-
-  1. ¿Qué quiere decir la expresión : /entitled to their opinions/?
-  2. En la última frase del texto, ¿qué nos indica la expresión : ... /spring from values/ ...?
-  3. La expresión "/Free as in freedom not as in free beer/" que se refiere en el mundo del Software Libre, ¿qué nos indica?.
-  4. ¿El autor valora la libertad?. Razona la respuesta.
-
-* Tarea 05 - Ampliación [ CLIL ] : Texto completo RMS 
-
-   Lee todo el artículo de Richard Stallman acerca de la documentación y formate una opinión acerca del tema.
-   Puedes estar deacuerdo o en desacuerdo con él, pero redacta en varias líneas tu postura. *En castellano*.
-
-   
-  
