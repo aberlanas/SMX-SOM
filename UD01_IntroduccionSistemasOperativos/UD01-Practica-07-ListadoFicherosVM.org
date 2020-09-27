@@ -1,0 +1,199 @@
+#+Title: Unidad 01 - Práctica 07 - Ficheros de las Máquinas Virtuales
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Práctica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Práctica 07]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage 
+* Práctica 07
+
+  En la realización de esta práctica vamos realizar una serie de operaciones
+  y comprobaciones referentes a los diferentes ficheros que utiliza /VirtualBox/
+  y otros entornos de Virtualización para simular las máquinas virtuales.
+
+  El objetivo de esta práctica es que vayais relacionandoos con los diferentes
+  tipos de fichero y que vayamos familiarizándonos/recordando con las rutas.
+
+  /AVISO A NAVEGANTES/
+  A lo largo de la práctica se os va a pedir que vayáis ejecutando comandos y que obtengáis 
+  determinada información. Abrir un documento de /LibreOffice/ e ir adjuntando capturas y 
+  descripciones.
+
+
+** Repaso de Carpetas y Ficheros.  
+
+   En temas posteriores veremos más detenidamente los sistemas de ficheros, pero 
+   por ahora vamos a tener en cuenta para la realización de esta práctica los siguientes
+   puntos.
+
+*** Carpetas Personales 
+
+    Tanto en los Sistemas GNU/LinuX como en los Sistemas Windows existen una serie de /Carpetas/
+    que se crean para cada uno de l@s usuari@s y es donde las aplicaciones que se ejecutan
+    por parte de l@s mism@s escriben los datos y configuraciones.
+
+    Estas carpetas son de utilización común por parte de l@s usuari@s, pero aunque existen
+    algunas /especialmente conocidas/, vale la pena repasarlas. Para ello utilizaremos
+    la *Línea de comandos*, o ~Terminal~, tal y como hemos ido viendo en prácticas anteriores.
+
+    Si lanzamos la ~Terminal~ desde el menú de Aplicaciones o utilizando el Atajo de teclado 
+    =<CTRL>+<ALT>+<T>=, la ventana que aparece es la siguiente:
+   
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/Practica-07-01.png]]
+
+
+    Aunque en un primer momento nos pueda parecer una "caja negra", esto es una de las herramientas
+    más útiles de las que dispone un Administrador de Sistemas.
+
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/powercli.png]]
+
+    El símbolo del ~$~ nos indica que estamos ejecutando la Terminal (~Shell~) con privilegios
+    de usuario.
+
+    Al igual que los programas de /Exploración de ficheros/, la Terminal tiene /abierto/ en cada 
+    momento una única /Carpeta/ que es lo que denominamos *Directorio de Trabajo* (/Working Directory/).
+
+    Eso significa que si ejecutamos un comando para la creación de un fichero o directorio 
+    desde la terminal, por poner un ejemplo sencillo, la ruta se *calculará* desde donde nos
+    encontremos.
+
+    Conocer como movernos por las carpetas de nuestro SO es algo muy importante, y que trabajaremos
+    a lo largo del curso en multitud de ocasiones.
+
+    Presento una pequeña tabla de comandos con su descripción que nos ayudarán a manejarnos con la 
+    línea de comandos:
+
+    | Comando | Función                             | Ejemplo  de Ejecución             |
+    |---------+-------------------------------------+-----------------------------------|
+    | =cd=    | Cambiar de directorio de trabajo    | =cd Escritorio/=                  |
+    | =mkdir= | Crear un nuevo directorio           | =mkdir directorio-de-prueba=      |
+    | =touch= | Crear o acceder a un fichero        | =touch "hola.txt"=                |
+    | =ls=    | Listar contenido de un directorio   | =ls=                              |
+    | =file=  | Muestra información de un fichero   | =file hola.txt=                   |
+    | =cp=    | Copia un fichero o directorio       | =cp hola.txt destino.txt=         |
+    | =mv=    | Mueve o renombra un fichero         | =mv destino.txt destinofinal.txt= |
+    | =rm=    | Borra un fichero o directorio       | =rm hola.txt=                     |
+    | =tree=  | Muestra la estructura del árbol     | =tree=                            |
+    | =pwd=   | Muestra el Working Directory actual | =pwd=                             |
+    
+\newpage
+    *ENTREGA*:
+
+    Ejecuta todos los comandos que aparecen en la tabla y comprueba que realizan la función indicada. Para cada uno 
+    de ellos realiza una pequeña captura donde aparezca que se ha ejecutado.
+    
+    Navegando por el sistema de archivos obtén las rutas a las siguientes carpetas, para cada una de ellas, adjunta una 
+    captura de pantalla del resultado:
+
+    | Nombre común de la carpeta   | Ruta Completa |
+    |------------------------------+---------------|
+    | Carpeta Personal             |               |
+    | Escritorio                   |               |
+    | Papelera de reciclaje        |               |
+
+
+\newpage
+
+** Ubicación de las Máquinas Virtuales  
+   
+   Durante la creación de las mismas, cada una de las máquinas (normalmente) se situa
+   en una carpeta dentro de nuestra *Carpeta personal*:
+
+   Por ejemplo, en el caso de una máquina creada con nombre =Xubuntu=, la ruta a la carpeta
+   que contiene los diferentes ficheros es:
+
+   =~/VirtualBox VMs/Xubuntu/=
+
+   Vamos a situar la Terminal en ese directorio o carpeta y vamos a ejecutar una serie de comandos 
+   que nos aportarán más información acerca de la máquina virtual.
+
+#+BEGIN_SRC shell
+   cd VirtualBox\ VMs/Xubuntu/
+#+END_SRC
+
+  /NOTA/
+  Habréis podido comprobar que acaba de aparece un carácter nuevo =\= en la dirección de la carpeta.
+  Esto es debido a que necesitamos /escapar/ el espacio para que la terminal no lo tome como una 
+  separación de argumentos.
+
+  Esto lo veremos más detenidamente en prácticas posteriores...
+
+  Si ejecutamos ahora:
+#+BEGIN_SRC shell
+ls -lah
+#+END_SRC
+
+  Debe aparecer algo similar a esto:
+
+  #+ATTR_LATEX: :width 12cm
+  [[./imgs/Practica-07-02.png]]
+  
+  *ENTREGA*
+
+  Ejecutad la orden en vuestra máquina, adaptándo la ruta de la Máquina Virtual a una que tengais instalada y 
+  describid que significan los argumentos : =-lah= que se le han indicado al comando =ls=. Es muy importante que 
+  separéis las diferentes funciones de los mismos.
+
+  Ejemplo:
+  
+  | Comando | Argumento | Ejemplo | Función                      |
+  |---------+-----------+---------+------------------------------|
+  | =ls=    | =-l=      | =ls -l= | Lista indicando permisos,... |
+  | =ls=    | =-a=      | =ls -a= | Muestra ficheros ocultos     |
+  | ...     |           |         |                              |
+
+
+\newpage
+** Ficheros y Descripción
+
+   Vamos a ver ahora algunos ficheros relativos a las máquinas virtuales, su función, así como diferentes
+   comandos que nos permitirán /extraer información/ y trabajar con estos ficheros.
+
+   Durante la descripción, siempre aparecerán los ficheros referentes a /mi máquina/, pero cada un@ debe 
+   adaptarlo a sus necesidades.
+
+*** Xubuntu.vbox   
+
+    El fichero =.vbox= es un fichero de tipo =XML= que contiene la información relativa a la Máquina Virtual,
+    que nosotros hemos configurado utilizando la /GUI/ (*aka.* /Graphical User Interface/).
+    
+    Si ejecutamos el comando:
+
+#+BEGIN_SRC shell
+cat Xubuntu.vbox
+#+END_SRC
+
+    En la terminal aparecerá el *contenido* del fichero. Se trata de un tipo de fichero bastante /Human Readable/, pero
+    recordad que ha sido diseñado para que sea interpretado y utilizado por los sistemas de virtualización.
+
+    Si le echamos un vistazo al contenido del fichero podemos extraer información /interesante/ =^_^=.
+
+      #+ATTR_LATEX: :width 12cm
+      [[./imgs/Practica-07-03.png]]
+  
+    La primera línea del fichero nos indica que se trata un fichero de tipo ~XML~. A lo largo de la vida de un informático,
+    nos encontraremos con este tipo de ficheros en más ocasiones de las que podáis imaginar.
+
+    Lo siguiente que nos aparece es una *ADVERTENCIA*, nos indica que *NO EDITEMOS ESTE FICHERO*.
+
+    *ENTREGA:*
+
+    Realizad una traducción de las tres líneas siguientes :
+    (desde =<!--= hasta =-->=).
+
+    $\hrule$
+    
+    Muchas veces nos veremos en la situación de que no queremos /leer/ 
+
+\newpage
