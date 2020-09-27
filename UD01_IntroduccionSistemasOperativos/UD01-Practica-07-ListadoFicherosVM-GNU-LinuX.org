@@ -1,4 +1,4 @@
-#+Title: Unidad 01 - Práctica 07 - Ficheros de las Máquinas Virtuales
+#+Title: Unidad 01 - Práctica 07 - Ficheros de las Máquinas Virtuales - GNU/LinuX
 #+Author: Angel Berlanas Vicente
 
 #+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
@@ -24,10 +24,12 @@
   tipos de fichero y que vayamos familiarizándonos/recordando con las rutas.
 
   /AVISO A NAVEGANTES/
+  
   A lo largo de la práctica se os va a pedir que vayáis ejecutando comandos y que obtengáis 
   determinada información. Abrir un documento de /LibreOffice/ e ir adjuntando capturas y 
   descripciones.
 
+  $\hrule$
 
 ** Repaso de Carpetas y Ficheros.  
 
@@ -43,7 +45,7 @@
 
     Estas carpetas son de utilización común por parte de l@s usuari@s, pero aunque existen
     algunas /especialmente conocidas/, vale la pena repasarlas. Para ello utilizaremos
-    la *Línea de comandos*, o ~Terminal~, tal y como hemos ido viendo en prácticas anteriores.
+    la *Línea de comandos*, ~Shell~ o ~Terminal~, tal y como hemos ido viendo en prácticas anteriores.
 
     Si lanzamos la ~Terminal~ desde el menú de Aplicaciones o utilizando el Atajo de teclado 
     =<CTRL>+<ALT>+<T>=, la ventana que aparece es la siguiente:
@@ -163,7 +165,8 @@ ls -lah
    Durante la descripción, siempre aparecerán los ficheros referentes a /mi máquina/, pero cada un@ debe 
    adaptarlo a sus necesidades.
 
-*** Xubuntu.vbox   
+\newpage
+*** Xubuntu.vbox: cat y grep
 
     El fichero =.vbox= es un fichero de tipo =XML= que contiene la información relativa a la Máquina Virtual,
     que nosotros hemos configurado utilizando la /GUI/ (*aka.* /Graphical User Interface/).
@@ -194,6 +197,118 @@ cat Xubuntu.vbox
 
     $\hrule$
     
-    Muchas veces nos veremos en la situación de que no queremos /leer/ 
+    Muchas veces nos veremos en la situación de que no queremos /leer/ toda la información, que contiene
+    un fichero, por ejemplo en este caso nos puede interesar tan solo obtener la cantidad
+    de ~RAM~ asignada a esta máquina virtual.
 
-\newpage
+    Si buscamos en el contenido del fichero, podemos ver que aparece descrito de esta manera:
+
+#+BEGIN_SRC xml
+    <Memory RAMSize="4096">
+#+END_SRC
+
+    Ahora que ya lo /sabemos/, podríamos /buscarlo/, es decir podríamos buscar en el contenido del fichero
+    aquellas líneas que contuvieran la palabra =RAMSize=.
+
+    Para ello contamos en GNU/LinuX con uno de los comandos más útiles para todos los administradores, =grep=.
+
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/regular_expressions.png]]
+    
+    \newpage
+    
+    Si ejecutamos =grep= pasándole como argumento /qué tiene que buscar/ como primer argumento y como segundo 
+    argumento /donde tiene que buscar/, nos mostrará las líneas del fichero que /concuerdan/ con la búsqueda.
+
+#+BEGIN_SRC shell
+    grep RAMSize Xubuntu.vbox
+#+END_SRC
+    
+    Nos debe devolver algo similar a esto:
+
+      #+ATTR_LATEX: :width 12cm
+      [[./imgs/Practica-07-04.png]]
+
+    *ENTREGA*
+    
+    Realizad la ejecución de este último comando en vuestra máquina, adjuntad la captura de pantalla de la
+    ejecución del mismo.
+    
+    \newpage
+
+*** Xubuntu.vdi y file
+
+    Al lado del fichero =Xubuntu.vbox= podemos encontrar el fichero =Xubuntu.vdi=. Este fichero especialmente
+    grande es el *Disco Duro* de la máquina virtual.
+
+    Para comprobar que /tipo/ de fichero es, podemos ejecutar el comando =file=, indicándole como primer argumento
+    la ruta fichero a comprobar:
+
+    #+BEGIN_SRC shell
+    file Xubuntu.vdi
+    #+END_SRC
+    
+    Aparecerá algo como esto:
+    #+ATTR_LATEX: :width 12cm
+    [[./imgs/Practica-07-05.png]]
+
+    *ENTREGA*
+    
+    Realizad la ejecución de este último comando en vuestra máquina, adjuntad la captura de pantalla de la
+    ejecución del mismo.
+    
+    \newpage
+
+*** Logs y tree
+
+    En la carpeta =Logs= podemos ver que hay varios ficheros que contienen un /registro/ de los diferentes
+    mensajes que ha ido notificando el VirtualBox cuando esta máquina se ha puesto en marcha.
+
+    Estos ficheros de /registro/ también conocidos como /logs/ deben de ser consultados por parte de los 
+    Administradores de Sistemas y los desarrolladores para comprobar que todo está marchando correctamente.
+
+    Muchas veces (muchas, en verdad), consultaremos este tipo de ficheros para comprobar cosas como:
+
+    - Cuando se apagó una máquina.
+    - A que hora se conectó un usuario a un servicio o máquina.
+    - Qué ocurrió justo antes de que una catástrofe ocurriera.
+    - ...
+
+    En prácticas posteriores veremos utilidades para la comprobación de estos ficheros de registro, pero por 
+    ahora (que ya vamos bien), vamos a mostrar la /estructura en árbol/ que contien estos ficheros.
+
+    Utilizando el comando =tree= desde la carpeta de la Máquina Virtual podemos ver que aparece algo similar a esto:
+
+    #+ATTR_LATEX: :width 12cm
+    [[./imgs/Practica-07-06.png]]
+
+    *ENTREGA* 
+
+    Realizad los mismos pasos y adjuntad la salida en vuestro ordenador.
+
+    \newpage
+
+** La práctica hace al maestr@.
+
+   #+ATTR_LATEX: :width 12cm
+    [[./imgs/practice.jpeg]]
+   
+
+   Utilizando los comandos descritos en la práctica realizad las siguientes tareas, para cada una de ellas, adjuntad
+   el comando o comandos ejecutados.
+
+   
+   1. Crea en tu carpeta personal una carpeta cuyo nombre sea tu primer apellido.
+   2. Cambia el directorio de trabajo a esa carpeta recién creada.
+   3. Crea un fichero que se llame =practica.txt=.
+   4. Crea una carpeta que se llame =CarpetaVerde=.
+   5. Crea una carpeta que se llame =CarpetaImportante=.
+   6. Crea una carpeta que se llame =CarpetaNoMenosImportante=.
+   7. Crea una carpeta dentro de =CarpetaVerde= que se llame =CarpetaMorada=.
+   8. Crea una carpeta dentro de =CarpetaMorada= que se llame =CarpetaNegra=.
+   9. Dentro de la =CarpetaImportante= crea un fichero llamado =miClaveDelTikTok.key=.
+   10. Utilizando un /editor/ (puede ser nano), escribe tu nombre en el fichero =practica.txt=.
+   11. Copia el fichero =practica.txt= a cada una de las carpetas que tienen un color en su nombre.
+   12. Copia el fichero de la máquina virtual (=*.vbox=) a la carpeta =CarpetaNoMenosImportante=.
+   13. Desde tu carpeta personal ejecuta el comando =tree PrimerApellido= y captura el resultado 
+       de la ejecución.
