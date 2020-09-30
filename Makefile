@@ -19,5 +19,6 @@ prog-didactica: files
 	@echo " [ Step : prog-didactica ]"
 	@echo " * [ PDF ] : Programacion Didactica ..."
 	@pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ProgramacionDidactica_SOM.pdf ProgramacionDidactica/PD_*.md 
+	@pandoc  -o $(PDF_PATH)/ProgramacionDidactica_SOM.odt ProgramacionDidactica/PD_*.md 
 	@echo " * [ PDF Result ] : $(PDF_PATH)/ProgramacionDidactica_SOM.pdf"
 	atril $(PDF_PATH)/ProgramacionDidactica_SOM.pdf
