@@ -1,0 +1,40 @@
+#+Title: Unidad 01 - Practica 10 : Ejemplos de Licencias Libres
+#+Author: Angel Berlanas Vicente
+#+STARTUP: nofold
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 01 - Introducción}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 12 [ CLIL ] : GOG
+
+  CD Projekt was founded by Marcin Iwiński and Michał Kiciński 
+  in 1994 for the purposes to trying to bring legitimate sales
+ of foreign game titles into Poland, knowing they would have no easy
+ way to compete against pirated copies. 
+
+They would obtain import rights from foreign publishers, 
+and where possible, provide in-game localization for text and voice lines, 
+typically through reverse engineering to decompile the game's code. 
+
+They would then package the game with localized instruction manuals and other physical goodies, 
+hoping that the added features would draw buyers away from pirated copies.
+
+Their first major success was with Baldur's Gate (1998) with which they had 18,000 units sold on its first day of release in Poland.
+Due to this success, Interplay, the publisher of Baldur's Gate, asked CD Projekt 
+if they could do a similar treatment to Baldur's Gate: Dark Alliance, a console title released in 2001. 
+
+As their past work had been strictly on personal computers, the company accepted to try to port it,
+ but the project fell through before it was completed. 
+However, as a result, CD Projekt realized they had the ability to make their own games, 
+and moved into games development. This eventually proved fruitful, as it ultimately landed the company with rights to 
+The Witcher video game series. The company's interest in game distribution has declined since then.
