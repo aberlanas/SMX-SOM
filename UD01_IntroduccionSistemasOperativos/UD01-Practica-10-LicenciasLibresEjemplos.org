@@ -1,0 +1,74 @@
+#+Title: Unidad 01 - Practica 10 : Ejemplos de Licencias Libres
+#+Author: Angel Berlanas Vicente
+#+STARTUP: nofold
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 01 - Introducción}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 10 : Ejemplos de Licencias Libres
+
+  Vamos a buscar aplicaciones que tengan licencias catalogadas como /libres/ 
+  (no confundir con *gratis*), que podamos instalar en nuestra casa y en varios
+  Sistemas Operativos.
+
+  En la primera parte de la práctica, buscaremos la licencia de determinados
+  programas, mientras que en la segunda buscaremos programas que tengan 
+  una determinada licencia.
+
+  
+** Licencias de Programas
+
+   
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+
+
+   Para cada uno de los programas listados a continuación, busca su licencia
+   en los menús o ficheros instalados del programa y adjunta una captura donde
+   se muestre la licencia.
+
+   Rellena de paso la siguiente tabla a medida que vayas buscando cada uno de los programas.
+
+   | Programa         | Licencia |
+   |------------------+----------|
+   | LibreOffice      |          |
+   | Mozilla Firefox  |          |
+   | Mousepad         |          |
+   | VideoLan         |          |
+   | Gimp             |          |
+   | Scite            |          |
+   | WireShark        |          |
+   | Chromium Browser |          |
+
+   En caso de que en vuestro ordenador no haya algún programa de la lista, busca alguna alternativa
+   que ya tengas instalad@ y describe la licencia. Intentad llegar a 8 programas, todos con las licencias
+   en la categoría de Libres que hemos visto en clase y en la teoría.
+
+** Programas con Licencias   
+
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+
+
+   Ahora el reto es diferente, se trata de buscar en Internet Software que instalarías en 
+   casa o en una pequeña empresa que tenga las siguientes licencias:
+
+   | Licencia               | Software |
+   |------------------------+----------|
+   | GPL                    |          |
+   | GPL v3                 |          |
+   | Mozilla Public License |          |
+   | BSD                    |          |
+
+   
