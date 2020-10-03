@@ -1,0 +1,111 @@
+#+Title: Unidad 01 - Practica 09 : Preguntas sobre el vídeo de licencias OEM.
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 01 - Introducción}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+
+* Tarea 09 : Preguntas sobre el vídeo de Licencias OEM
+
+  Una vez visto el vídeo que aparece en Teoría y que pongo también aquí:
+  
+  [[https://www.youtube.com/watch?v=KWFkkZS43go][Windows y Office - ¿Son legales las licencias de 10€?]]
+
+  Contesta /con tus palabras/ a las siguientes preguntas.
+
+** Pregunta 1  
+
+   ¿Cuanto vale Windows 10 Pro en la Web de Microsoft según el vídeo?
+
+** Pregunta 2
+
+   ¿Qué es una licencia RETAIL?
+
+** Pregunta 3
+
+   Según el vídeo , ¿qué diferencia hay inicialmente  entre las RETAIL y las OEM?, antes de realizar el 
+   análisis de las mismas.
+
+** Pregunta 4
+
+   ¿Qué comandos borran la clave establecida en un Windows 10?
+
+** Pregunta 5
+
+   ¿Cuál es el camino para ir a *Activar Windows*?
+
+** Pregunta 6
+
+   Si durante la instalación no hemos puesto la clave, ¿la podremos poner más tarde?
+
+** Pregunta 7
+  
+   ¿A qué se ligan las licencias RETAIL? ¿Podremos activar las licencias en varios equipos, si disponemos
+   una licencia RETAIL?
+
+** Pregunta 8
+   
+   ¿Las licencias RETAIL disponen de Soporte Técnico?
+
+** Pregunta 9
+
+   ¿Qué es una licencia de Volumen?¿Para qué la usan los cracks?¿Cómo funcionan los servidores /FAKE/?
+
+** Pregunta 10
+
+   ¿Qué 3 alternativas pueden ejecutar los cracks a partir de Windows 8.1?
+
+** Pregunta 11
+
+   ¿Cada cuanto tiempo se vuelve a comprobar la licencia?¿Qué sistema ejecutan los cracks?
+
+** Pregunta 12
+
+   ¿Qué peligros contienen los cracks? Enumera las amenazas que se explican en el vídeo.
+
+** Pregunta 13
+
+   ¿Es importante estar actualizado?¿Porqué?
+
+** Pregunta 14
+
+   ¿Cuál es el precio de una licencia OEM?¿Qué significan las siglas?
+
+** Pregunta 15
+
+   ¿Que diferencia principal hay entre una clave OEM y RETAIL?
+
+** Pregunta 16
+   
+   ¿Qué componente queda ligado a la licencia?
+
+** Pregunta 17 
+   
+   ¿Se puede trasferir la clave entre tus propios PCs? ¿Donde se indica si se puede o no?
+
+** Pregunta 18
+
+   ¿Se pueden actualizar entre diferentes versiones si adquirimos las licencias?
+
+** Pregunta 19
+
+   ¿Es legal que se active un Windows con una de las claves OEM? Describe la llamada telefónica
+   que se muestra en el vídeo.
+
+** Pregunta 20
+
+   ¿Cómo obtiene la tienda de claves de la que habla todo el rato en el vídeo, las claves que vende?.
+
+   
+
+
