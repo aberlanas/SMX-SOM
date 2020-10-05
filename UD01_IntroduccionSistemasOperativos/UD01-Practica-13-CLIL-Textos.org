@@ -14,9 +14,71 @@
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
+\newpage
+* Task CLIL
+
+  Choose one of these texts, read it carefully and answer the questions
+  that you will find at the end of each one.
+
+  You can choose more than one Text.
+
 * Mision WOW
 
+     
+   #+ATTR_LATEX: :width 13cm
+   [[./imgs/wow-quest.png]]
+
+** Questions 
+
+   1. What is the meaning of the next Words/Sentences?
+
+     + Seance
+     + Shattered
+     + Rewards
+     + Citadel
+     + Untrack
+     + Classic Quest Log
+
+   2. Make a really good translations (taking into account everything you know about the game) of the
+      paragraph: *DESCRIPTION*.
+ 
+
 * Mision FIFA
+
+   FIFA 20: Defensive Tactics
+   
+   Each formation has default settings across three key areas which you can 
+   amend to better suit your playing style. Defensive Style, Width and Depth 
+   can all be changed to help you alter the formation to make it suit your 
+   players and the way you intend to play FIFA 20.
+
+   There are five options for Defensive Style: Drop Back, Balanced, Pressure on Heavy Touch, 
+   Press After Possession Loss and Constant Pressure. 
+   
+   These are ordered by the levels of pressure your players put 
+   on the opponents when you do not have possession.
+
+   Drop Back attempts to keep your formation shape when you lose the 
+   ball and players will stick to their positions unless you manually 
+   control them to move them out of position. Constant Pressure is the exact 
+   opposite to this and has players harry the opposition to try to win the 
+   ball back at the earliest opportunity, with every player pressing including 
+   strikers and wingers. This can often move players out of position 
+   and causes players to tire more quickly.
+
+   Balanced is a mix of the two and is the default setting for every formation. 
+   Pressure on Heavy Touch puts the pressure on when there is a loose 
+   ball or when a player controls the ball poorly, while Press After 
+   Possession Loss will have all your players press for seven seconds 
+   after losing the ball before reverting to Balanced.
+
+   Defensive Width has three main options: Narrow, Normal and Wide, 
+   but is applied using a 1-10 scale. Narrow (1-3) keeps your players 
+   in the middle of the field, congesting the central areas but leaving 
+   space out wide. Normal (4-7) attempts to be balanced, maintaining 
+   the default shape of the formation, while Wide (8-10) covers the wings 
+   more and stop opponents exploiting wide areas.
+
 
 * Mision COD
 
