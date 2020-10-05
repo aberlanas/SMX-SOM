@@ -1,0 +1,29 @@
+#+Title: Unidad 01 - Practica 13 : Textos CLIL
+#+Author: Angel Berlanas Vicente
+#+STARTUP: nofold
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Practica 13 - Textos}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+* Mision WOW
+
+* Mision FIFA
+
+* Mision COD
+
+* Mision Rocket League
+
+* Fortnite
+
+* Historia del DOOM
+
+* Historia del GTA2
