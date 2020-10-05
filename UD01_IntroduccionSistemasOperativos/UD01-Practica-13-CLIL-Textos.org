@@ -20,14 +20,26 @@
   Choose one of these texts, read it carefully and answer the questions
   that you will find at the end of each one.
 
-  You can choose more than one Text.
+  You can choose more than one Text. 
 
+  | Number of texts | Maximum Mark |
+  |-----------------+--------------|
+  |               1 |            5 |
+  |               2 |            7 |
+  |               3 |            8 |
+  |               5 |            9 |
+  |               6 |          9,5 |
+  |               7 |           10 |
+ 
+
+\newpage
 * Mision WOW
 
      
    #+ATTR_LATEX: :width 13cm
    [[./imgs/wow-quest.png]]
 
+\newpage
 ** Questions 
 
    1. What is the meaning of the next Words/Sentences?
@@ -42,7 +54,7 @@
    2. Make a really good translations (taking into account everything you know about the game) of the
       paragraph: *DESCRIPTION*.
  
-
+\newpage
 * Mision FIFA
 
    FIFA 20: Defensive Tactics
@@ -58,7 +70,7 @@
    These are ordered by the levels of pressure your players put 
    on the opponents when you do not have possession.
 
-   Drop Back attempts to keep your formation shape when you lose the 
+   *Drop Back* attempts to keep your formation shape when you lose the 
    ball and players will stick to their positions unless you manually 
    control them to move them out of position. Constant Pressure is the exact 
    opposite to this and has players harry the opposition to try to win the 
@@ -78,6 +90,23 @@
    space out wide. Normal (4-7) attempts to be balanced, maintaining 
    the default shape of the formation, while Wide (8-10) covers the wings 
    more and stop opponents exploiting wide areas.
+
+   ...
+
+   \newpage
+
+   1. What is the meaning of the next Words/Sentences?
+
+     + Formation Shape
+     + Has players harry the Opossition
+     + Poorly
+     + You can amend
+     + Wide
+     + Narrow
+     + Wings
+     
+   2. Make a really good translations (taking into account everything you know about the game) of the
+      paragraph that starts with: *Drop Back ...*.
 
 
 * Mision COD
