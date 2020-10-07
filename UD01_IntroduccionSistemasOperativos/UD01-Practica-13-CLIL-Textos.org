@@ -27,12 +27,10 @@
   |               1 |            5 |
   |               2 |            7 |
   |               3 |            8 |
-  |               5 |            9 |
-  |               6 |          9,5 |
-  |               7 |           10 |
+  |               4 |           10 |
  
 
-\newpage
+  \newpage
 * Mision WOW
 
      
@@ -40,7 +38,7 @@
    [[./imgs/wow-quest.png]]
 
 \newpage
-** Questions 
+** Questions WoW 
 
    1. What is the meaning of the next Words/Sentences?
 
@@ -94,6 +92,7 @@
    ...
 
    \newpage
+** Questions FIFA
 
    1. What is the meaning of the next Words/Sentences?
 
@@ -105,16 +104,103 @@
      + Narrow
      + Wings
      
-   2. Make a really good translations (taking into account everything you know about the game) of the
+   2. Make a really good translation (taking into account everything you know about the game) of the
       paragraph that starts with: *Drop Back ...*.
 
+   \newpage
 
 * Mision COD
 
-* Mision Rocket League
+  Zombies
 
+  A zombie cooperation mode, titled "Zombies", is included in the game. Originally featured in World at War, 
+  it was revamped to be included in Black Ops. It is a four-player online and two-player split screen co-op mode (which can also be unlocked online).
+
+  *"Five"*
+
+  "Five" takes place in The Pentagon during a chain of events that differ from the storyline of the campaign mode.
+  The playable characters, John F. Kennedy, Richard Nixon, Robert McNamara, and Fidel Castro are interrupted from negotiations 
+  by an outbreak of zombies. "Five" has many hidden secrets, from an 'Easter Egg' song, which Treyarch's Zombies are famous for 
+  (in the case of "Five", the Easter Egg song is 'Won't Back Down' by Eminem and featuring P!nk). 
+  There are also hints of connections between "Five" and the first DLC zombies map in the Black Ops season pass, Ascension through hidden radios throughout the map.
+
+  *Kino Der Toten*
+
+  Kino Der Toten takes place in an abandoned Group 935 facility located within a theater in Berlin, 
+  and takes place in 1965. The words "Kino Der Toten" mean "Cinema of the Dead" in German, 
+  though the in-game character, Edward Richtofen, translates it as "Theater of the Damned" 
+  in the loading screen pre-game. 
+  The map features a single teleporter pad, as well as several hidden references to other maps, 
+  both past and future. By activating various meteor pieces throughout the map, 
+  players can hear an Easter Egg song, "115" written by Kevin Sherwood, and sung by Elena Seigman,
+  who is the lead singer in many of Treyarch Sound's songs. 
+  The playable characters in this map return from the World at War Zombies mode. 
+  Edward Richtofen, a mad German scientist from the World War Two era, Takeo Masaki, 
+  the last of the Japanese Samurai, Nikolai Belinski, a WWII era Soviet soldier, and Tank Dempsey, 
+  a Marine from the United States are teleported to Kino Der Toten from the last map of World at War, Der Riese. 
+
+
+   \newpage
+
+** Questions Call Of Duty
+   1. What is the meaning of the next Words/Sentences?
+
+     + Hidden
+     + pad
+     + Damned
+     + Easter Egg
+     + Split screen
+     + Loading
+     + chain of events
+     + outbreak of zombies
+     
+   2. Make a really good translation (taking into account everything you know about the game) of the
+      paragraph that starts with: *"Five" ...*.
+
+
+\newpage
 * Fortnite
 
-* Historia del DOOM
+  Phases
+  *Pre-Game phase*
 
-* Historia del GTA2
+  Players start in the "Pre-Game Phase", where they're put on the Spawn 
+  Island that acts as the lobby while they wait. Players can openly roam 
+  the island and pick up and test fire weapons. Matches won't begin until 
+  the lobby is near full, and once there, the Battle Bus starts its engines and honks. 
+  A 10-second countdown timer then begins, after which all players are loaded 
+  onto the Battle Bus and it takes off to the game map. Players are now in the "Bus Phase".
+
+  *Bus Phase*
+
+  The Battle Bus chooses a random trajectory across the world map, flying 
+  at a steady speed in a straight line until it fully crosses the mainland. 
+  There's a 5-second countdown shortly after takeoff, and once the timer expires, 
+  players enter the "Drop Phase". 
+
+  *Drop Phase*
+
+  During this phase, players choose when to exit the bus to skydive/glide to the ground; 
+  players who remain on the bus when it reaches its destination are forced off. 
+  The Battle Bus departs from the island. Once the Drop Phase begins, 
+  a 35-second countdown timer (depends on the length of route), after which the Storm warning sounds. 
+  Players enter a 1-minute grace period before the Storm begins to form. Once the time is up, 
+  a white circle appears on the map, showing players where the storm eye will stop shrinking first. 
+  Players can see the storm beginning to form around the outside of the map. 
+
+\newpage
+** Questions Fortnite
+   1. What is the meaning of the next Words/Sentences?
+
+     + Countdown
+     + takeoff
+     + random
+     + shrinking
+     + lobby
+     + engines
+     + honks
+     
+   2. Make a really good translation (taking into account everything you know about the game) of the
+      paragraph that starts with: *Drop Phase...*.
+
+
