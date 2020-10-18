@@ -9,6 +9,9 @@ clean:
 	@echo " * Clean workspace "
 	rm UD01_IntroduccionSistemasOperativos/*.tex
 	rm UD01_IntroduccionSistemasOperativos/*.pdf
+	rm UD02_PowerShell-BASH/*.tex
+	rm UD02_PowerShell-BASH/*.pdf
+
 
 files:
 	@echo " [ Step : files ]"
