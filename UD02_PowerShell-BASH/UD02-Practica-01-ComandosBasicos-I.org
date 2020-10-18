@@ -180,9 +180,10 @@ Algunas características que merece la pena conocer de bash son:
     #+ATTR_LATEX: :width 13cm
     [[./imgs/ls-ejemplo.png]]
 
+\newpage
 **** Tarea 01
 
-     Con lo explicado en clase (o buscando en internet describe qué nos indica cada columna).
+     Con lo explicado en clase (o buscando en internet) describe qué nos indica cada columna.
      (omite la línea de /total 52/).
 
      
@@ -221,6 +222,135 @@ Algunas características que merece la pena conocer de bash son:
      Adjunta una captura de pantalla de la ejecución del comando ~ls -R ~/Tarea03/~, donde
      debería de mostrarse todas las carpetas creadas.
 
-*** Comando      
+*** Comando rm 
+
+    El comando ~rm~ (ReMove) borra los ficheros y directorios que se le pasan como argumentos.
     
+    A ser un comando que puede provocar (y provoca) pérdidas importantes de información, es uno 
+    de los que más cuidado tenemos que tener cuando lo estemos utilizando.
+
+    /Un gran poder conlleva una gran responsabilidad/
+
+    Este comando merece todo un ejercicio (o al menos algo de tiempo dedicado a él).
+
+
+    Vamos a ir realizando pequeños pasos y vamos probando (siempre en nuestra máquina virtual ^_^).
+
+    En cada uno de los apartados que veremos a continuación hay siempre un pequeño/s comandos que 
+    preparan el "entorno de pruebas", que es donde luego ejecutaremos el comando ~rm~ para que vayáis 
+    viendo como funciona.
+
+    Ejemplo:
+
+    
+    #+BEGIN_SRC shell
+    # TEST00
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test00/ThisIsATest
+    
+    # Execution
+    rm /tmp/test00
+    #+END_SRC
+    
+    Este patrón se repetirá en todos los ejemplos, vosotr@s deberéis de ejecutar el apartado de la 
+    preparación de entorno y luego la ejecución, así como describir qué está haciendo el comando ~rm~.
+    Algunas de las ejecuciones tendrán /exito/ y otras no. No pasa, nada debéis ejecutarlo y entender
+    /qué es lo que hacéis/ y qué está fallando y anotarlo tras cada apartado.
+    
+    *PISTA:* Podeis utilizar el manual de ~rm~ (man ~rm~).
+
+    Ejemplo de entrega tras la ejecución del ejemplo (valga la redundancia).
+
+    /La ejecución del comando ~rm /tmp/test00~ falla, debido a que és un directorio/
+    /y ~rm~ por defecto solo borra ficheros, a menos que se le indique con un argumento/.
+
+    Realizad los apartados siguientes.
+    \newpage    
+**** Tarea 04
+
+    #+BEGIN_SRC shell
+    # TEST01
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test01/This
+    touch /tmp/test01/isATest
+    
+    # Execution
+    rm /tmp/test01/*
+    #+END_SRC
+    
+    $\hrule$
+
+    #+BEGIN_SRC shell
+    # TEST02
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test02/ThisIsA
+    touch /tmp/test02/Test
+    
+    # Execution
+    rm /tmp/test02/T*
+    #+END_SRC
   
+    \newpage
+
+    #+BEGIN_SRC shell
+    # TEST03
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test03/ThisIsATest/And/this/and/This/
+    
+    # Execution
+    rm -r /tmp/test03
+    #+END_SRC
+
+    $\hrule$
+
+    #+BEGIN_SRC shell
+    # TEST04
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test04/
+    touch /tmp/test04/example1.txt
+    touch /tmp/test04/example2.txt
+    touch /tmp/test04/example3.txt
+    touch /tmp/test04/example4.txt
+    
+    # Execution
+    rm -i /tmp/test04/*
+    #+END_SRC
+
+    \newpage
+
+    #+BEGIN_SRC shell
+    # TEST05
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test05/
+    touch /tmp/test05/example1.txt
+    touch /tmp/test05/example2.txt
+    touch /tmp/test05/example3.txt
+    touch /tmp/test05/example4.txt
+    
+    # Execution
+    rm -I /tmp/test05/*
+    #+END_SRC
+
+    $\hrule$
+
+    #+BEGIN_SRC shell
+    # TEST06
+    # Building an Awesome Workspace ^_^
+    mkdir -p /tmp/test06/
+    touch /tmp/test06/example1.txt
+    touch /tmp/test06/example2.txt
+    touch /tmp/test06/example3.txt
+    touch /tmp/test06/example4.txt
+    
+    # Execution
+    rm -vi /tmp/test06/*
+    #+END_SRC
+
+\newpage
+*** Comandos clear & history
+
+**** Tarea 05    
+
+     Utilizando las páginas de manual (~man clear~ y ~man history~). Traducid al castellano la /"Description"/ de ambos comandos.
+
+

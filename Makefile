@@ -7,10 +7,10 @@ PDF_PATH:=$(shell readlink -f PDFS)
 
 clean:
 	@echo " * Clean workspace "
-	rm UD01_IntroduccionSistemasOperativos/*.tex
-	rm UD01_IntroduccionSistemasOperativos/*.pdf
-	rm UD02_PowerShell-BASH/*.tex
-	rm UD02_PowerShell-BASH/*.pdf
+	rm -f UD01_IntroduccionSistemasOperativos/*.tex
+	rm -f UD01_IntroduccionSistemasOperativos/*.pdf
+	rm -f UD02_PowerShell-BASH/*.tex
+	rm -f UD02_PowerShell-BASH/*.pdf
 
 
 files:
