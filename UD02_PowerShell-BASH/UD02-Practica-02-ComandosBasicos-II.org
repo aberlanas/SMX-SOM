@@ -1,0 +1,122 @@
+#+Title: Unidad 02 - Comandos Básicos II
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Practica : Comandos Básicos
+
+  En esta práctica vamos a realizar una serie de ejercicios para ir comprobando
+  cómo funciona las líneas de comandos. En un primer momento comenzaremos con la
+  línea de comandos de GNU/LinuX y luego veremos la de Windows (PowerShell).
+
+* Obteniendo información del sistema
+  
+  A continuación vamos a ver una serie de comandos que nos servirán para conocer rápidamente 
+  el estado de un Sistema Operativo y de un equipo. De esta manera podremos realizar un diágnostico 
+  y poder detectar lo que pudiera estar pasando en el equipo.
+
+** Comando free
+
+   ~free~
+
+   Muestra la cantidad de RAM que hay instalada, así como la usada actualmente.
+
+** Comando df  
+
+   ~df~
+
+   Muestra información acerca de los diferentes discos duros y particiones que hay en el equipo.
+
+** Comando cat
+
+   ~cat~ 
+
+   Uno de los más famosos y más utilizados comandos de todos los tiempos. Nos muestra por la terminal
+   o /salida estándar/ el contenido del fichero que se le indique. Esto es muy potente en realidad.
+
+   En el fichero 
+   
+   ~/proc/cpuinfo~ 
+   
+   podemos encontrar toda la información relativa al MicroProcesador. Si ejecutamos:
+
+   ~cat /proc/cpuinfo~ 
+
+   Nos aparecerá toda la información de nuestra CPU.
+
+** Comando ps 
+
+   ~ps~
+
+   Muestra los procesos en ejecución (Administrador de tareas).
+
+** Comando top
+
+   ~top~
+
+   Muestra de forma interactiva los diferentes procesos y estadísticas útiles para los administradores
+   de sistemas.
+
+** Comando ip
+
+   ~ip~
+
+   Muestra información acerca de la conectividad.
+
+** Comando host
+
+   ~host~
+   
+   Resuelve las peticiones de /Resolución de Nombres/
+
+** Comando ping 
+
+   ~ping~ 
+
+   Comprueba la conectividad del anfitrión con el host indicado.
+
+** Comando route
+   
+   ~route~
+
+   Muestra la tabla de rutas de nuestro equipo para acceder a las diferentes redes.
+
+** Comando who
+
+   ~who~
+
+   Muestra los usuarios logados en el equipo en ese momento.
+
+\newpage
+** Tarea OBS : Quiero ser un buen YouTuber.
+
+   Graba un vídeo de unos /2 minutos/ en el que expliques cómo se usa y para que sirve uno de los comandos explicados anteriormente en clase.
+
+   Para ello prepara los siguientes puntos:
+
+   - Elige el comando que vas a explicar.
+   - Documéntate sobre el comando (alguna anécdota sobre su autor, lo que se te ocurra).
+   - Busca dos o tres ejemplos que puedan ser del interés del espectador, piensa que se lo estás explicando
+     a algún compañero de clase para un exámen.
+   - Escribe un guión.
+   - Graba el vídeo, sin vergüenza.
+   - Editalo, introduciendo un título.
+   - Súbelo a Aules.
+
+** Tarea OBS 2 : I want to be a successful YouTuber (English)
+
+   Graba un vídeo en el que expliques en *Inglés* cómo se usa y para que sirve uno de los comandos explicados anteriormente en clase, 
+   diferente al elegido anteriormente.
+
+   Sigue los pasos descritos anteriormente.
