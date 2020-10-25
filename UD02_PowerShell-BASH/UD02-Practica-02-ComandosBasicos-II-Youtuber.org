@@ -99,7 +99,8 @@
    Muestra los usuarios logados en el equipo en ese momento.
 
 \newpage
-** Tarea OBS : Quiero ser un buen YouTuber.
+
+* Tarea OBS : Quiero ser un buen YouTuber.
 
    Graba un vídeo de unos /2 minutos/ en el que expliques cómo se usa y para que sirve uno de los comandos explicados anteriormente en clase.
 
@@ -114,9 +115,13 @@
    - Editalo, introduciendo un título.
    - Súbelo a Aules.
 
-** Tarea OBS 2 : I want to be a successful YouTuber (English)
+* Tarea OBS 2 : I want to be a successful YouTuber (English)
 
-   Graba un vídeo en el que expliques en *Inglés* cómo se usa y para que sirve uno de los comandos explicados anteriormente en clase, 
-   diferente al elegido anteriormente.
+  Graba un vídeo en el que expliques en *Inglés* cómo se usa y para que sirve uno de los comandos explicados anteriormente en clase, 
+  diferente al elegido anteriormente.
 
-   Sigue los pasos descritos anteriormente.
+  Sigue los pasos descritos anteriormente. Presenta el Guión (en Inglés) y el vídeo en Aules.
+
+* Software Útil
+
+  - Open Broadcaster Software
