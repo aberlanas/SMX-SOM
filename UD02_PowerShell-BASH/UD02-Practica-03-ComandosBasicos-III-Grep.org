@@ -1,0 +1,51 @@
+#+Title: Unidad 02 - Comandos Básicos III
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/cthulhu.png}
+
+\newpage
+* Practica : Comandos Básicos
+
+  En esta práctica vamos a realizar una serie de ejercicios para ir comprobando
+  cómo funciona las líneas de comandos. En un primer momento comenzaremos con la
+  línea de comandos de GNU/LinuX y luego veremos la de Windows (PowerShell).
+
+* Usando Grep
+
+  Con lo explicado en clase y estos pequeños apuntes que adjuntamos, entregar un documento *pdf* con 
+  los comandos necesarios para resolver cada uno de los puntos que se plantean sobre ~TheCallOfCthulhu.txt~.
+
+  Entregar los comandos que resuelven los siguientes puntos de la Llamada de Cthulhu. 
+  
+  #+BEGIN_SRC shell
+  $ cat TheCallOfCthulhu.txt | grep 
+  #+END_SRC
+
+  ¿Qué lineas hacen "matching con las siguientes cuestiones?
+
+  + Comienzan por "T" y acaban en "n".
+  + Contienen a "Jhon"
+  + Contienen a "Cthulhu" pero no empiezan por él.
+  + Contienen a "would" y acaba en consolante.
+  + Comienza por vocal y acaba en vocal.
+  + Comienza por A o por T.
+  + Comienza por N o M y acaba en Vocal.
+  + Contienen la palabra "Cult", en minúscula o mayúscula.
+  + Contienen una palabra entre comillas.
+  + Contienen una palabra con admiración, pero no acaba en ella.
+  + Contienen 2 palabras con "-".
+  + Contiene la palabra R’lyeh.
+  + Contiene la palabra Cthulhu *y* R’lyeh.
+  + Contiene la palabra Cthulhu *o* R’lyeh.
+
+
