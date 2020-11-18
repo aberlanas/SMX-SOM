@@ -1,0 +1,176 @@
+#+Title: Unidad 02 - Scripting Básico - I
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Practica : Scripting Básico
+
+  Los Scripts (o /guiones/ ) pequeños o no tan pequeños ficheros que contienen
+  una secuencia de órdenes que será ejecutada por parte del Sistema Operativo.
+
+  Esas órdenes contendrán una serie de instrucciones y comprobaciones que nos 
+  permitirán resolver un determinado problema.
+
+  Existen multitud de lenguajes de Scripting (maneras diferentes de programar
+  acciones que serán realizadas por los ordenadores). Para much@s de vosotr@s 
+  esta es la primera vez que veis ~como funcionan los programas~. Soy consciente
+  de la dificultad que tiene esto, pero estoy seguro de que si le dedicais 
+  1 hora cada dia, podréis enfrentaros a esto sin problema.
+
+  Vamos a comenzar repasando lo que hemos visto ya en clase, pero que puede ser 
+  interesante recordarlo.
+
+** Editor
+
+  Para crear un Script, ya sea en Windows o en GNU/LinuX debéis editar un fichero
+  de texto sencillo, no usar un Editor ~WYSIWYG~. Algunos de los editores más famosos
+  son:
+
+  * notepad.exe (Windows)
+  * nano
+  * vim   (FAN : ^_^)
+  * emacs (FAN : ^_^)
+  * mousepad (El de XFCE)
+  * kate     (El de KDE)
+  * gedit    (El de GNOME)
+  * vscode   
+
+  Yo os recomiendo por ahora usar uno básico en GNU/LinuX: ~nano~. En Windows
+  ya veremos más adelante cual usamos.
+
+  Perfecto...ya tenemos el Editor, ahora...al lio.
+
+  Durante el resto de la práctica asumiré que estamos usando ~nano~.
+
+** Creando el Script
+
+   Para crearlo bastará con que guardemos un fichero de texto con las instrucciones necesarias
+   en una ruta conocida por nosotros. Por ejemplo:
+
+
+   #+BEGIN_SRC shell
+   
+   $ cd $HOME
+   $ nano miPrimerScript.sh
+   
+   #+END_SRC
+
+   Nos situará en nuestra carpeta personal (indicada por la /variable de entorno/ ~$HOME~)  y 
+   en la segunda orden abriremos un fichero que se llamará ~miPrimerScript.sh~. Ya podemos ir 
+   haciéndonos a la idea de que cuando /guardemos/ el fichero se encontrará en ~/home/USUARIO/miPrimerScript.sh~.
+
+   Una vez se nos abra el ~nano~, lo que debemos hacer es escribir las órdenes necesarias para
+   la resolución del Script, pero indicando además /qué intérprete/ deberá ejecutar el Script, por ahora
+   y durante este primer curso, casi siempre que estemos en /GNU/LinuX/ usaremos:
+
+   #+BEGIN_SRC shell
+   #!/bin/bash
+   #+END_SRC
+
+   
+   La última línea del Script es conveniente que sea ~exit 0~ para indicar a los siguientes comandos 
+   que el Script que se ha ejecutado ha terminado de manera correcta.
+
+   PD: Si alguien tiene curiosidad sobre esto, por favor preguntadme más.
+
+   En este ejemplo vamos a Saludar a todo el mundo que nos ejecute, realizando el más famoso
+   programa de todos los tiempos: el "Hello World!".
+
+   [[https://en.wikipedia.org/wiki/%2522Hello,_World!%2522_program][{ Wikipedia } : Hello World!]]
+
+   
+   Para ello nuestro script quedará de la siguiente manera:
+
+   #+BEGIN_SRC shell
+   #!/bin/bash
+
+   echo " Hello World! "
+
+   exit 0
+
+   #+END_SRC
+
+   Guardaremos el fichero y a continuación le daremos permisos de ejecución (esto lo veremos con mayor profundidad
+   en sucesivas Unidades).
+
+   #+BEGIN_SRC shell
+
+   $ chmod +x miPrimerScript.sh
+
+   #+END_SRC
+
+
+   Y una vez echo esto podemos ejecutarlo como un programa, para ello bastará con que 
+   lo invoquemos indicando toda su ruta al terminal, o en su defecto desde donde nos encontramos:
+
+   #+BEGIN_SRC shell
+
+   $ ./miPrimerScript.sh
+
+   #+END_SRC
+
+
+\newpage   
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-TutorialScripts.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~tutorial-mision-01.sh~
+  * ~tutorial-mision-02.sh~
+  * ...
+
+  Debéis probar /todos/ los Scripts que hagáis. 
+
+
+** Misión 01    
+
+   Crea un script que nos indique si el fichero ~/tmp/token.1.txt~ existe, en caso de que 
+   no exista, que lo cree.
+
+   Comandos relacionados : ~test~, ~touch~ .
+
+** Misión 02
+
+   Crea un script que nos indique si el directorio ~/var/run~ existe y es un directorio, en caso 
+   de que no exista, debe mostrar el mensaje : "No se que hacer con mi vida".
+
+** Misión 03
+
+   Crea un script que cuente el número de veces que aparece la palabra ~sda~ en el último arranque
+   de la máquina, en caso de que sea mayor que *7* que muestre un mensaje indicando que se ha superado
+   el número 7. En caso contrario nos indicará que han sido menos de las necesarias.
+
+   Comandos relacionados : ~dmesg~, ~grep~, ~wc~.
+
+** Misión 04
+
+   Crea un script que cuente el número de veces que aparece la palabra ~sda~ en el último arranque
+   de la máquina. Si el número es par (^_^) debe mostrar un mensaje similar a este: 
+   " El número par es ~NUMERO_DE_VECES~ ".
+   En caso contrario (impar), debe decir: " En la imparidad esta la sabiduria ".
+
+** Misión 05
+
+   Crea un script que al ejecutarse muestre por pantalla *tan solo* la IPs en su versión 4 de /todas/ las tarjetas de red
+   que tiene el equipo. 
+   
+   Comandos relacionados : ~ip~, ~grep~ , ~cut~
+
+
+
+   
