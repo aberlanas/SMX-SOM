@@ -1,0 +1,99 @@
+#+Title: Unidad 02 - Scripting Básico - II
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Practica : Scripting Básico II
+  
+  Vamos a plantear una serie de ejercicios adicionales para que 
+  sirvan de práctica cara al examen que tendrá lugar la semana que viene.
+
+  La parte de creación del Script está omitida, pero siempre podréis ir 
+  a la practica del tutorial para comprobar cómo funciona.
+  
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-Sputnik-Scripts.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~sputnik-mision-01.sh~
+  * ~sputnik-mision-02.sh~
+  * ...
+
+  Debéis probar /todos/ los Scripts que hagáis. 
+
+
+** Misión 01    
+
+   Crea un script que nos indique si el fichero ~/tmp/kazajistan/tyuratam/baikonur/sputnik.txt~ existe, en caso de que
+   exista debe mostrar el mensaje: " ~Preparado para el lanzamiento~ " en caso de que no exista, que lo cree en esa ruta.
+
+** Misión 02
+
+   Crea un script que cuente el número de líneas que tiene el fichero ~/var/log/syslog~.
+
+** Misión 03
+
+   Crea un script que primero muestre las líneas que contienen la palabra "~scsi~" en el último 
+   arranque. A continuación:
+
+   Si el número de veces es menor que 10 deberá mostrar el mensaje:
+   -~No llegamos a 10~.
+   Si es exactamente 10 mostrará:
+   -~Un diez~.
+   Si es más de 10 mostrará:
+   -~Nos hemos pasado~.
+
+** Misión 04
+
+   Desde el punto de control de /Baikonur/ se han dado cuenta de que necesitan 
+   con urgencia obtener los datos siguientes:
+   
+   - Hora actual.
+   - Uptime de la máquina.
+   - Cantidad Libre de memória RAM.
+   - Cantidad Libre de espacio en el Disco Duro.
+   - IP (versión 4) de la máquina (no 127.0.0.1).
+
+   Realizad un script que muestre estos datos indicando para cada uno de ellos un título
+   que indique lo que se va a mostrar a continuación:
+
+   Ejemplo:
+
+   #+BEGIN_SRC
+   $./sputnik-mision-04.sh
+
+   === HORA ===
+   sáb 21 nov 2020 12:31:09 CET
+   
+   === UPTIME ===
+   ...
+   #+END_SRC
+
+
+** Misión 05
+
+   Crea un script que cuente :
+
+   - El número de directorios que hay en vuestra carpeta personal (1º nivel).
+   - El número de ficheros que hay en vuestra carpeta "Descargas" (1º nivel.
+   - El número de ficheros y directorios que hay ocultos en vuestra carpeta personal (1º nivel).
+
+   Al igual que en la misión anterior, debe aparecer un título antes de cada apartado. 
+
+
+   
