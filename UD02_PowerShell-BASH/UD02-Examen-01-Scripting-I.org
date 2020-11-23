@@ -1,0 +1,170 @@
+#+Title: Soviet Team - Examen Scripting - Soyuz 1
+#+Author: Angelov Berlaneskon Vikenlinova
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Examen}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Grupo B}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/soyuz.png}
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/soyuz.png]]
+
+\newpage
+* Examen
+
+  Habéis sido seleccionados para participar en el programa "Soyuz-Apolo". 
+  El Grupo B seréis los Soviéticos.
+
+  Para comprobar que sois personas aptas para recibir el dinero proveniente del Plan Quinquenal,
+  (/Pjatiletnije plany razvitiya narodnogo khozyaystva SSSR/),  deberéis resolver 
+  con éxito los retos que el equipo de IT está teniendo actualmente. Para ello buscan a gente altamente
+  preparada en Sistemas	Operativos. En concreto GNU/LinuX, Sistema Operativo Comunista.
+
+
+  La parte de creación del Script está omitida, pero siempre podréis ir 
+  a la practica del tutorial para comprobar cómo funciona.
+
+  Disponéis de *90* minutos para la realización de la prueba.
+
+  Algunos consejos interesantes:
+
+  - Lee *todo* el examen antes de empezar.
+  - Los *Scripts* son independientes.
+  - Puedes utilizar Internet y las prácticas que has presentado.
+  - No está permitido hablar con otros compañer@s durante la realización del examen.
+  - Rusia es enorme.
+
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-Examen.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~examen-mision-01.sh~
+  * ~examen-mision-02.sh~
+  * ...
+
+  Debéis probar /todos/ los Scripts que hagáis. 
+
+\newpage
+** Misión 01
+   
+   Para asegurar el lanzamiento necesitaremos contar con que ciertos ficheros del Sistema
+   Operativo están donde deben estar (y además són lo que deben ser).
+
+   El Script debe mostrar un mensaje indicando que va a comprobar una serie de rutas y ficheros.
+   Para cada uno de ellos debe indicar qué está comprobando. Los mensajes os los indico a continuación.
+
+   Deberá comprobar en primer lugar si es un directorio. Si no lo és, debe comprobar si el fichero 
+   existe y es ejecutable. En caso de que no exista o sea un fichero no ejecutable, debe indicar un error:
+
+   #+BEGIN_SRC shell
+   MSG_DIRECTORIO=" * Es un directorio "
+   MSG_FICHERO_EJECUTABLE=" * Es un fichero Ejecutable "
+   MSG_NO_EXISTE=" ** NO HAY VIDA INTELIGENTE **" 
+   #+END_SRC
+   
+   Rutas a comprobar:
+
+   | Rutas  |
+   |--------|
+   | ~/home/~ |
+   | ~/etc/hostname~ |
+   | ~/usr/bin/nano~ |
+   | ~/bin/man~ |
+   | ~/bar/run/~  |
+   
+   Ejemplo de ejecución del Script:
+   
+   #+BEGIN_SRC
+   $./examen-mision-01.sh
+    * Comprobando : /home/
+    * Es un directorio 
+    * Comprobando : /etc/hostanme
+    * Es un fichero Ejecutable
+   #+END_SRC
+
+** Misión 02
+
+   Durante el último arranque se ha detectado un problema con el subsistema ~usb~. Debe de ser una maniobra
+   de los Chinos. Vamos a averiguar /qué está pasando aquí/.
+   
+   Realiza un Script que cuente el número de líneas que contienen la palabra ~usb~ (mayúsculas, minúsculas,...).
+   En ese mismo Script, debe además mostrar los diferentes /Fabricantes/ de los dispositivos 
+   *USB* que se han detectado. 
+   
+** Misión 03
+
+   Crea un script que primero muestre las líneas que contienen la palabra "~ata~" en el último 
+   arranque. A continuación:
+
+   - Si el número de veces es menor que 3 deberá mostrar el mensaje:
+     - ~No llegamos a 3~.
+   - Si es exactamente 3 mostrará:
+     - ~La fuerza de la U.R.S.S.~.
+   - Si es más de 3 mostrará:
+     - ~Nos hemos pasado~.
+
+** Misión 04
+
+   Desde el punto de control de /Baikonur/ se han dado cuenta de que necesitan 
+   con urgencia obtener los datos siguientes:
+   
+   - Dia de hoy, en formato: " DiaDelMes, DiaDeLaSemana".
+   - Nombre de la máquina.
+   - Cantidad Usada de memória RAM.
+   - Cantidad Usada de espacio en el Disco Duro.
+   - IP (versión 6) de la máquina (no ::1).
+
+   Realizad un script que muestre estos datos indicando para cada uno de ellos un título
+   que indique lo que se va a mostrar a continuación:
+
+   Ejemplo:
+
+   #+BEGIN_SRC
+   $./examen-mision-04.sh
+
+   === DIA ===
+   23, lun
+   
+   === HOSTNAME ===
+   moria
+
+   === RAM USADA ===
+   6779
+
+   === DISCO USADO ===
+   165G 
+
+   === IP v6 ===
+   fe80::e300:5666:ff0a:77b3/64
+
+   ...
+   #+END_SRC
+
+   
+** Misión 05
+
+   Crea un script que muestre :
+
+   - Ordenado por fecha de modificación :
+     - El contenido de vuestra carpeta personal (1º nivel).
+   - Ordenado por tamaño:
+     - El contenido de la carpeta ~Descargas~ (1º nivel).
+   - Ordenador de manera /contra-alfabética de extensión/:
+     - El contenido de la carpeta ~Descargas~ (1º nivel).
+
+   Al igual que en la misión anterior, debe aparecer un título antes de cada apartado. 
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/soyuz.png]]
+   
+
+   
