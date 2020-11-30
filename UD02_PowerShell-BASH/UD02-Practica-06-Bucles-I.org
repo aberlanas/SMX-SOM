@@ -1,0 +1,122 @@
+#+Title: Unidad 02 - Scripting  - Bucles - I
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+* Scripting - Bucles
+  
+  Los bucles que veremos en Shell Script son dos de los más famosos.
+  
+  El /bucle/ en programación es una estructura que nos permite *repetir* unas 
+  instrucciones un número determinado de veces. Dependiendo del problema será
+  más interesante el uso de uno u otro. Pero esto nos lo dará la experiencia, 
+  así que vamos a repasar un momento y nos ponemos al lio.
+
+** Bucle for  
+
+   El bucle ~for~ tiene la siguiente estructura:
+
+   #+BEGIN_SRC shell
+   for i in 1 2 3 4; do
+     # En $x vamos obteniendo los diferentes valores 
+     # en las sucesivas ejecuciones.
+     echo " + Ahora vale : $i"
+   done
+   #+END_SRC
+
+   Este bucle si lo ejecutamos dará lugar a la siguiente salida:
+
+   #+BEGIN_SRC
+   + Ahora vale : 1
+   + Ahora vale : 2
+   + Ahora vale : 3
+   + Ahora vale : 4
+   #+END_SRC
+   
+   Se puede cambiar la /secuencia/ con la ejecución de un determinado comando, capturando 
+   la salida cómo hemos visto anteriormente:
+
+   Si sabemos que ~seq 1 10~ nos devuelve los números del 1 al 10, podemos incluir este
+   comando en la generación del iterador.
+
+   #+BEGIN_SRC shell
+   for i in $(seq 1 10); do
+     # En $x vamos obteniendo los diferentes valores 
+     # en las sucesivas ejecuciones.
+     echo " + Ahora vale : $i"
+   done
+   #+END_SRC
+
+
+\newpage
+* Ejercicios for
+
+  Debéis presentar los diferentes Scripts en un fichero comprimido:
+
+  - bucle-for-01.sh
+  - bucle-for-02.sh
+  - ...
+
+  Vamos a ir utilizando otro compresor diferente al /zip/. Por ahora vamos a usar /.tar.gz/. El fichero 
+  ha de llamarse : ~bucle-for-scripts.tar.gz~
+
+** Bucle 01  
+
+   Programa un Script que pregunte por un número y nos devuelva la *tabla* de ese número por pantalla.
+
+   Ejemplo de ejecución:
+   #+BEGIN_SRC shell
+   * Indicame el numero: 7
+   7 x 1 = 7
+   7 x 2 = 14
+   7 x 3 = 21
+   7 x 4 = 28
+   7 x 5 = 35
+   7 x 6 = 42
+   7 x 7 = 49
+   7 x 8 = 56
+   7 x 9 = 63 
+   7 x 10 = 70
+   #+END_SRC
+
+** Bucle 02
+   
+   Programa un Script que nos indique de los números del 1 al 500 cuales son múltiplos de 13.
+
+** Bucle 03 
+
+   Programa un Script que nos indique cuales de los ficheros de ~/var/log~  (1º nivel) comienzan 
+   por alguna de las siguientes letras: [ a, z, r, d, s ].
+
+** Bucle 04
+
+   Programa un Script que nos haga las tablas de multiplicar de los números del 1 al 17.
+
+** Bucle 05
+
+   Programa un Script que nos obtenga el Sumatorio de los primeros 1000 números enteros.
+
+** Bucle 06 
+   
+   Programa un Script que nos obtenga el Productorio de los primeros 50 números impares.
+
+** Bucle 07 
+
+   Programa un Script que nos pregunte por el número de una casa y nos indique si está 
+   a la izquierda o a la derecha para repartir cartas. (/Debéis investigar cómo se asignan/).
