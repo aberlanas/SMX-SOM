@@ -1,0 +1,184 @@
+#+Title: US Team - Examen Scripting - Apolo 1
+#+Author: John Angel Smith
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Examen}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Grupo A}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/soyuz.png}
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/apolo.png]]
+
+\newpage
+* Examen
+
+  Habéis sido seleccionados para participar en el programa "Soyuz-Apolo". 
+  El Grupo A seréis los Estadounidenses. Vuestra misión: Conseguir llegar
+  antes a la Luna.
+
+  Para comprobar que sois personas aptas para pertenecer a una de las agencias más 
+  influyentes de todos los tiempos la *NASA*, deberéis resolver con éxito los retos
+  que el equipo de IT está teniendo actualmente. Para ello buscan a gente altamente
+  preparada en Sistemas Operativos.
+
+  La parte de creación del Script está omitida, pero siempre podréis ir 
+  a la practica del tutorial para comprobar cómo funciona.
+
+  Disponéis de *90* minutos para la realización de la prueba.
+
+  Algunos consejos interesantes:
+
+  - Lee *todo* el examen antes de empezar.
+  - Los *Scripts* son independientes.
+  - Puedes utilizar Internet y las prácticas que has presentado.
+  - No está permitido hablar con otros compañer@s durante la realización del examen.
+  - Alaska tiene como capital a Juneau, que no tiene acceso por tierra desde el continente.
+
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-Examen.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~examen-mision-01.sh~
+  * ~examen-mision-02.sh~
+  * ...
+
+  Debéis probar /todos/ los Scripts que hagáis. 
+
+\newpage
+** Misión 01
+   
+   Para asegurar el lanzamiento necesitaremos contar con que ciertos ficheros del Sistema
+   Operativo están donde deben estar (y además són lo que deben ser).
+
+   El Script debe mostrar un mensaje indicando que va a comprobar una serie de rutas y ficheros.
+   Para cada uno de ellos debe indicar qué está comprobando. Los mensajes os los indico a continuación.
+
+   Deberá comprobar en primer lugar si es un fichero. Si lo és, debe comprobar si el fichero 
+   existe y es ejecutable. En caso de que no exista o sea un directorio, debe indicar un error:
+
+   #+BEGIN_SRC shell
+   MSG_FICHERO=" *  [ NASA INFO ] : - A File"
+   MSG_FICHERO_EJECUTABLE=" * [ NASA INFO ] : - An executable file "
+   MSG_NO_EXISTE=" ** [ NASA INFO ] : Not exists or is a directory**" 
+   #+END_SRC
+   
+   Rutas a comprobar:
+
+   | Rutas  |
+   |--------|
+   | ~/bin/echo~ |
+   | ~/etc/hosts~ |
+   | ~/etc/alternatives/~    |
+   | ~/run/~     |
+   | ~/usr/bin/firefox~  |
+   
+   Ejemplo de ejecución del Script:
+   
+   #+BEGIN_SRC
+   $./examen-mision-01.sh
+    * [ NASA INFO ] : testing /bin/echo
+    * [ NASA INFO ] : - An executable file 
+    * [ NASA INFO ] : testing /etc/hosts 
+    * [ NASA INFO ] : - A File
+   
+   #+END_SRC
+
+\newpage
+** Misión 02
+
+   Durante el último arranque se ha detectado un problema con el subsistema ~BIOS~. Debe de ser una maniobra
+   de los Rusos. Vamos a averiguar /qué está pasando aquí/.
+   
+   Realiza un Script que cuente el número de líneas que contienen la palabra ~BIOS~ (mayúsculas, minúsculas,...).
+   En ese mismo Script, debe además mostrar el modelo de la ~BIOS~.
+
+   Ejemplo
+   
+      #+BEGIN_SRC shell
+      $./examen-mision-02.sh
+      La palabra BIOS aparece :  17 veces.
+      El modelo BIOS es: Gigabyte Technology Co., Ltd. B450M DS3H/B450M DS3H-CF
+      #+END_SRC
+   
+
+** Misión 03
+
+   Crea un script que primero muestre las líneas que contienen la palabra "~sound~" en el último 
+   arranque. A continuación:
+
+   - Si el número de veces es mayor que 11 deberá mostrar el mensaje:
+     - ~* [ NASA INFO ] : More than 11 times~ .
+   - Si es exactamente 11 mostrará:
+     - ~* [ NASA INFO ] : Saltlake City is ready~ .
+   - Si es menos de 11 mostrará:
+     - ~* [ NASA INFO ] : Oh...what a pity~ .
+
+** Misión 04
+
+   Desde el punto de control de /Cabo Cañaveral/ se han dado cuenta de que necesitan 
+   con urgencia obtener los datos siguientes:
+   
+   1. Hora y Dia de hoy, en formato: "YYYY..MM..DD..HH..mm".
+   2. Nombre de la máquina.
+   3. Cantidad de Swap total (en MB).
+   4. Cantidad de Swap Usada (en MB).
+   5. IPs (versión v4) de la máquina (127.0.0.1 también).
+
+   Realizad un script que muestre estos datos indicando para cada uno de ellos un título
+   que indique lo que se va a mostrar a continuación:
+
+   Ejemplo:
+
+   #+BEGIN_SRC
+   $./examen-mision-04.sh
+
+   === DIA ===
+   2020..11..24..13..45
+   
+   === HOSTNAME ===
+   moria
+
+   === SWAP TOTAL ===
+   2047
+
+   === SWAP USADA ===
+   0
+
+   === IPS v4 ===
+   127.0.0.1
+   192.168.1.32
+
+   #+END_SRC
+
+   
+** Misión 05
+
+   Utilizando el fichero que os adjunto en el examen (datos-nasa.txt).
+
+   Sabiendo que los campos están separados por "," cómo si fuera una hoja de cálculo, y teniendo
+   en cuenta que las columnas son:
+
+   | Numero Fila | Estado | Animal (Nombre Científico) | Planta | Palabras aleatorias | IP |
+   
+   Realizar un Script que muestre:
+
+   - [ IPS en IOWA ] : El número de veces que en Iowa hay una IP que contiene un 5.
+   - [ FLORIDA ANIMALS ] : El listado de animales diferentes que hay en Florida.
+   - [ LEONES ] : Cuantos leones hay en todo E.E.U.U.
+    
+   Al igual que en la misión anterior, debe aparecer un título antes de cada apartado. 
+
+   #+ATTR_LATEX: :width 5cm
+   [[./imgs/apolo.png]]
+   
+
+   
