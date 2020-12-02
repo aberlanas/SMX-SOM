@@ -1,0 +1,86 @@
+#+Title: Unidad 02 - Programas
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Practica]}
+
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/cthulhu.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+
+\newpage
+* Practica : Programas
+
+  En esta práctica vamos a repasar conceptos de programación que nos serán
+  muy útiles cuando nos enfrentemos a los problemas en un ordenador.
+
+  
+* Conceptos
+
+  Un programa en un ordenador es una serie de órdenes que se ejecutan, resolviendo 
+  un determinado problema. Esas órdenes las acaba ejecutando el /microprocesador/, pero 
+  no es nuestro objetivo llegar tan abajo. Tan sólo tenemos que comprender /cómo funcionan/ 
+  estas cosas.
+
+  Los Sistemas Operativos son nuestro *intérprete* con el /Hardware Real/. Ese intérprete 
+  traduce nuestras "acciones" haciendo /clicks/ sobre pequeños iconos a lo que nosotros
+  deseamos:
+  
+  - Imprimir un documento.
+  - Copiar un fichero.
+  - Navegar por Internet.
+
+  Pero es casi mágia que esto ocurra, la cantidad de órdenes que hay escritas por programadores
+  para que nosotros al hacer doble-click sobre un enlace a un vídeo de /YouTube/ podamos verlo 
+  es mucho más grande de lo que podemos imaginar.
+
+  Nosotros estamos /empezando/ en todo esto, y el Sistema Operativo nos ofrece un /intérprete/
+  al que nosotros podemos pedirle que haga cosas y *si se las pedimos adecuadamente* las 
+  ejecutará y nos indicará cómo ha ido la ejecución.
+
+  La cantidad de cosas que se pueden hacer si conoces el lenguaje de este /intérpret/ es muchísimo más grande de
+  las que podemos hacer haciendo doble-click sobre las cosas, pero tenemos que dominar el lenguaje.
+
+  Al igual que los lenguajes humanos, hay que ir paso a paso, y dedicándole muchas horas a esto.
+  
+  ¡Vamos allá!
+
+** ¿Donde está ese intérprete?
+
+   El intérprete podemos /invocarlo/ desde la ~Terminal~. Se trata de una aplicación que nos 
+   ofrece directamente el intérprete y podemos comenzar a hablar con él.
+
+   La orden más básica de todas es ~echo~.
+
+   Si en la terminal escribimos la orden ~echo~ seguida de una palabra o frase entre ", el /intérprete/
+   nos la devolverá tal cual (como el /eco/ de las montañas).
+
+   #+BEGIN_SRC shell
+
+   
+   echo "Hola"
+
+
+   #+END_SRC
+
+   Al pulsar ~Enter~  el intérprete coge todas las órdenes escritas y las ejecuta, veremos que nos devuelve
+   por pantalla:
+
+   #+BEGIN_SRC shell
+
+   Hola
+   
+   #+END_SRC
+
+   Sin las comillas ni nada.
