@@ -1,4 +1,4 @@
-#+Title: Unidad 02 - Scripting  - Bucles - I
+#+Title: Unidad 02 - Scripting  - Bucles - II
 #+Author: Angel Berlanas Vicente
 
 #+LATEX_COMPILER: xelatex
@@ -109,15 +109,141 @@
 
    Si cogemos el 11:
 
-      - ¿ 11 Es par ? $\rightarrow$ 11 + 3 : salto 1
-      - ¿ 14 es par ? $\rightarrow$ 14 / 2 : salto 2
+      - ¿ 11 Es par ? $\rightarrow$ 11 + 3 : salto 1 -> ahora comprobamos "*14*"
+      - ¿ 14 es par ? $\rightarrow$ 14 / 2 : salto 2 -> ahora comprobamos "*7*"
       - 7 es menor de 10 : El /número de Ah-berl'anas/ es : *2*
 
     Vamos a hacer ahora un programa que pida un número y que calcule el /número de Ah-berl'anas/ de ese número.
+    
+    #+ATTR_LATEX: :width 5cm
+    [[./imgs/chess.png]]
 
+    
+\newpage
     #+BEGIN_SRC
     #!/bin/bash
+
+    # Script para calcular el numero de Ah-berl'anas
+    # de un numero dado.
+    
+    echo " Dime un numero "
+    read num
+    # Nos guardamos orig para poder mostrar un mensaje al final
+    orig=$num
+    # Iniciamos el numero de saltos a 0
+    let salto=0
+    
+    while [ $num -gt 10 ] ; do
+    
+      # Test if es par.
+      # Obtenemos el resto
+      let resto=$num%2
+    
+      if [ $resto -eq 0 ]; then
+	let num=$num/2
+      else
+	let num=$num+3
+      fi
+	
+      ((salto++))
+	
+    done
+
+    echo " El numero $orig tiene un numero de Ah-berl'anas de : $salto"
+
+    exit 0
     #+END_SRC
     
+\newpage
+
+* Ejercicios
+
+  Ya hemos visto varios ejemplos en los que el bucle ~while~ es muy interesante para 
+  resolver el problema.
+
+  Vamos ahora /al turrón/, vamos a plantear una serie de ejercicios en los que el bucle 
+  ~while~ puede ser utilizado.
+
+  
+
+** mientras-01.sh
+
+   El programa debe pedir un número al usuario, mientras sea menor que *100* que lo multiplique por 2.
+   Cuando acabe, ha de mostrarlo por pantalla.
+
+** mientras-02.sh
+
+   El programa debe pedir un número al usuario, mientras sea menor que *1000* que le sume 123.
+   Cuando acabe, ha de mostrarlo por pantalla.
+
+** mientras-03.sh
+   
+   El programa debe pedir un número al usuario y debe asegurarse de que está entre el 1 y el 100.
+   En caso de que no esté entre esos valores, debe volver a pedirlo.
+   Cuando la condición se cumpla, debe multiplicar el número que el usuario ha introducido por 42 y 
+   mostrarlo por pantalla.
+
+** mientras-04.sh
+
+   El programa debe pedir confirmación (Yes/No) si se escribe "Yes" debe mostrar el mensaje:
+   
+   - ~I love the bucles~
+     
+   Si se escribe "No", debe mostrar el mensaje:
+
+   - ~What a pity, a boring person...~
+
+   Si no se contesta ni sí ni no, debe volver a preguntar.
+
+** mientras-05.sh
+
+   El programa debe leer el fichero ~/etc/apt/sources.list~ y 
+   mostrar tan solo las líneas /pares/ que contienen la palabra ~focal~.
+
+** mientras-06.sh
+   
+   El programa ha de esperar a que el fichero ~/tmp/si-existo-me-paro~ exista, cuando 
+   exista debe parar, en caso contrario esperar 2 segundos y mostrar un mensaje
+   de espera.
+
+** mientras-07.sh
+
+   El programa ha de esperar a que el fichero ~/tmp/voy-creciendo-con-texto~ contenga algo
+   (su tamaño sea mayor que 0).
+
+   Pista :
+
+   La orden:
+
+   #+BEGIN_SRC shell
+   ls -s RUTA-AL-FICHERO|cut -d " " -f1
+   #+END_SRC
+
+   Nos devuelve el tamaño en /bytes/ del fichero indicado.
 
 \newpage
+** mientras-08-mini-boss.sh
+
+   El famosérrimo Matématico Oriental de la Antiguedad (nacido a orillas del Rio Amarillo) apasionado de los 
+   Grafos : /Pat-xih Xan-xis/ vió la idea de /Ah-berl'anas/ y decidió que era incompleta, 
+   tal y como se demostraría siglos más tarde,  así que elaboró un pequeño /corolario/.
+
+
+   Comprobó que la restricción de que los números fueran más pequeños que *10* era una idea /sacrílega/ 
+   ya que pensó que el número *2*, el /Yin y el Yang/ era el destino de todos los números, la dualidad
+   cósmica. Se debían contar los saltos hasta el número *2*.
+
+   
+   #+ATTR_LATEX: :width 6cm
+   [[./imgs/yin-yang.jpeg]]
+
+
+   Además, se dió cuenta de que si el número /no era par/ y erá divisible por 3 y por 5 /a la vez/, debía de incrementarse en 
+   *42*, que es la /respuesta a la vida, al universo y a todo/.
+
+
+   Adapta el programa de /Ah-berl'anas/ para que haga lo que /Pat-xih Xan-xis/ estableció en 
+   su infinita sabiduría.
+
+   #+ATTR_LATEX: :width 7cm
+   [[./imgs/patxi-chino.jpg]]
