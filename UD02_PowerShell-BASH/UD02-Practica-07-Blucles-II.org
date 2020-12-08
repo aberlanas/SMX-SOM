@@ -1,0 +1,123 @@
+#+Title: Unidad 02 - Scripting  - Bucles - I
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Bucles - While}
+
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+* Scripting - Bucles
+  
+  Los bucles que veremos en Shell Script son dos de los más famosos.
+  
+  El /bucle/ en programación es una estructura que nos permite *repetir* unas 
+  instrucciones un número determinado de veces. Dependiendo del problema será
+  más interesante el uso de uno u otro. Pero esto nos lo dará la experiencia, 
+  así que vamos a repasar un momento y nos ponemos al lio.
+
+** Bucle while 
+
+   El bucle ~while~ tiene la siguiente estructura:
+
+   #+BEGIN_SRC shell
+
+   while [ condicion ]; do
+    
+     # Estas ordenes se ejecutan mientras no se cumpla la condicion
+
+   done
+   #+END_SRC
+
+   Ejemplo:
+
+   #+BEGIN_SRC shell
+   let contador=1
+   while [ $contador -lt 11 ]; do
+     echo " + Ahora vale : $contador"
+     # Sleep es un comando que le indica al ordenador que se espere un 
+     # tiempo determinado, se establece en segundos.
+     sleep 1
+
+     # Esta ultima orden lo que hace es incrementar en 1 el valor de lo que
+     # haya en contador.
+     ((contador++))
+   done
+   #+END_SRC
+  
+   Esta sería una manera de usar el bucle ~while~ muy similar al de un ~for~,
+   el uso habitual es utilizar una /condición de parada/ que pueda ser posible
+   a medida que se ejecutan las ordenes de dentro del bucle:
+
+   Por ejemplo:
+
+   - Mientras haya líneas en un fichero, leerlo línea a línea y realizar alguna operación.
+   - Pedir un dato al usuario y revisar lo que ha introducido.
+   - Realizar alguna operación más compleja con los datos de entrada.
+   - ...
+
+\newpage
+   Creo que sería intersante ver un ejemplo de cada uno de estos.
+
+** Leyendo un fichero línea a línea   
+
+   #+BEGIN_SRC shell
+   #!/bin/bash
+   let numline=1
+   cat /etc/hosts | while read line; do 
+     echo "La linea $numline es : $line"
+     ((numline++))
+   done
+   #+END_SRC
+
+** Pidiendo un dato al usuario  
+
+   #+BEGIN_SRC shell
+   #!/bin/bash
+   echo " Dime un numero entre el 1 y el 10 "
+   read num
+   while [ $num -lt 1 -o $num -gt 10 ]; do
+     echo " Por favor entre el 1 y el 10 :"
+     read num
+   done
+   echo " Titan! Has seguido las instrucciones : $num"
+   #+END_SRC
+
+\newpage
+** Realizar alguna operación más compleja
+
+   En el mundo de los acertijos matemáticos existen muchos juegos de lógica y demás, uno que podemos trabajar es el famoso 
+   /número de Ah-berl'anas/. Este número es el que se obtiene de realizar la siguiente operación:
+
+   - Dado un /entero natural/ entre el 10 y 100, si el número es par, se divide entre 2 y si es impar se le suma 3. Esto 
+     cuenta como un /salto/. El /número de Ah-berl'anas/ es el número de saltos necesarios para llegar hasta un número
+     menor de 10.
+
+   Ejemplo:
+
+   Si cogemos el 11:
+
+      - ¿ 11 Es par ? $\rightarrow$ 11 + 3 : salto 1
+      - ¿ 14 es par ? $\rightarrow$ 14 / 2 : salto 2
+      - 7 es menor de 10 : El /número de Ah-berl'anas/ es : *2*
+
+    Vamos a hacer ahora un programa que pida un número y que calcule el /número de Ah-berl'anas/ de ese número.
+
+    #+BEGIN_SRC
+    #!/bin/bash
+    #+END_SRC
+    
+
+\newpage
