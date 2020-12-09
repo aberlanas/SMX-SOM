@@ -230,8 +230,8 @@
 
 
    Comprobó que la restricción de que los números fueran más pequeños que *10* era una idea /sacrílega/ 
-   ya que pensó que el número *2*, el /Yin y el Yang/ era el destino de todos los números, la dualidad
-   cósmica. Se debían contar los saltos hasta el número *2*.
+   ya que pensó que el número *3*, el /Yin y el Yang/ y el dragón era el destino de todos los números, la fuerza 
+   de la trinidad cósmica. Se debían contar los saltos hasta el número *3*.
 
    
    #+ATTR_LATEX: :width 6cm
@@ -239,7 +239,7 @@
 
 
    Además, se dió cuenta de que si el número /no era par/ y erá divisible por 3 y por 5 /a la vez/, debía de incrementarse en 
-   *42*, que es la /respuesta a la vida, al universo y a todo/.
+   *13*, que es el /número sagrado del calendario chino/.
 
 
    Adapta el programa de /Ah-berl'anas/ para que haga lo que /Pat-xih Xan-xis/ estableció en 
