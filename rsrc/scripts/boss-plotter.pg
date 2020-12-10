@@ -1,0 +1,5 @@
+#!/usr/bin/gnuplot
+
+reset
+set terminal png
+plot "datos.dat" 
