@@ -1,0 +1,179 @@
+#+Title: Unidad 02 - Scripting  - Bucles - III
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Practica}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Bucles}
+
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+* Scripting - Bucles
+  
+  Los bucles que veremos en Shell Script son dos de los más famosos.
+  
+  El /bucle/ en programación es una estructura que nos permite *repetir* unas 
+  instrucciones un número determinado de veces. Dependiendo del problema será
+  más interesante el uso de uno u otro. Pero esto nos lo dará la experiencia, 
+  así que vamos a repasar un momento y nos ponemos al lio.
+
+  En la realización de los ejercicios siguientes no se indica si de debe usar
+  un bucle u otro, eso queda a la decisión del alumn@.
+
+  Estos ejercicios van ya uniendo los diferentes conceptos que hemos visto a lo
+  largo de este trimestre.
+  
+* Ejercicios
+
+  Recordad, que una vez redactado el ~script~ debemos darle permisos con ~chmod +x RUTA-AL-SCRIPT~. 
+  Y que tan solo hay que darle permisos una vez a /cada/ script.
+
+\newpage
+** bucle-01.sh
+
+   El sistema está teniendo problemas de rendimiento. Al parecer uno de los usuarios del sistema 
+   tiene demasiados ficheros en su carpeta personal. Debemos crear un script que al ejecutarlo
+   recorra las diferentes carpetas personales de los diferentes usuarios del equipo (incluido ~root~).
+   
+   Y compruebe para cada una de las diferentes carpetas si ocupa más de *100 MB*, si es así que muestre
+   un mensaje indicando que se ha superado el límite de espacio establecido.
+
+   Pistas:
+
+   - Las carpetas personales de los usuarios se encuentran en ~/home~ excepto ~root~ que la tiene 
+     en ~/root/~.
+   - Un buen comando para obtener el tamaño de un directorio es ~du~.
+
+   Ejemplo de ejecución:
+
+   #+BEGIN_SRC shell
+   aberlanas@moria:~$./bucle-01.sh
+   * Testing [ aberlanas ] : -> Size exceeded : 192881
+   * Testing [ smx ] -> Size correct : 98 
+   * Testing [ daw ] -> Size correct : 42 
+   * Testing [ root ] -> Size correct : 11
+   #+END_SRC
+
+\newpage
+** bucle-02.sh
+
+   Se ha detectado un incremento en el número de procesos /alarmante/. Sabemos que los procesos se crean como directorios 
+   dentro de ~/proc/~ cuyo /nombre/ es un número que identifica el ~PID~ del proceso. (Podéis echarle un vistazo, mediante ~ls /proc/~).
+   Hemos determinado después de muchas pruebas que si el número de procesos excede de *2000*  el sistema se encuentra
+   en un estado crítico. Vamos a crear un bucle infinito que compruebe cada 10 segundos si se han superado 
+   los procesos, en caso de que se haya superado, debe mostrar un mensaje.
+
+   Pistas:
+
+   - Contar los directorios se puede hacer entubando la salida de ~ls~ con alguna opción para que
+     sólo muestre los directorios al comando ~wc -l~.
+   - Para esperar 10 segundos podemos ejecutar el comando ~sleep 10~.
+
+   Ejemplo de ejecución:
+
+   #+BEGIN_SRC shell
+   aberlanas@moria:~$./bucle-02.sh
+   * Testing /proc/ : 339 processes -> OK
+   * Testing /proc/ : 599 processes -> OK
+   * Testing /proc/ : 2130 processes -> DANGER
+   * Testing /proc/ : 339 processes -> OK
+   #+END_SRC
+   
+   Para pararlo debemos tener que pulsar ~CTRL+C~.
+
+\newpage
+** bucle-03.sh
+   
+   Los técnicos a las órdenes del insigne *J'aviher Dar'Oh-Qui* que están instalando el cableado 
+   de la empresa /Logaritmos Neperianos para el Futuro/, necesitan un pequeño ~script~ que al ejecutarlo pregunta al usuario si quiere ver los colores
+   del cable *Cruzado* o *Directo*.
+
+   Pulsando para elegir la ~d~ o la ~c~ o salir del ~script~ pulsando la ~q~. 
+
+   |---------+-------|
+   | Opción  | Letra |
+   |---------+-------|
+   | Directo | d     |
+   | Cruzado | c     |
+   | Salir   | q     |
+   |---------+-------|
+
+   A continuación, dependiendo de lo que ha seleccionado el usuario irá mostrando cada /medio segundo/
+   y /en orden/ los /colores/ de los cables que tienen que conectar en el ~RJ45~. Los colores han sido 
+   explicados por el muy honorable Capitán *J'aviher*, debéis buscar en sus apuntes el conocimiento
+   necesario para poder realizar este ~script~.
+
+   Una vez mostrado la configuración de los colores, debe /volver al menú inicial/ y volver a preguntar 
+   por qué tipo de cable queremos ver. 
+   
+   Tras cada ejecución debe mostrar el mensaje: 
+
+   ~Alabado sea *J'avih-er, y sus enseñanzas prácticas, hemos consultado NUMERO_DE_CABLES~
+
+   Donde ~NUMERO_DE_CABLES~ debe ir incrementándose tras cada ejecución que hagamos sin salir del ~script~.
+
+     
+   #+ATTR_LATEX: :width 7cm
+   [[./imgs/daroqui.jpg]]
+
+
+\newpage
+** bucle-04.sh
+
+   El script debe pedir primero un número, que llamaremos ~BASE~, luego otro que llamaremos ~MULTIPLICANDO~, y 
+   por último un tercero que llamaremos ~REPETICIONES~.  
+   
+   El ~script~ debe devolver el resultado de multiplicar 
+   la base por el multiplicando y debe mostrarlo por pantalla tantas veces como se ha pedido en ~REPETICIONES~.
+
+   Ejemplo de ejecución
+
+      #+BEGIN_SRC shell
+   aberlanas@moria:~$./bucle-04.sh
+   * Indica la base : 15
+   * Indica el multiplicando: 4
+   * Indica las repeticiones: 3
+   60
+   60
+   60
+   #+END_SRC
+
+\newpage
+** bucle-05.sh
+
+   La estación de tren de Requena tiene un sistema automatizado de vagones que se llenan con la uva que 
+   se recoge en la vendimia. Vamos a realizar un script que calcule el número de vagones necesarios
+   para llevar la uva. Para ello el script nos pedirá las *toneladas* de Uva que vamos a cargar (sin decimales
+   y redondeando hacia arriba). A continuación nos ofrecerá a elegir 3 modelos de vagón:
+
+   - Modelo Titan (tecla ~t~).
+   - Modelo Paquidermo (tecla ~p~)
+   - Modelo Albatros (tecla ~a~).
+
+   Seleccionaremos el modelo pulsando la tecla indicada. 
+   
+   Si no se pulsa una tecla de las indicadas, volver a preguntar por el modelo.
+   
+   A continuación, sabiendo que cada modelo es capaz de transportar los kilos de uva que se muestran a continuación, indicad cuantos vagones 
+   son necesarios para transportar la Uva que se ha indicado previamente.
+
+   | Modelo de Vagón | Capacidad  |
+   |-----------------+------------|
+   | Titán           | 1200 kilos |
+   | Paquidermo      | 900 kilos  |
+   | Albatros        | 300 kilos  |
+
+  
+   #+ATTR_LATEX: :width 7cm
+   [[./imgs/requena.jpg]]

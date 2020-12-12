@@ -120,3 +120,4 @@
 
    Programa un Script que nos pregunte por el número de una casa y nos indique si está 
    a la izquierda o a la derecha para repartir cartas. (/Debéis investigar cómo se asignan/).
+   
