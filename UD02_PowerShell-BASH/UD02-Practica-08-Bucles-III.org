@@ -177,3 +177,6 @@
   
    #+ATTR_LATEX: :width 7cm
    [[./imgs/requena.jpg]]
+
+
+   
