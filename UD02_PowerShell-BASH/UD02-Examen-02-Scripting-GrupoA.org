@@ -1,0 +1,237 @@
+#+Title: US Team - Examen Scripting - Bucles
+#+Author: John Angel Smith
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Examen}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Grupo A}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: %\CenterWallPaper{0.7}{../rsrc/logos/soyuz.png}
+
+#+ATTR_LATEX: :width 9cm
+[[./imgs/hiawatha.jpg]]
+
+\newpage
+* Examen
+
+  A diferencia de la prueba anterior en esta tan solo tenemos dos 
+  pruebas diferentes, cada una de las cuales está valorada en una 
+  puntuación del 0 al 5. Siendo la nota del examen la suma de ambas
+  notas.
+
+  Disponéis de *90* minutos para la realización de la prueba.
+
+  Algunos consejos interesantes:
+
+  - Lee *todo* el examen antes de empezar.
+  - Los *Scripts* son independientes.
+  - Puedes utilizar Internet y las prácticas que has presentado.
+  - No está permitido hablar con otros compañer@s durante la realización del examen.
+  - Los diferentes estados de US tienen un lema que se escribe en las matrículas de los coches.
+
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-Examen.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~examen-mision-01.sh~
+  * ~examen-mision-02.sh~
+  * ...
+
+  Debéis probar /todos/ los Scripts que hagáis. 
+
+\newpage
+** Misión 01: La economia de los Grandes Lagos
+ 
+   La economía de Milwaukee, al igual que la de otras ciudades de los Grandes Lagos de US
+   depende en gran medida la salud medioambiental de los mismos. El caudal de los rios con destino 
+   a los lagos, que los abastecen de agua y les aportan oxígeno es un elemento que se debe
+   vigilar y controlar.
+
+   #+ATTR_LATEX: :width 5cm
+   [[./imgs/great-lakes.png]]
+
+   Los grandes lagos son (de este a oeste) : /Superior,Michigan,Huron,Erie y Ontario/. 
+   
+   La gran Investigadora y Economista /Evee Puig-Smith-Cerver/ a lo largo de los últimos
+   años ha ido recopilando información acerca del caudal de entrada a los grandes lagos. 
+   En esos datos se muestra cual era su relación con el desarrollo de la economía en los diferentes lagos. 
+
+   Los años malos, la economía desciende, y los buenos asciende. Además existen años especialmente buenos 
+   que hacen que las aguas del lago luzcan transparentes y afectan muy positivamente
+   a todos los negocios de los lagos.
+
+   Vamos a ayudar a /Evee/ con la introducción de datos, y con el cálculo de los años buenos, malos y optimos.
+   
+   A continuación se indican los pasos que debe seguir el Script.
+
+   _Requisitos_
+
+   - El Script debe mostrar un menú donde dé a elegir de que lago vamos 
+     a introducir datos del caudal. El caudal se mide en número de hectometros
+     cúbicos por segundo, suelen ser números entre el 1 y el 1000 pero no hace 
+     falta que lo comprobéis dentro del Script, confiaremos en los usuarios ^_^.
+   - Una vez introducido el dato, este se acumula en la cuenta de cada lago y se muestra
+     al usuario el total acumulado de ese lago hasta ese momento.
+   - Volverá al menú, permitiendo introducir más datos del mismo lago, o de otros.
+   - Una de las opciones de menú es "~Informe~" que mostrará el total acumulado de cada uno de 
+     los lagos, indicando qué lago es y a continuación mostrará si se trata de un año 
+     malo,bueno u óptimo siguiendo los siguientes criterios:
+
+     Se sumarán todos los caudales de todos los lagos y se determintará el tipo de año.
+     
+     | Criterio | Tipo de Año |
+     |----------+-------------|
+     |     <100 | Malo        |
+     |  100-850 | Bueno       |
+     |     >851 | óptimo      |
+     |----------+-------------|
+     
+   - Para salir se deberá pulsar la letra '~q~' en una opción del menú. 
+
+   \newpage
+
+   Ejemplo de ejecución del Script:
+   
+   #+BEGIN_SRC shell
+
+  * Seleccione una opcion: 
+ - S) Lago Superior 
+ - M) Lago Michigan 
+ - H) Lago Huron 
+ - E) Lago Erie 
+ - O) Lago Ontario
+ - I) Mostrar Informe
+ - q) Salir
+ Opcion : S
+ Introduzca caudal ->100
+ * Seleccione una opcion: 
+ - S) Lago Superior 
+ - M) Lago Michigan 
+ - H) Lago Huron 
+ - E) Lago Erie 
+ - O) Lago Ontario
+ - I) Mostrar Informe
+ - q) Salir
+ Opcion : S
+ Introduzca caudal ->200
+ * Seleccione una opcion: 
+ - S) Lago Superior 
+ - M) Lago Michigan 
+ - H) Lago Huron 
+ - E) Lago Erie 
+ - O) Lago Ontario
+ - I) Mostrar Informe
+ - q) Salir
+ Opcion : I
+ * Informe : 
+ Lago Superior : 300 
+ Lago Michigan : 0 
+ Lago Huron : 0 
+ Lago Erie : 0 
+ Lago Ontario : 0
+ --- Bueno ---
+ * Seleccione una opcion: 
+ - S) Lago Superior 
+ - M) Lago Michigan 
+ - H) Lago Huron 
+ - E) Lago Erie 
+ - O) Lago Ontario
+ - I) Mostrar Informe
+ - q) Salir
+ Opcion : q   
+
+   #+END_SRC
+
+\newpage
+** Misión 02: Alaska, Rusia y unos Dados.
+
+   Durante los meses de Invierno, al Almirante /Die-Go Karr'Ash-Ko/ le gusta pasar los días en 
+   Alaska, recordando que hace muchos años todas aquellas tierras eran de la madre Rusia.
+
+   Uno de sus pasatiempos favoritos consiste en averiguar cosas curiosas acerca de la /aleatoriedad/ del 
+   Universo y de los Ordenadores. 
+
+   
+   #+ATTR_LATEX: :width 10cm
+   [[./imgs/dice-patent.png]]
+
+   La búsqueda del la /Aleatoriedad Pura/ es una de las grandes batallas de la informática, ya que 
+   al ser un ordenador una máquina que se comporta siempre de la misma manera frente a una determinada
+   situación, la posibilidad de que al pedir varios números aleatorios se repitan (/o se parezcan/) es muy alta.
+
+   /Die-Go Karr'Ash-Ko/ con sus conocimientos de /estrategia/ a elaborado un mecanismo para comprobar
+   que la /aleatoriedad/ se cumpla en pequeños números aptos para los juegos con dados (que le encantan). 
+
+   El /algoritmo/ es el siguiente:
+
+   - Se extrae un número aleatorio del 1 al 20, lo llamaremos ~INTENTOS~.
+   - Se extrae un número aleatorio del 1 al 6, lo llamaremos ~OBJETIVO~.
+   - Simularemos tantas tiradas de dados como ~INTENTOS~ (de la misma manera que hemos 
+     obtenido ~OBJETIVO~), apuntándonos cada vez que hayamos 
+     conseguido un acierto. Para cada tirada mostraremos si hemos acertado o no y cuando 
+     se nos acaben los intentos, diremos cuantas veces hemos obtenido el ~OBJETIVO~.
+   - Entre cada tirada, pararemos ~0.3~ segundos.
+
+   \newpage
+     _Pistas_
+
+     * Si consultamos la variable ~$RANDOM~ en un determinado momento nos mostrará un entero
+       positivo entre el 1 el 32000. Podeis probarlo en la terminal.
+
+   #+ATTR_LATEX: :width 5cm
+   [[./imgs/dadetes.jpg]]
+
+   \newpage
+
+   Ejemplo de ejecuciones.
+   #+BEGIN_SRC shell
+
+ * El Objetivo es sacar : 6 
+   - Vamos a realizar 16 intentos
+ * Fallo : 1
+ * Acierto : 6
+ * Acierto : 6
+ * Fallo : 3
+ * Acierto : 6
+ * Acierto : 6
+ * Fallo : 2
+ * Fallo : 1
+ * Fallo : 5
+ * Fallo : 3
+ * Fallo : 5
+ * Fallo : 4
+ * Fallo : 5
+ * Fallo : 3
+ * Fallo : 3
+ * Fallo : 1
+ * Hemos acertado 4 veces 
+
+
+
+   #+END_SRC
+  
+
+
+   #+BEGIN_SRC shell
+
+ * El Objetivo es sacar : 5 
+   - Vamos a realizar 8 intentos
+ * Acierto : 5
+ * Fallo : 2
+ * Fallo : 3
+ * Acierto : 5
+ * Fallo : 2
+ * Fallo : 2
+ * Fallo : 6
+ * Acierto : 5
+ * Hemos acertado 3 veces 
+
+   #+END_SRC
+   

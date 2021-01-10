@@ -1,0 +1,194 @@
+#+Title: Soviet Team - Examen Scripting
+#+Author: Angelov Berlaneskon Vikenlinova
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Examen}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 02: Grupo B}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/rusian-trans.png}
+
+#+ATTR_LATEX: :width 5cm
+[[./imgs/rusian.png]]
+
+\newpage
+* Examen
+
+  A diferencia de la prueba anterior en esta tan solo tenemos dos 
+  pruebas diferentes, cada una de las cuales está valorada en una 
+  puntuación del 0 al 5. Siendo la nota del examen la suma de ambas
+  notas.
+
+  Disponéis de *90* minutos para la realización de la prueba.
+
+  Algunos consejos interesantes:
+
+  - Lee *todo* el examen antes de empezar.
+  - Los *Scripts* son independientes.
+  - Puedes utilizar Internet y las prácticas que has presentado.
+  - No está permitido hablar con otros compañer@s durante la realización del examen.
+  - Rusia es enorme.
+
+* Ejercicios
+
+  Debéis presentar todos los Scripts que podáis en un fichero comprimido que se llame:
+
+  ~NombreAlumn@-Examen-Bucles.zip~
+
+  Cada uno de los siguientes ejercicios debe ir en un Script diferente:
+
+  * ~examen-mision-01.sh~
+  * ~examen-mision-02.sh~
+
+  Debéis probar los Scripts que hagáis. 
+
+  \newpage
+** Misión 01: La economia de Siberia
+   
+   Durante los largos meses del Invierno Siberiano, en las heladas tundras 
+   camino de /Vladivostok/, los escasos habitantes de Siberia se entretienen
+   viendo pasar los trenes que los comunican con las grandes ciudades. 
+
+   Uno de los más famosos trenes de todos los tiempos : /El Transiberiano/, pasa
+   regularmente cada cierto tiempo, con provisiones y correos que vienen de /Moscú/
+   y se dirigen hacia China y hacia la lejana /Vladivostok/.
+
+   Este tren es uno de los elementos más importantes de comunicación en todas las Rusias. Ya que no solo 
+   se encarga de transportar viajeros, sino también de mercancias.
+
+
+   #+ATTR_LATEX: :width 9cm
+   [[./imgs/transiberiano-ruta.png]]
+   
+
+   En la estación de /Irkutsk/, una famosísima Jefa de Estación, llamada
+   /Eva Puig-Zerveriskaia/ ha conseguido que los salarios de los trabajadores
+   de la estación tengan un plus, dependiendo de las ganancias acumuladas durante
+   los meses de Invierno. (*De Octubre a Abril ambos incluidos*).
+
+   Durante estos meses el tren de mercancias tan solo pasa 1 vez al més. Debemos 
+   ayudar a /Eva/ para que se calcule automáticamente el salario en Rublos de los 
+   trabajadores de la estación durante estos meses. Para ello, elaboraremos un pequeño
+   script que debe:
+
+   - Preguntar para cada uno de los meses (e ir acumulando):
+
+     - Toneladas de mercancia (sin decimales).
+     - Sacos de correos.
+     - Número de pasajeros.
+
+   Una vez tengamos el total de las tres cantidades se calculará el sueldo en rublos aplicando la siguiente
+   fórmula:
+
+
+   Sueldo = $(Toneladas * 10) + (Sacos * 30) + (Pasajeros * 100)$
+
+
+   _Requisitos_: 
+
+   - Debemos usar un bucle para recorrer los meses, indicando al usuario en cada més qué més está introduciendo.
+   - Durante los meses de Enero y Diciembre los sacos de correos cuentan doble.
+   - Durante el més de Noviembre cada pasajero cuenta por 3.
+
+   #+ATTR_LATEX: :width 8cm
+   [[./imgs/transiberiano.jpg]]
+
+   \newpage
+   Ejemplo de ejecución:
+
+   #+BEGIN_SRC shell
+ --- Bienvenidos a Irkutsk ---
+ - Mes de Octubre 
+ ---> Toneladas de Mercancia : 12
+ ---> Sacos de correos : 2
+ ---> Pasajeros : 3
+ - Mes de Noviembre 
+ ---> Toneladas de Mercancia : 1
+ ---> Sacos de correos : 3
+ ---> Pasajeros : 2
+ - Mes de Diciembre 
+ ---> Toneladas de Mercancia : 4
+ ---> Sacos de correos : 2
+ ---> Pasajeros : 33
+ - Mes de Enero 
+ ---> Toneladas de Mercancia : 12
+ ---> Sacos de correos : 3
+ ---> Pasajeros : 122
+ - Mes de Febrero 
+ ---> Toneladas de Mercancia : 32
+ ---> Sacos de correos : 2
+ ---> Pasajeros : 31
+ - Mes de Marzo 
+ ---> Toneladas de Mercancia : 23
+ ---> Sacos de correos : 4
+ ---> Pasajeros : 23
+ - Mes de Abril 
+ ---> Toneladas de Mercancia : 23
+ ---> Sacos de correos : 1
+ ---> Pasajeros : 2
+ El Sueldo final es 23730
+   #+END_SRC
+
+\newpage
+   
+** Misión 02: La estrategia Karr'Ash-Ko.
+
+   Durante los meses de verano, al norte de San Petersburgo se puede visitar al famosísimo
+   Almirante /Die-Go Karr'Ash-Ko/. Uno de los grandes Generales /Rojos/ de todas las Rusias.
+   
+   Antiguo militar y ahora gran aficionado a los juegos de mesa, ha diseñado una estrategia 
+   para vencer en menos de *7* intentos a un juego singular. El juego es el siguiente:
+
+   - El ordenador elige un número del 1 al 103, permanece ~OCULTO~ al usuario.
+   - Te pregunta por un número y te dice si es mayor o menor que el número elegido por el.
+   - En caso de acierto, detiene el programa y te dice cuantos intentos has usado.
+   - En caso de fallo, te vuelve a preguntar, incrementando el número de intentos.
+   - En todo momento se puede salir del programa pulsando la letra '~q~'.
+   - Si has acertado el número en menos de 7 intentos, el programa ha de mostrar el mensaje:
+     
+     ~Eres tan astuto como Karr'Ash-Ko: $NUMINTENTOS~
+     
+     En caso contrario, el mensaje ha de ser el siguiente:
+
+     ~Karr'Ash-Ko te supera $NUMINTENTOS son muchos~
+
+     
+     #+ATTR_LATEX: :width 5cm
+     [[./imgs/chess.jpg]]
+
+
+     \newpage
+
+     _Pistas_
+
+     * Si consultamos la variable $RANDOM en un determinado momento nos mostrará un entero
+       positivo entre el 1 el 32000. Podeis probarlo en la terminal.
+     
+     Ejemplo de ejecución:
+
+     #+BEGIN_SRC shell
+ Juego Matematico de Karr'Ash-Ko
+ Dime un numero 10
+ Demasiado Pequeño
+ Dime un numero 50
+ Demasiado Pequeño
+ Dime un numero 75
+ Demasiado Pequeño
+ Dime un numero 100
+ Demasiado Grande
+ Dime un numero 80
+ Demasiado Pequeño
+ Dime un numero 90
+ Demasiado Grande
+ Dime un numero 88
+ Demasiado Grande
+ Dime un numero 83
+ Demasiado Grande
+ Dime un numero 82
+ Demasiado Grande
+ Dime un numero 81
+ Karr'Ash-Ko te supera: 9 son muchos
+     #+END_SRC

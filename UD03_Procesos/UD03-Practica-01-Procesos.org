@@ -1,0 +1,218 @@
+#+Title: Unidad 03 - Procesos - Introducción
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Procesos}
+#+LATEX_HEADER: \fancyhead[L]{}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+* Procesos
+
+  ¿Qué es un /proceso/? De la /Wikipedia/:
+
+  ...
+  Un proceso, en informática, puede entenderse informalmente como un programa en ejecución. 
+  Formalmente un proceso es "/Una unidad de actividad que se caracteriza por la ejecución/
+  /de una secuencia de instrucciones, un estado actual, y un conjunto de recursos del sistema asociados"/.
+  
+  ...
+
+  Vamos a trabajar durante esta unidad estos diferentes apartados, así cómo trabajaremos 
+  a nivel teórico con el /planificador de procesos/.
+
+  Otra de las analogías la Wikipedia (en realidad de /Tanenbaun/) es la del cocinero para
+  comprender el concepto de proceso:
+
+  /"Un científico computacional con mente culinaria hornea un pastel de cumpleaños para /
+  /su hija; tiene la receta para un pastel de cumpleaños y una cocina bien equipada/
+  /con todos los ingredientes necesarios, harina, huevo, azúcar, leche, etc."/ 
+
+  Vamos a ver punto a punto, qué sería cada uno:
+
+  - La receta -> 
+  - El científico ->
+  - Los ingredientes ->
+  - El proceso ->
+
+** Características de los procesos
+
+   El proceso es la actividad que consiste en que el científico computacional vaya leyendo la receta, obteniendo los ingredientes y horneando el pastel. 
+
+   Cada proceso tiene su contador de programa, registros y variables, aislados de otros procesos, incluso siendo el mismo programa en ejecución 2 veces. Cuando este último caso sucede, el sistema operativo usa la misma región de memoria de código, debido a que dicho código no cambiará, a menos que se ejecute una versión distinta del programa.
+
+   Los procesos son gestionados por el sistema operativo y están formados por:
+
+    - Las instrucciones de un programa destinadas a ser ejecutadas por el microprocesador.
+    - Su estado de ejecución en un momento dado, esto es, los valores de los registros de la unidad central de procesamiento para dicho programa.
+    - Su memoria de trabajo (memoria crítica), es decir, la memoria que ha reservado y sus contenidos.
+    - Otra información que permite al sistema operativo su planificación.
+
+   
+   Los procesos son creados y eliminados por el sistema operativo, 
+   así como también este se debe hacer cargo de la comunicación entre procesos, 
+   pero lo hace a petición de otros procesos (interrupción o tiempo de reloj). 
+   
+   El mecanismo por el cual un proceso crea otro proceso se denomina bifurcación (fork). 
+   El proceso de arranque de GNU/Linux inicia con un solo proceso (~init~) 
+   y después comienza a crear los hilos necesarios para tener el sistema listo para su uso. 
+
+   Los procesos pueden ser cooperativos o independientes (Tuberías por ejemplo).
+
+   * Se usa una variable de tipo semáforo para sincronizar los procesos.
+   * Si un proceso está esperando una señal, se suspende hasta que la señal se envíe.
+   * Se mantiene una cola de procesos en espera en el semáforo.
+   * La forma de elegir los procesos de la cola en espera es mediante una política first in first out.
+
+   La sincronización explícita entre procesos es un caso particular del estado "bloqueado". 
+   En este caso, el suceso que permite desbloquear un proceso no es una operación de entrada/salida, 
+   sino una señal generada a propósito por el programador desde otro proceso.
+
+   Hay cuatro eventos principales que provocan la creación de procesos:
+
+   * El arranque del sistema.
+   * La ejecución, desde un proceso, de una llamada al sistema para la creación de otro proceso.
+   * Una petición de usuario para crear un proceso.
+   * El inicio de un trabajo por lotes.
+
+   Los procesos pueden contener uno o más hilos, haciendo más eficiente las tareas, 
+   asimismo la complejidad de los algoritmos de sincronización, ya que podría ocurrir la condición de carrera muy a menudo, 
+   inclusive los indeseados interbloqueos. 
+
+   Los interbloqueos es cuando los procesos se quedan esperando indefinidamente a que otros procesos 
+   les suministren algo o acaben con el recurso que están utilizando.
+   
+* Atributos de los procesos
+   
+   Los procesos tienen los siguientes atributos (entre otros), todos pueden ser consultados en 
+   su tabla del proceso o a través de diferentes comandos:
+
+   | Atributo | Descripción       |
+   |----------+-------------------|
+   | PID      | Process ID        |
+   | PPID     | Parent Process ID |
+   | UID      | User              |
+   | GID      | Group             |
+   | FD       | Ficheros Abiertos |
+   | Mem      | Memoria           |
+   | CPU      | Tiempo de CPU     |
+   | nice     | Prioridad         |
+   | CMD      | Comando ejecutado |
+   | TTY      | Terminal Asociado |
+
+
+* Operaciones sobre los procesos
+
+** ps   
+
+   Muestra diferentes procesos con opciones.
+
+   #+BEGIN_SRC shell
+   ps -flU $USER
+   #+END_SRC
+
+** top   
+
+   Muestra el estado de los procesos en tiempo real.
+
+** kill
+
+   Mata un proceso (o le envía una señal diferente), aunque la opción
+   más habitual es ~-9~ que manda la señal de terminar.
+
+** nice   
+
+   Cambia la prioridad de ejecución de un proceso.
+   Se mide del 1 al 19 siendo 19 la más baja (por defecto es 10).
+
+** time
+
+   Se utiliza para saber cuanto tiempo tarda en ejecutarse un proceso.
+
+   #+BEGIN_SRC shell
+   time ls /tmp/
+   #+END_SRC
+
+* Algoritmos de Planificación de procesos
+
+  Vamos a repasar diferentes políticas de planificación de procesos.
+
+** Tipos de Algoritmos
+
+*** FIFO  
+
+*** LIFO
+
+*** Round Robin
+
+*** Processor Sharing
+
+*** Shortest Job First
+
+*** Shortest Remaining Processing Time
+
+*** Expulsivos
+
+** Valores interesantes
+
+*** Tiempo de espera medio
+
+*** Tiempo de retorno del proceso
+
+*** Tiempo de retorno medio
+
+\newpage
+* Tareas 
+
+** Tarea 01 
+
+   Dados los siguientes procesos, rellenad la tabla siguiente, indicando
+   el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
+
+
+   | Procesos | Tiempo de Ejecución (Ciclos) | FIFO | LIFO |
+   |----------+------------------------------+------+------|
+   | P1       |                           10 |      |      |
+   | P2       |                            5 |      |      |
+   | P3       |                            4 |      |      |
+   | P4       |                            2 |      |      |
+
+   Calculad además el /Tiempo de Espera medio/ de todos los procesos para todos 
+   los algoritmos.
+
+** Tarea 02
+
+   Dados los siguientes procesos, rellenad la tabla siguiente, indicando
+   el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
+   
+   | Procesos | Tiempo de Ejecución (Ciclos) | FIFO | SJB | Round Robin |
+   |----------+------------------------------+------+-----+-------------|
+   | P1       |                            4 |      |     |             |
+   | P2       |                            5 |      |     |             |
+   | P3       |                            6 |      |     |             |
+   | P4       |                            1 |      |     |             |
+
+   Calculad el /Tiempo de Retorno/ de todos los procesos para todos los algoritmos.
+   
+** Tarea 03
+
+   Dados los siguientes procesos, rellenad la tabla siguiente, indicando
+   el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
+   
+   | Procesos | Tiempo de Ejecución (Ciclos) | LIFO | SJB | SRPT |
+   |----------+------------------------------+------+-----+------|
+   | P1       |                            4 |      |     |      |
+   | P2       |                            5 |      |     |      |
+   | P3       |                            6 |      |     |      |
+   | P4       |                            1 |      |     |      |
+
+   Calculad el /Tiempo de retorno Medio/ de todos los procesos para todos los algoritmos.
