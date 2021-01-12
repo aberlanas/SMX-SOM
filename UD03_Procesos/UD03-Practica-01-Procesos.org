@@ -39,14 +39,14 @@
 
   Vamos a ver punto a punto, qué sería cada uno:
 
-  - La receta -> 
-  - El científico ->
-  - Los ingredientes ->
+  - La receta -> Las instrucciones
+  - El científico (cocinero) -> El procesador
+  - Los ingredientes -> 
   - El proceso ->
 
-** Características de los procesos
-
    El proceso es la actividad que consiste en que el científico computacional vaya leyendo la receta, obteniendo los ingredientes y horneando el pastel. 
+
+** Características de los procesos
 
    Cada proceso tiene su contador de programa, registros y variables, aislados de otros procesos, incluso siendo el mismo programa en ejecución 2 veces. Cuando este último caso sucede, el sistema operativo usa la misma región de memoria de código, debido a que dicho código no cambiará, a menos que se ejecute una versión distinta del programa.
 
@@ -56,7 +56,6 @@
     - Su estado de ejecución en un momento dado, esto es, los valores de los registros de la unidad central de procesamiento para dicho programa.
     - Su memoria de trabajo (memoria crítica), es decir, la memoria que ha reservado y sus contenidos.
     - Otra información que permite al sistema operativo su planificación.
-
    
    Los procesos son creados y eliminados por el sistema operativo, 
    así como también este se debe hacer cargo de la comunicación entre procesos, 
@@ -109,7 +108,6 @@
    | CMD      | Comando ejecutado |
    | TTY      | Terminal Asociado |
 
-
 * Operaciones sobre los procesos
 
 ** ps   
@@ -144,8 +142,11 @@
 
 * Algoritmos de Planificación de procesos
 
-  Vamos a repasar diferentes políticas de planificación de procesos.
-
+  Vamos a ver diferentes políticas de planificación de procesos que se 
+  pueden aplicar a nivel del Sistema Operativo para ordenar e ir ejecutando
+  y completando los diferentes procesos que van teniendo lugar en los 
+  ordenadores.
+  
 ** Tipos de Algoritmos
 
 *** FIFO  
@@ -161,6 +162,7 @@
 *** Shortest Remaining Processing Time
 
 *** Expulsivos
+
 
 ** Valores interesantes
 
