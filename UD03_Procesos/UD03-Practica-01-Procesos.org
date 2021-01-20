@@ -151,18 +151,48 @@
 
 *** FIFO  
 
+    /First-In, First-Out/
+
+    El primero en entrar es el primero en salir.
+
+    Los procesos serán ejecutados según el orden de llegada. 
+
 *** LIFO
 
+    /Last-In, First-Out/
+
+    El último en entrar es el primero en salir.
+    
+    Los procesos serán ejecutados en orden inverso a la llegada.
+
 *** Round Robin
-
+    
+    Por turnos, se asigna una cantidad de tiempo a cada proceso de la cola
+    estableciendo una secuencia, cuando un proceso acaba, sale de la cola y esta 
+    se hace más "/pequeña/". Se suele indicar con un número al lado que indica 
+    las /unidades de procesamiento/ que serán asignadas a cada proceso en cada
+    turno.
+    
 *** Processor Sharing
-
-*** Shortest Job First
-
-*** Shortest Remaining Processing Time
-
+    
+    En los sistemas modernos, es un algoritmo que permite dividir un proceso
+    en varios procesadores, o juntar varios procesos en el mismo procesador.
+    
 *** Expulsivos
+    
+    Un algoritmo de planificación se considera expulsivo si es capaz de expulsar
+    de la ejecución a un proceso para ejecutar otro que tenga mayor prioridad o 
+    deba ejecutarse por ser más adecuado.
 
+*** Shortest Job First (SJF)
+
+    Se ordenan los procesos en orden ascendente de tiempo de resolución, siendo 
+    los más rápidos en ejecutarse los primeros.
+    
+*** Shortest Remaining Processing Time First (SRPTF)
+    
+    Igual que el *SJF* pero expulsando a los procesos que se están ejecutando
+    si aparece uno nuevo con menor tiempo restante.
 
 ** Valores interesantes
 
@@ -196,25 +226,55 @@
    Dados los siguientes procesos, rellenad la tabla siguiente, indicando
    el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
    
-   | Procesos | Tiempo de Ejecución (Ciclos) | FIFO | SJB | Round Robin |
-   |----------+------------------------------+------+-----+-------------|
-   | P1       |                            4 |      |     |             |
-   | P2       |                            5 |      |     |             |
-   | P3       |                            6 |      |     |             |
-   | P4       |                            1 |      |     |             |
+   | Procesos | Tiempo de Ejecución (Ciclos) | FIFO | SJB | Round Robin (2) |
+   |----------+------------------------------+------+-----+-----------------|
+   | P1       |                            4 |      |     |                 |
+   | P2       |                            5 |      |     |                 |
+   | P3       |                            6 |      |     |                 |
+   | P4       |                            1 |      |     |                 |
 
-   Calculad el /Tiempo de Retorno/ de todos los procesos para todos los algoritmos.
+   Calculad el /Tiempo de Retorno medio/ de todos los procesos para todos los algoritmos.
    
 ** Tarea 03
 
    Dados los siguientes procesos, rellenad la tabla siguiente, indicando
    el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
    
-   | Procesos | Tiempo de Ejecución (Ciclos) | LIFO | SJB | SRPT |
-   |----------+------------------------------+------+-----+------|
-   | P1       |                            4 |      |     |      |
-   | P2       |                            5 |      |     |      |
-   | P3       |                            6 |      |     |      |
-   | P4       |                            1 |      |     |      |
+   | Procesos | Tiempo de Ejecución (Ciclos) | LIFO | SJF | SRPTF |
+   |----------+------------------------------+------+-----+-------|
+   | P1       |                            4 |      |     |       |
+   | P2       |                            5 |      |     |       |
+   | P3       |                            6 |      |     |       |
+   | P4       |                            1 |      |     |       |
 
    Calculad el /Tiempo de retorno Medio/ de todos los procesos para todos los algoritmos.
+
+** Tarea 04
+
+   Dados los siguientes procesos, rellenad la tabla siguiente, indicando
+   el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
+   
+   | Procesos | Tiempo de Ejecución (Ciclos) | FIFO | SJF | SRPTF |
+   |----------+------------------------------+------+-----+-------|
+   | P1       |                           17 |      |     |       |
+   | P2       |                           22 |      |     |       |
+   | P3       |                           11 |      |     |       |
+   | P4       |                           12 |      |     |       |
+
+   Calculad el /Tiempo de retorno Medio/ de todos los procesos para todos los algoritmos.
+
+** Tarea 05 
+
+   (Opcional)
+
+   Dados los siguientes procesos, rellenad la tabla siguiente, indicando
+   el tiempo de terminación del proceso siguiendo los diferentes algoritmos.
+
+   #+ATTR_LaTeX: :center 
+  | Procesos | Tiempo de Ejecución (Ciclos) | Round Robin (2) |
+  |----------+------------------------------+-----------------|
+  | <>       |                           <> |                 |
+  | P1       |                            4 |                 |
+  | P2       |                            2 |                 |
+  | P3       |                            5 |                 |
+  | P4       |                            8 |                 |
