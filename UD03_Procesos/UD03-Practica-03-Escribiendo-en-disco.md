@@ -1,12 +1,17 @@
 ---
-title: "UD03 - Practica 03 - Escribiendo en Disco"
-author: [Diego Carrasco]
+title: "[ Práctica ] Particiones, Sistemas de Ficheros y Ficheros"
+author: [Diego Carrasco García y Ángel Berlanas Vicente]
 date: "2021-01-23"
 subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
-subtitle: "Acceso a Disco, tiempos de escritura"
+subtitle: "Acceso a disco, tiempos de escritura, scripting,..."
 lang: "es"
-page-background: "../rsrc/backgrounds/background7.pdf"
+page-background: "../rsrc/backgrounds/background8.pdf"
+titlepage: true,
+titlepage-text-color: "FFFFFF"
+titlepage-rule-color: "360049"
+titlepage-rule-height: 0
+titlepage-background: "../rsrc/backgrounds/background-title.pdf"
 ...
 
 # Escritura en Disco
@@ -242,7 +247,7 @@ No es objetivo de esta que los conozcáis todos, pero sí que cada uno de ellos 
 una serie de ventajas e inconvenientes y que no todos sirven para todo, y que deberemos
 elegir con cuidado dependiendo de la situación en la que vayamos a instalar, configurar, etc.
 
-Por ahora utilizando esta tabla como referencia, cread los sistemas de ficheros en las particiones anteriormente creadas:
+Por ahora utilizando esta tabla como referencia, estableced los sistemas de ficheros en las particiones anteriormente creadas:
 
 | Partición | Comando | Sistema de ficheros final |
 |:---------:|:-------:|:-------------------------:|
@@ -257,8 +262,186 @@ Un ejemplo de ejecución sería:
 
 **¡Cuidado!** Un paso en falso y borrarás el sistema de archivos. Debéis manejar esto con atención.
 
+\newpage
 
+## mount
 
+Ahora ya tenemos los sistemas de ficheros y las particiones hechas, nos falta establecer los
+*puntos de montaje*. ¿Qué es un punto de montaje?
+
+Si buscamos este concepto en la *Wikipedia* aparece este texto:
+
+>Cada dispositivo de disco (disco duro, CD-ROM, pendrive, etc.) aloja un sistema de archivos que, conceptualmente, no es más que un árbol de directorios. Dicho árbol puede ser integrado en el árbol único de Unix utilizando un punto de montaje. El punto de montaje es cualquier directorio a partir del cual se visualizará el sistema de archivos montado. Si el punto de montaje contenía ficheros, estos desaparecerán, para visualizar los del dispositivo montado.
+
+Básicamente consiste en asignar una carpeta como punto de entrada a los ficheros
+y directorios que ya se encuentran presentes en el sistema de ficheros del dispositivo.
+
+Esto es un concepto muy curioso y que da lugar gran cantidad de operaciones que se pueden
+realizar desde sistemas de ficheros remotos, herramientas forenses, etc. 
+
+¿Cómo se realiza un montaje? Pues podemos efectuarlo de dos maneras:
+
+- Estableciéndolo en el fichero del Sistema Operativo que monta los diferentes dispositivos 
+   al arrancar.
+- Manualmente para hacer pruebas u operaciones *no persistentes*.
+
+Para la realización de las pruebas (por ahora) utilizaremos la línea de comandos (*a.k.a. Terminal*).
+
+La orden que realiza el montaje es : `mount`.
+
+El modo básico es : 
+
+`$ sudo mount DEVICE MOUNTPOINT`
+
+Donde:
+
+- `DEVICE` : Es el dispositivo que queremos montar.
+- `MOUNTPOINT` : Es la carpeta del *Sistema de ficheros actual* que nos servirá de enlace
+  entre *ambos mundos*.
+
+En este modo, el comando `mount` intentará *averiguar* por si mismo *qué tipo de sistema de ficheros* contiene el dispositivo que estamos montando. En caso de que no lo averigue, se le puede indicar al comando utilizando el parámetro `-t`, veamos un ejemplo:
+
+`$ sudo mount -t ext4 /dev/sdb2 /mnt/`
+
+Esta orden intentará montar la partición 2 del segundo disco duro en la carpeta `/mnt` y para
+trabajar con los ficheros que contiene utilizará el sistema de ficheros `ext4`. En caso de que ocurra un error, el comando mount fallará y deberéis arreglarlo ^_^.
+
+## Tarea 02 
+
+Las dos particiones que tenéis creadas de la tarea anterior vamos a montarlas en dos carpetas diferentes:
+
+- /mnt/mme-ntfs
+- /mnt/mme-fat32
+
+Para ello deberéis crear primero las carpetas y luego ejecutar el comando `mount` para que cada una acabe accesible desde la carpeta adecuada:
+
+| Dispositivo | Punto de montaje|
+|:-----------:|:----------------:|
+| /dev/sdb1   | /mnt/mme-ntfs|
+| /dev/sdb2   | /mnt/mme-fat32|
+
+Ejecutad el comando : `$ fdisk -l | grep sdb1` y comprobad que las líneas que aparecen 
+son las de vuestros puntos de montaje y que todo está correcto.
+
+Adjuntad captura de pantalla de la salida de ese comando.
+
+# Scripts y pruebas
+
+Más adelante en el curso veremos diferentes herramientas de *pruebas de rendimiento*, pero 
+por ahora vamos a realizar una serie de *Scripts* que crearán ficheros en los puntos
+de montaje que acabamos de crear. 
+
+Los *scripts* van a generar una serie de ficheros de diferentes tamaños en nuestras carpetas, 
+para ver como se llena el espacio disponible y cómo se accede a los diferentes ficheros.
+
+Como resumen del *script* podríamos decir:
+
+* Para la creación de ficheros utilizaremos `dd`.
+* Para repetición de la creación utilizaremos `for`
+* Para la comprobación de donde nos encontramos utilizaremos `if`, `pwd` y `test`.
+
+La tarea consiste en crear varios Scripts que resuelvan diferentes problemas:
+
+- Asegurarnos de que nos encontramos en las carpetas correcta.
+- Comprobar que podemos escribir en esa carpeta.
+- Crear diferentes ficheros, de diferentes tamaños.
+- Algunas cosas más.
+
+## Misión 00
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-ntfs` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio y si es así que genere
+10 ficheros de 1 MB cada uno que se llamen:
+
+- fich-1mb-1.iso
+- fich-1mb-2.iso
+- ....
+
+Esta misión tutorial se resolvería con el siguiente script copiado a la carpeta `/mnt/mme-ntfs`
+
+```shell
+#!/bin/bash
+
+# Sanity Checks
+# Are we in the correct place?
+if [ $(pwd) != "/mnt/mme-ntfs" ]; then
+   echo " Wrong execution place !"
+   exit 1
+fi
+
+# Can we write here?
+touch test-if-i-can-write.txt || true
+
+if [ ! -f test-if-i-can-write.txt ];then
+   echo " I cannot write here !"
+   exit 1
+fi
+
+# Remove the file (for cleaning)
+rm test-if-i-can-write.txt
+
+# Now create the files
+for i in $(seq 1 10); do
+   dd if=/dev/zero of=fich-1mb-$i.iso bs=1M count=1
+done
+
+exit 0
+```
+\newpage
+
+Algunos consejos para la realización de las misiones siguientes:
+
+- Cread los *scripts* en una carpeta en vuestra carpeta personal y copiadlos 
+  para la ejecución para cada prueba. No editeis los scripts en `/mnt/*`
+
+## Misión 01
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-ntfs` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio y si es así que genere
+15 ficheros de 2 MB a bloques de 512K y que se llamen:
+
+- mission-01-file-2mb-1.iso
+- mission-01-file-2mb-2.iso
+- ...
+
+## Misión 02
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-fat32` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio y si es así que genere
+100 ficheros de 3 MB a bloques de 256K y que se llamen:
+
+- mission-02-file-3mb-1.iso
+- mission-02-file-3mb-2.iso
+- ...
+
+## Misión 03
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-ntfs` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio y si es así que genere
+300 ficheros de 100KB a bloques de 50KB y que se llamen:
+
+- mission-03-file-100k-1.iso
+- mission-03-file-100k-2.iso
+- ...
+
+\newpage
+
+## Misión 04
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-ntfs` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio, que borre todos los ficheros de la mision 01 y que genere un fichero de 500MB a bloques de 4MB, que se llame:
+
+- mission-04-largefile.iso
+- ...
+
+## Misión 05
+
+Generar un script que una vez copiado a la carpeta `/mnt/mme-fat32` compruebe que está 
+en ese directorio, que puede escribir ficheros en ese directorio, que borre los ficheros de las misiones anteriores de esta carpeta y que genere 1000 ficheros de 10KB, indicando en cada fichero cómo se llama por pantalla:
+
+- mission-05-file-10k-1.iso
+- mission-05-file-10k-2.iso
+- ...
 
 
 

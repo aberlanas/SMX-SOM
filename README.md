@@ -7,6 +7,10 @@ Recursos para el Módulo de Sistsemas Monopuesto del Ciclo de Grado Medio de Sis
 
     * `pandoc`
 
+# Comandos útiles
+
+- `pandoc fichero.md -o fichero.pdf --from markdown --template ../rsrc/templates/eisvogel.tex --listings`
+
 # Probando Markdown
 
     Vamos a desarrollar algunos ejercicios en Markdown, utilizando 
