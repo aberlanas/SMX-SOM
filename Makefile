@@ -2,6 +2,8 @@
 
 TEMPLATE_TEX_PD="rsrc/templates/pd-nologo-tpl.latex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
+TEMPLATE_TEX_PRACTICA="rsrc/templates/eisvogel.tex"
+UD03_FOLDER="UD03_Procesos"
 
 PDF_PATH:=$(shell readlink -f PDFS)
 
@@ -12,6 +14,16 @@ clean:
 	rm -f UD02_PowerShell-BASH/*.tex
 	rm -f UD02_PowerShell-BASH/*.pdf
 
+ud03:
+	@echo " * UD03 -> Procesos "
+	cd $(UD03_FOLDER)
+	@for file in *.md ; do \
+        	echo " -> " $${file} ; \
+			destfile=$(basename $${file}); \
+			echo $destfile; \
+			pandoc --template $(TEMPLATE_TEX_PRACTICA) --listings --from markdown $${file} -o ../PDFS/1.pdf; \
+        done
+	#@pandoc --template $(TEMPLATE_TEX_PRACTICA) --listings --from markdown UD03_Procesos/UD03-
 
 files:
 	@echo " [ Step : files ]"

@@ -1,6 +1,6 @@
 ---
 title: "[ Práctica ] Particiones, Sistemas de Ficheros y Ficheros"
-author: [Diego Carrasco García y Ángel Berlanas Vicente]
+author: [Diego Carrasco García y Angel Berlanas Vicente]
 date: "2021-01-23"
 subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
@@ -242,6 +242,7 @@ en una determinada partición. Existen multitud de sistemas de ficheros diferent
 - btrfs
 - reiserFS
 - XFS
+- GlusterFS
 - ...
 
 No es objetivo de esta que los conozcáis todos, pero sí que cada uno de ellos presenta 
@@ -471,18 +472,99 @@ Ahora que ya tenemos la capacidad de generar entornos llenos de ficheros de dife
 nuestras propias herramienta (`crafting`), vamos a realizar una serie de acciones con la intención
 de comprobar y medir algunas de las operaciones más habituales de acceso a discos duros.
 
-Para ello utilizaremos el comando `time` para extraer diferentes tiempos, que utilizaremos para generar
-ficheros de `CSV` (*Comma Separated Values*), que son ficheros en cuyo interior los datos están separados
-por un carácter "`,`" que indica las diferentes columnas.
+Vamos utilizar `time` para ir tomando medidas de la ejecución de nuestros scripts de las misiones anteriores y ademas de la copia y el borrado de los ficheros en diferentes situaciones.
+
+Rellena una tabla en *LibreOffice* con las siguientes filas y columnas:
+
+| Operación | real | user | sys | 
+|:---------:|:----:|:----:|:---:|
+| mision 01 |      |      |     |
+| mision 02 |      |      |     |
+| mision 03 |      |      |     |
+| mision 04 |      |      |     |
+| mision 05 |      |      |     |
+| mision 06 |      |      |     |
+| mision 07 |      |      |     |
+| mision 08 |      |      |     |
+| mision 09 |      |      |     |
+| mision 10 |      |      |     |
+
+Las misiones de la 7 en adelante están descritas a continuación:
+
+## Misión 07
+
+Vacia ambos directorios de /mnt/, ejecuta los scripts de la misión 01 y 03 y copia todos los ficheros generados a la carpeta /mnt/mme-fat32. Toma medidas de la copia solamente.
+
+## Misión 08
+
+Vacia ambos directorios de /mnt/, ejecuta los scripts de la misión 01 y 04 y copia todos los ficheros generados a la carpeta /mnt/mme-fat32. Toma medidas de la copia solamente.
+
+## Misión 09
+
+Vacia ambos directorios de /mnt/, ejecuta los scripts de la misión 02 y 05 y copia todos los ficheros generados a la carpeta /mnt/mme-ntfs. Toma medidas de la copia solamente.
+
+## Misión 10
+
+Vacia ambos directorios de /mnt/, ejecuta los scripts de la misión 01, 03 y 04 y copia todos los ficheros generados a la carpeta /mnt/mme-fat32. Toma medidas de la copia solamente.
+
+\newpage
+
+## ¡Misión extra!
+
+Hemos utilizado el comando `time` para extraer diferentes tiempos, que hemos rellenado en la hoja de cálculo, vamos ahora a automatizar todo esto, de tal manera que en vez de utilizar el LibreOffice, usaremos ficheros de `CSV` (*Comma Separated Values*), que son ficheros en cuyo interior los datos están separados por un carácter "`;` o `,`" que indica las diferentes columnas.
+
+`time` es un *bash-builtin*, esto hace que su salida se deba tratar de una manera 
+un poco especial. Para redirigir la salida del comando `time`, será mejor que utilicemos
+técnicas como la siguiente:
+
+`$ { time COMAND ARGS ; } 2> /tmp/time.txt`
+
+Y luego procesaremos el fichero `/tmp/time.txt` para extraer la información que nosotros
+necesitemos.
+
+`$ cat /tmp/time.txt`
+
+```shell
+real	0m0,008s
+user	0m0,001s
+sys     0m0,007s
+```
+
+Vamos a pasarlo a un formato más *csv-friendly*:
+
+`$ cat /tmp/time.txt | sed "/^$/d" | sed -e "s%[[:space:]]%;%g" | tr "\n" ";"`
+
+```shell
+real;0m0,008s;user;0m0,001s;sys;0m0,007s;
+```
+
+Si realizáis la prueba en vuestras máquinas, observaréis que no se genera un *salto de línea* al final de cada ejecución, así que vamos a preparar un *script* sencillo que al ejecutarlo indicándole
+como argumento la ruta a un fichero de estádisticas (`/tmp/time.txt` por ejemplo), nos añada las estadísticas a un fichero acumulado que vamos a situar en nuestra carpeta personal:
+
+```shell
+#!/bin/bash
+RUTA_AL_ACUMULADO="$HOME/acumulado.csv"
+
+# En $1 tenemos la ruta al fichero que queremos procesar
+# comprobaremos que existe primero.
+if [ -f $1 ]; then
+   RESULTS=$(cat $1| sed "/^$/d" | sed -e "s%[[:space:]]%;%g" | tr "\n" ";")
+   echo "$RESULTS" >> "$RUTA_AL_ACUMULADO"
+else
+   echo " No existe el fichero indicado "
+   exit 1
+fi
+
+exit 0
+```
+
+De esta manera podemos generar diferentes estadísticas y luego procesarlos fichero de resultados
+para generar un único acumulado, que al abrirlo con *LibreOffice* nos dará la posibilidad
+de tratarlo como una *hoja de cálculo*.
+
+Plantea las misiones de la 7 a la 10 como scripts, y ejecutalos guardando la salida en diferentes ficheros y luego procésalos con el script que acabamos de ver.
 
 
-
-para muchos ficheros pequeños, para pocos grandes, y mixto
-
-y también que saquen tiempos cuando se lee y escribe en un mismo disco duro, o cuando se lee de un disco y se escribe en otro
-
-
-vamos que esta práctica que has hecho, me viene bien como punto de inicio para lo que yo quiero enseñarles, y podría utilizarla para la oposición como muestra de una actividad transversal, donde indique que en SOM se crean scripts, y que en MME se mide rendimiento
 
 
 
