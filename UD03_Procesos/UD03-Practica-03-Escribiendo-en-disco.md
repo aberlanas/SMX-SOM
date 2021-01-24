@@ -6,7 +6,8 @@ subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
 subtitle: "Acceso a disco, tiempos de escritura, scripting,..."
 lang: "es"
-page-background: "../rsrc/backgrounds/background8.pdf"
+page-background: "../rsrc/backgrounds/background-senia.pdf"
+page-background-opacity: 1
 titlepage: true,
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
@@ -393,6 +394,9 @@ Algunos consejos para la realización de las misiones siguientes:
 
 - Cread los *scripts* en una carpeta en vuestra carpeta personal y copiadlos 
   para la ejecución para cada prueba. No editeis los scripts en `/mnt/*`
+- Los scripts es recomendable que tengan nombres como:
+  - `mision-01-mme.sh`
+  - `mision-02-mme.sh`
 
 ## Misión 01
 
@@ -442,6 +446,43 @@ en ese directorio, que puede escribir ficheros en ese directorio, que borre los 
 - mission-05-file-10k-1.iso
 - mission-05-file-10k-2.iso
 - ...
+
+## Misión 06 - Limpieza
+
+Genera un script que borre todos los ficheros generados por las misiones anteriores y prepare 
+el entorno (*environment*) para la ejecución *limpia* de determinadas pruebas que veremos más adelante.
+
+Debe indicar cada carpeta que está *limpiando*, ejemplo de ejecución:
+
+`$ ./mission-06-clean.sh`
+
+```shell
+* Cleaning /mnt/mme-ntfs/
+* Cleaning /mnt/mme-fat32/
+```
+
+Este script en concreto podría llamarse: `mission-06-clean.sh`.
+
+\newpage
+
+# Estadísticas y time
+
+Ahora que ya tenemos la capacidad de generar entornos llenos de ficheros de diferente tamaños, utilizando
+nuestras propias herramienta (`crafting`), vamos a realizar una serie de acciones con la intención
+de comprobar y medir algunas de las operaciones más habituales de acceso a discos duros.
+
+Para ello utilizaremos el comando `time` para extraer diferentes tiempos, que utilizaremos para generar
+ficheros de `CSV` (*Comma Separated Values*), que son ficheros en cuyo interior los datos están separados
+por un carácter "`,`" que indica las diferentes columnas.
+
+
+
+para muchos ficheros pequeños, para pocos grandes, y mixto
+
+y también que saquen tiempos cuando se lee y escribe en un mismo disco duro, o cuando se lee de un disco y se escribe en otro
+
+
+vamos que esta práctica que has hecho, me viene bien como punto de inicio para lo que yo quiero enseñarles, y podría utilizarla para la oposición como muestra de una actividad transversal, donde indique que en SOM se crean scripts, y que en MME se mide rendimiento
 
 
 
