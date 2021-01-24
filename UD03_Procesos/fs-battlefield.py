@@ -6,7 +6,7 @@ import random
 positions_index = []
 positions_fs = []
 bloqueados_list = []
-fs_list = ["APFS","btrfs","exFAT","ext3","ext4", "FAT16", "FAT32", "GlusterFS", "NTFS","ReFS", "XFS"]
+fs_list = ["apfs","btrfs","exfat","ext3","ext4", "fat16", "fat32", "glusterfs", "ntfs","refs", "xfs"]
 
 
 def test_positions(i):
@@ -50,17 +50,22 @@ def main():
         tests_bloqueados(random.randint(10,14))
     
     #print (bloqueados_list)
+    filas_aux = 1
 
     while (pos <= tamanyo_tablero):
 
+        #if (pos%5 ==0 ):
+        #    print("| "+str(filas_aux), end='')
+
         if pos in bloqueados_list:
-            print("| - ", end='')
+            print("|![HDD](imgs/hddicon2.png) ", end='')
         else:
-            print("| "+lista_aux[fs_indice]+" ", end='')
+            print("|![HDD](imgs/button_"+lista_aux[fs_indice]+".png) ", end='')
             fs_indice=fs_indice+1
 
         if (pos == 4 or pos == 9 or pos == 14):
             print("|")
+            filas_aux = filas_aux+1
         
         pos=pos+1
 
@@ -85,8 +90,8 @@ if __name__ == "__main__":
             s = open("header.md", 'r').read()
 
             print(s)
-    
-            print("|  1 | 2|  3| 4 | 5 |")
+
+            print("| 1 | 2|  3| 4 | 5 |")
             print("|:--------:|:--------:|:-------:|:-------:|:-------:|")
 
             main()
