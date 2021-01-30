@@ -70,6 +70,7 @@ done
 exit 0
 ```
 
+
 ## Script 02
 
 Cuando queremos ejecutar algo y que se quede en *background* podemos ejecutarlo
