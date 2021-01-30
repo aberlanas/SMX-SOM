@@ -37,7 +37,40 @@ Some *useful* commands:
 | `tr -s` | translate or delete characters (-s replace each sequence of a repeated character that is listed) |
 | `read` | read from standar input|
 
+\newpage
 ## Script 01
+
+Vamos a crear un pequeño menú que muestre una serie de opciones relacionadas con los procesos:
+
+Corrígelo y rellena los huecos (*FILL THE GAPS*)
+
+```shell
+#!/bin/bash
+
+OPTION="none"
+
+while ( $OPTION != "q" ); do 
+
+    echo " = = ADMINISTRADOR DE PROCESOS TACTICO = = "
+    echo " - Press : p -> Report a snapshot of the current processes"
+    echo " - Press : c -> Count the number of processes"
+    echo " * Select an option: "
+    read OPTION
+
+    if [ $OPTION = "p" ]; then
+        # FILL THE GAPS
+    elif [ $OPTION = "c" ]; then
+        # FILL THE GAPS
+    else 
+        echo " [ Unknown Option ] : Please select p or c"
+    fi
+
+done
+
+exit 0
+```
+
+## Script 02
 
 Cuando queremos ejecutar algo y que se quede en *background* podemos ejecutarlo
 añadiendo al final del comando el símbolo `&`, por ejemplo:
@@ -61,6 +94,11 @@ Debéis crear una opción adicional pulsando la tecla `q` que salga del script.
 |---------|-------------|
 | `while (CONDITION) do; stuff; done;`   | Repetition structure |
 
-## Script 02
+## Script 03 -> OPCIONAL
+
+Crea un script que pida un número entre el 1 y 10 (debe asegurarse de que está en ese rango) al usuario y que muestre
+los primeros *n* procesos ordenados por memoria RAM usada.
+
+
 
 
