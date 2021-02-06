@@ -49,7 +49,7 @@ Corrígelo y rellena los huecos (*FILL THE GAPS*)
 
 OPTION="none"
 
-while ( $OPTION != "q" ); do 
+while [ $OPTION != "q" ]; do 
 
     echo " = = ADMINISTRADOR DE PROCESOS TACTICO = = "
     echo " - Press : p -> Report a snapshot of the current processes"
@@ -93,7 +93,7 @@ Debéis crear una opción adicional pulsando la tecla `q` que salga del script.
 
 | Command | Description |
 |---------|-------------|
-| `while (CONDITION) do; stuff; done;`   | Repetition structure |
+| `while [ CONDITION ]  do; stuff; done;`   | Repetition structure |
 
 ## Script 03 -> OPCIONAL
 

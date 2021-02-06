@@ -1,10 +1,10 @@
 ---
-title: "[ Práctica ] Procesos y Scripts"
+title: "[ Práctica ] Algoritmo expulsivo: SRTF"
 author: [Angel Berlanas Vicente]
 date: "2021-01-23"
 subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
-subtitle: "Procesos, prioridad, PIDS,..."
+subtitle: "Diferentes ejercicios de procesos,..."
 lang: "es"
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
@@ -15,11 +15,12 @@ titlepage-rule-height: 0
 titlepage-background: "../rsrc/backgrounds/background-title.pdf"
 ...
 
-Tareas
-======
+# Tareas
 
-Tarea 01
---------
+Realizad las siguientes tareas que se adjuntan, podéis hacerlo en papel y subir una foto 
+como entrega si aparecen los cálculos claros.
+
+## Tarea 01
 
 Dados los siguientes procesos, el tiempo de llegada de los mismos y su
 coste, averiguad los tiempos de finalización de los procesos,
@@ -40,8 +41,7 @@ Calculad también:
 -   Tiempo de espera medio.
 -   Tiempo de retorno medio.
 
-Tarea 02
---------
+##  Tarea 02
 
 Dados los siguientes procesos, el tiempo de llegada de los mismos y su
 coste, averiguad los tiempos de finalización de los procesos,
@@ -62,8 +62,7 @@ Calculad también:
 -   Tiempo de espera medio.
 -   Tiempo de retorno medio.
 
-Tarea 03
---------
+##  Tarea 03
 
 Dados los siguientes procesos, el tiempo de llegada de los mismos y su
 coste, averiguad los tiempos de finalización de los procesos,
@@ -83,3 +82,4 @@ Calculad también:
 
 -   Tiempo de espera medio.
 -   Tiempo de retorno medio.
+
