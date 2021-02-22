@@ -4,7 +4,6 @@ author: [Angel Berlanas Vicente]
 date: "2021-02-16"
 subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
-subtitle: "Grupo A"
 lang: "es"
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
