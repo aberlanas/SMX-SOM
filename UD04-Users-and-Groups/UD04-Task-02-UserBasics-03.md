@@ -41,4 +41,14 @@ In addition to the script to solve the task.
 
 # Task 02
 
-Using crontab, code a Shell Script that shows 
+Using crontab, code a Shell Script that shows the use of the RAM (at the `syslog` with `logger`)
+(only the percentage) and prepare crontab to run it each 30 seconds.
+
+Example of execution of : `tail -f /var/log/syslog` with the Crontab correctly configured:
+
+```shell
+...
+Mar  1 19:16:01 erebor aberlanas: RAM 87% Free
+Mar  1 19:16:31 erebor aberlanas: RAM 88% Free
+...
+```
