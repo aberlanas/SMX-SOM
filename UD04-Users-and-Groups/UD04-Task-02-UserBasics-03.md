@@ -1,9 +1,9 @@
 ---
-title: "[ Unit 04 ] : Users and Groups"
+title: "[ Unit 04 ] : Crontab and Users"
 author: [Angel Berlanas Vicente]
-date: "2021-02-16"
+date: "2021-03-01"
 subject: "Markdown"
-keywords: [Markdown, Users, Groups]
+keywords: [Markdown, Users, Groups, Crontab]
 lang: "es"
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
@@ -16,20 +16,29 @@ titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 
 # Task 01
 
-Fill in the table with the commands that allow us to obtain the following *attributes* or *information* from the users
+Using `crontab` setup a Shell Script that must be launched every minute and log into the `syslog` which are the users that are logged in the system in this time.
 
-| Attributes | Command  |
-|----------|:----------:|
-| login       |             |
-| first name      |            |
-| last name       |            |
-| home directory       |            |
-| user id |            |
-| shell |            |
-| user's groups |            |
+Hints:
 
+* `/var/log/syslog`
+* `logger`
+* `who`
+
+Example of execution of : `tail -f /var/log/syslog` with the Crontab correctly configured:
+
+```shell
+...
+Mar  1 18:56:01 erebor aberlanas: aberlanas tty7 2021-03-01 18:44 (:0)
+...
+```
+
+
+Make an screenshot of the output of :
+
+`crontab -l`
+
+In addition to the script to solve the task.
 
 # Task 02
 
-Why you can not obtain a `plain copy` from a user's password in a `modern` OS?
-
+Using crontab, code a Shell Script that shows 
