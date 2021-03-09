@@ -1,7 +1,6 @@
 ---
 title: "[ Unit 04 ] : Arguments: Perfect Clusters of Grapes"
 author: [Angel Berlanas Vicente]
-date: "2021-02-16"
 subject: "Markdown"
 keywords: [Markdown, Users, Groups]
 lang: "es"
