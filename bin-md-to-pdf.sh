@@ -2,6 +2,14 @@
 
 mkdir -p PDFS
 
+clean-pdfs(){
+    echo " * Cleaning PDFs"
+    rm -f PDFS/*.pdf
+}
+
+
+make-UD03(){
+
 cd UD03_Procesos
 
 for f in $(find . -name  "UD03*.md"); do
@@ -11,6 +19,9 @@ for f in $(find . -name  "UD03*.md"); do
 
 done
 cd ..
+}
+
+make-AceptaElScript(){
 
 cd AceptaElScript
 
@@ -22,6 +33,9 @@ for f in $(find . -name  "*.md"); do
 done
 cd ..
 
+}
+
+make-UD04(){
 cd UD04-Users-and-Groups
 
 for f in $(find . -name  "*.md"); do
@@ -31,6 +45,16 @@ for f in $(find . -name  "*.md"); do
 
 done
 cd ..
+
+}
+
+
+# Main
+
+clean-pdfs
+make-UD04
+
+
 
 
 exit 0
