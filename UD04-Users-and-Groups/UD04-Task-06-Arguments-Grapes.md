@@ -11,7 +11,7 @@ titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
 titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
-...
+---
 
 # Task 01
 
