@@ -80,23 +80,22 @@ A medida que durante un conflicto las unidades blindadas avanzan en territorio e
 
 ![Norte de Africa](imgs/map-tanks.jpg)\
 
-Los kilómetros que tienen que recorrer los son muchos, y se deben apostar (*dejar vigilando*) tanques, vigilando dichas líneas de suministro.
+Los kilómetros que tienen que recorrer los convoys de abastecimiento son muchos, y se deben apostar (*dejar vigilando*) tanques vigilando dichas líneas de suministro.
 
 Esos tanques que deben quedarse vigilando son parte de los batallones, así que cada vez que recorren kilómetros y van dejando vigilancia, los batallones son menos númerosos.
 
 Realiza un Shell Script que ayude a los Comandantes a averiguar cuantos tanques quedarán al final de las línea de suministro al ir apostando los tanques cada *X* kilómetros.
 
-El Script debe preguntar *cuantos tanques debe dejar en cada puesto* con un mínimo de 2 y un máximo de 7 tanques.
-A continuación debe preguntar *cada cuantos kilómetros* se establecerán los puestos de vigilancia.
+- El Script debe preguntar *cuantos tanques debe dejar en cada puesto* con un mínimo de 2 y un máximo de 7 tanques.
+- A continuación debe preguntar *cada cuantos kilómetros* se establecerán los puestos de vigilancia.
 
 El número de tanques en el batallón inicial es de *540* tanques.
 
 Teniendo en cuenta que debemos recorrer *3300* kilómetros hasta *Tobruk*, el Script deberá tener en cuenta esos datos y tras el cálculo de los tanques que se quedan atrás, indicar **cuantos** tanques quedarían disponibles para el asalto final. En caso de que no hayan suficientes tanques, mostrar un mensaje indicándo el número de kilómetros de las líneas de suministros que quedarían vigilados.
 
-Tanto el número de tanques iniciales como los kilómetros a recorrer hasta Tobruk, deben ser variables establecidas
-dentro de script, no hace falta que lo preguntéis al usuario.
+Tanto el número de tanques iniciales como los kilómetros a recorrer hasta Tobruk, deben ser variables establecidas *dentro* de script, no hace falta que lo preguntéis al usuario.
 
-Ejemplos:
+Ejemplos de ejecución:
 
 ```shell
 usuario@maquina:~$./script-recuperacion-03.sh
@@ -106,6 +105,7 @@ usuario@maquina:~$./script-recuperacion-03.sh
  * Cada cuantos kilometros vigilamos : 110
  * Cuantos tanques dejamos vigilando : 6
  --- CALCULOS ---
+ -- ¡ ASALTAMOS Tobruk ! --
  -- Quedarian : 360 tanques para asaltar Tobruk.
 
 ```
