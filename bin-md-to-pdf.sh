@@ -64,8 +64,8 @@ cd ..
 # Main
 
 clean-pdfs
-#make-UD04
-make-UD0X
+make-UD04
+#make-UD0X
 
 
 
