@@ -88,7 +88,6 @@ elrond@rivendel:~$sudo ./ElrondCouncilUsers.sh
 * Legolas users not exists.. creating it...
 -- Legolas added!
 * CONTINUE...
-
 ```
 
 
