@@ -1,5 +1,5 @@
 ---
-title: "[ Unit 04 ] : Local Users and Groups on GNU/LinuX - Collector's Edition"
+title: "[ Unit 04 ] : The One Hundred Scripts - Collector's Edition"
 author: [Angel Berlanas Vicente]
 subject: "Markdown"
 keywords: [Markdown, Users, Groups]
@@ -49,7 +49,7 @@ And after that, shows all the users on the systems which their $HOME are in the 
 
 ## Script 07 
 
-Code a Shell Script that uses the first argument give in order show all the users on the System which their `$HOME` matches the argument.
+Code a Shell Script that uses the first argument given in order show all the users on the System which their `$HOME` matches the argument.
 
 ## Script 08 
 
@@ -57,5 +57,64 @@ Code a Shell Scrip that list from all groups on the systems each user that belon
 
 ## Script 09 
 
-Code a 
+Code a Shell Script that uses the first argument to indicat if the script must list *users* or *groups*. If the first parameter is :
+`user`, then the script must take the **second** argument as the *username* and list all the groups of the user given. If the first parameter is : `group`, then the script will use the **second** argument as a *groupname* and list all the users on this group.
+
+Examples of execution:
+```shell
+usuario@maquina:~$./script-09.sh user tic
+ * The groups of the user tic will be displayed:
+tic adm sudo
+```
+
+```shell
+usuario@maquina:~$./script-09.sh group sudo
+ * The user of the group sudo will be displayed:
+tic
+aberlanas
+```
+
+## Script 10
+
+Using the script of the task 09 as a base for development make the next improvements (next exercises uses the same base):
+
+- Test that the number of arguments is three or show an error message and exit with error : `exit 1`
+
+## Script 11
+
+Improve the script 10 :
+
+- Test if the user or the group are valid (exists on the system) before execute the commands.
+  
+## Script 12 
+
+Improve the script 11 :
+
+- Show each group or user from the listed items in separate lines.
+
+```shell
+usuario@maquina:~$./script-09.sh user tic
+ * The groups of the user tic will be displayed:
+tic 
+adm 
+sudo
+```
+
+## Script 13
+
+Improve the script 12:
+
+If the user is member of the group `sudo`, display a message in the same line indicating the `Super-Cow Powers`
+
+```shell
+usuario@maquina:~$./script-09.sh user tic
+ * The groups of the user tic will be displayed:
+tic 
+adm 
+sudo -> IS A SUPER USER! 
+```
+
+## Script 14
+
+Improve the script 13: 
 
