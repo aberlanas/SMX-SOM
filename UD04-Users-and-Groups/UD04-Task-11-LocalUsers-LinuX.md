@@ -1,5 +1,5 @@
 ---
-title: "[ Unit 04 ] : The One Hundred Scripts - Collector's Edition"
+title: "[ Units 01-04 ] : The One Hundred Scripts - Collector's Edition"
 author: [Angel Berlanas Vicente]
 subject: "Markdown"
 keywords: [Markdown, Users, Groups]
@@ -16,6 +16,8 @@ titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 # Scripts about Users and Groups
 
 A collection of Shell Scripts about users and groups in GNU/LinuX.
+
+# Just a Warm-up
 
 ## Script 01
 
@@ -54,6 +56,8 @@ Code a Shell Script that uses the first argument given in order show all the use
 ## Script 08 
 
 Code a Shell Scrip that list from all groups on the systems each user that belongs to that group. Each group with their members.
+
+# The continuum improving
 
 ## Script 09 
 
@@ -116,5 +120,57 @@ sudo -> IS A SUPER USER!
 
 ## Script 14
 
-Improve the script 13: 
+Improve the script 13:
 
+Test if the username or groupname given as an argument *not* contains numbers or special characters before attempting to 
+manage it.
+
+\newpage 
+
+# Loops and Loops
+
+## Script 15
+
+Code a Shell Script that using the `seq` command displays the numbers between the 100 and 144 using steps of 3. Waiting `0,5` seconds between each number.
+
+## Script 16
+
+Code a Shell Script that displays all the numbers between 80 and 160 that are multiples of 12.
+
+## Script 17
+
+Code a Shell Script that displays all the numbers between 100 and 300 that are multiples of 13 and 3.
+
+## Script 18
+
+Code a Shell Script that displays all the numbers until 1000 that are prime numbers.
+
+## Script 19
+
+Code a Shell Script that displays all the possibles IP in Version 4 in the World.
+
+## Script 20
+
+Code a Shell Script that displays all **prime factors** of a number given as first parameter (argument).
+
+Disclaimer: *prime factors* = Factores Primos (sí, han vuelto en forma de Chapa).
+
+## Script 21
+
+Improve the Script 20 in order to also test that the first argument given is a number (integer).
+
+## Script 22
+
+Improve the Script 21 in order to also test that only *one* argument is given.
+
+## Script 23
+
+Code a Shell Script that calculate the sum of all prime numbers between 1 and 100.
+
+## Script 24
+
+Code a Shell Script that calculate the product of all prime numbers between 1 and 100.
+
+## Script 25
+
+Code a Shell Script that using a number given as a parameter displays the first multiple of it that is also a multiple of 5.
