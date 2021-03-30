@@ -1,5 +1,5 @@
 ---
-title: "[ Units 01-04 ] : The One Hundred Scripts - Collector's Edition"
+title: "[ Units 01-04 ] : The 47 Ronin Scripts - Collector's Edition"
 author: [Angel Berlanas Vicente]
 subject: "Markdown"
 keywords: [Markdown, Users, Groups]
@@ -174,3 +174,152 @@ Code a Shell Script that calculate the product of all prime numbers between 1 an
 ## Script 25
 
 Code a Shell Script that using a number given as a parameter displays the first multiple of it that is also a multiple of 5.
+
+\newpage
+# Testing arguments
+
+## Script 26 
+
+Code a Shell Script that accepts exactly 3 integers as a parameters (testing the arguments in number and form), and returns the sum of them.
+
+## Script 27
+
+Code a Shell Script that accepts exactly 3 strings as a parameters (testing the arguments in number and form), and returns the concatenation of them.
+
+## Script 28 
+
+Code a Shell Script that accepts exactly 1 integer of 4 digit as a parameters (testing the arguments in number and form) and return the prime factors of it.
+
+## Script 29
+
+Code a Shell Script that test if the argument given is a valid *Car Plate* in the form 0000-XYZ.
+
+## Script 30
+
+Code a Shell Script that test if the argument given is a valid *Car Plate* in the form 0000-XYZ and returns the next Car Plate Code (number and letters).
+
+## Script 31
+
+Code a Shell Script that ask for a SQL Select expression via Standard Input and test if seems a *valid* expression:
+
+- Begins with `SELECT` in uppercase.
+- Ends in semicolon ";".
+  
+## Script 32
+
+Improve the Script 31 testing also that contains a `FROM` clausule. 
+
+## Script 33
+
+Code a Shell Script that test if the argument given is a valid IP number.
+
+## Script 34
+
+Code a Shell Script that test if the argument given is a valid IP number in a Class B.
+
+## Script 35
+
+Code a Shell Script that test if the argument given is a valid IP number in a Class C.
+
+## Script 36
+
+Code a Shell Script that test if the arguments givens (2) is a valid IP and a possible Mask.
+
+Example of execution:
+```shell
+usuario@maquina:~$./script-36.sh 192.168.1.3 /23
+```
+
+## Script 36
+
+Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given.
+
+## Script 37 
+
+Code a Shell Script that test if the arguments givens (2) is a Broadcasst IP with the Mask given.
+
+## Script 38
+
+Code a Shell Script that test if the arguments givens (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one.
+
+## Script 39
+
+Code a Shell Script that test if the arguments givens (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one. And then make a 3 ping tests over this IP, reporting the failure or succcess of the tests.
+
+## Script 40 
+
+Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned increasingly. (*1,2,3,4,....123,...*).
+
+## Script 41
+
+Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned decreasingly. (*254,253,252,...,2,1*).
+
+\newpage
+## Script 42 (Value x4)
+
+In Japan, the country is splitted in 47 prefectures (provinces), for us (*European People*), all of them are similar, but for the japaneses is said that exists 4 kind of prefectures:
+
+- 1 To (*Tokio*)
+- 1 Do (*Hokkaido*)
+- 2 Fu (*Osaka and Kioto*)
+- 43 Ken (from the **Rural contries**)
+
+![Japan Prefectures](imgs/japan.jpg)\
+
+Make a Shell Script that ask the user for a Valid ZIP Number (Postal code of Japan), in the format NNN-NNNN, after validate that the format is correct, the Script must say if the Prefecture is *To*, *Do*, *Fu* or *Ken*. If the Prefecture is one of the 43 ken is not necessary to indicate the name of the Prefecture, if the Prefecture is *To*, *Do* or *Fu*, the name of the Prefecture must be listed.
+
+The script must check the Postal Code from the Real Postal Codes of Japan.
+
+The list of Postal Codes and their number can be found here:
+
+- https://en.wikipedia.org/wiki/Postal_codes_in_Japan
+
+*Warning!*: Some Japan Prefectures have more than one number to identify them. For example Tokyo has from 10 to 20.
+
+Some examples:
+```shell
+ * Welcome to the PostMan Japanese CLI
+ * What is your ZIP Code : 45-3334
+ [ ERROR ] : Format not valid, use NNN-NNNN
+```
+
+```shell
+ * Welcome to the PostMan Japanese CLI
+ * What is your ZIP Code : 102-3334
+ [ TO ] : Postal code from : TOKIO
+```
+
+```shell
+ * Welcome to the PostMan Japanese CLI
+ * What is your ZIP Code : 771-0123
+ [ KEN ]: Postal code from Rural Japan
+```
+
+## Script 43
+
+Code a Shell Script that test if all the Ethernet Cards in the machine has Link. Displaying a summary of the status of all of them.
+
+Example of execution:
+```shell
+enp0s8 -> Link UP.
+enp3s5 -> Link DOWNN
+```
+
+## Script 44
+
+Improve the Script 43 with the Maximun Speed of each link.
+
+## Script 45 
+
+Improve the Script 44 with the negotated Speed of each Link.
+
+## Script 46
+
+Improve the Script 45 with the MAC Address of each Link.
+
+## Script 47 
+
+Improve the Script 46 with the Gateway associated for each Ethernet (if it is present).
+
+
+
