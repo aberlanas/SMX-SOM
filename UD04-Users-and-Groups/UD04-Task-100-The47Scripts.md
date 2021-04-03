@@ -21,23 +21,23 @@ A collection of Shell Scripts about users and groups in GNU/LinuX.
 
 ## Script 01
 
-Code a Shell Script that ask for a username via Standar Input (`read`) and show all the System Users that matching in their usernames with the username given.
+Code a Shell Script that ask for a username via Standard Input (`read`) and show all the System Users that matching in their usernames with the username given.
 
 ## Script 02
 
-Code a Shell Script that ask for a username via Standar Input (`read`) and show all the System Users that matching in their usernames with the username given in Uppercase or lowercase.
+Code a Shell Script that ask for a username via Standard Input (`read`) and show all the System Users that matching in their usernames with the username given in Uppercase or lowercase.
 
 ## Script 03
 
-Code a Shell Script that ask for a username via Standar Input (`read`) and show all the System Users that starts in their usernames with the username given.
+Code a Shell Script that ask for a username via Standard Input (`read`) and show all the System Users that starts in their usernames with the username given.
 
 ## Script 04
 
-Code a Shell Script that ask for a username via Standar Input (`read`) and show all the System Users that starts in their usernames with the username given in Uppercase or lowercase.
+Code a Shell Script that ask for a username via Standard Input (`read`) and show all the System Users that starts in their usernames with the username given in Uppercase or lowercase.
 
 ## Script 05
 
-Code a Shell Script that ask for a username via Standar Input (`read`) and show all the System Users that starts in their usernames with the username given.
+Code a Shell Script that ask for several characters via Standard Input (`read`) and show all the System Users that *not contains* in their usernames these characters.
 
 ## Script 06
 
@@ -209,6 +209,8 @@ Code a Shell Script that ask for a SQL Select expression via Standard Input and 
 
 Improve the Script 31 testing also that contains a `FROM` clausule. 
 
+# Networking
+
 ## Script 33
 
 Code a Shell Script that test if the argument given is a valid IP number.
@@ -223,38 +225,39 @@ Code a Shell Script that test if the argument given is a valid IP number in a Cl
 
 ## Script 36
 
-Code a Shell Script that test if the arguments givens (2) is a valid IP and a possible Mask.
+Code a Shell Script that test if the arguments given (2) is a valid IP and a possible Mask.
 
 Example of execution:
 ```shell
 usuario@maquina:~$./script-36.sh 192.168.1.3 /23
 ```
 
-## Script 36
+## Script 36-bis
 
-Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given.
+Code a Shell Script that test if the arguments given (2) is a valid host IP with the Mask given.
 
 ## Script 37 
 
-Code a Shell Script that test if the arguments givens (2) is a Broadcasst IP with the Mask given.
+Code a Shell Script that test if the arguments given (2) is a Broadcasst IP with the Mask given.
 
 ## Script 38
 
-Code a Shell Script that test if the arguments givens (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one.
+Code a Shell Script that test if the arguments given (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one.
 
 ## Script 39
 
-Code a Shell Script that test if the arguments givens (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one. And then make a 3 ping tests over this IP, reporting the failure or succcess of the tests.
+Code a Shell Script that test if the arguments given (2) is a Gateway IP with the Mask given, taking into account that Gateway usually is the first IP on the network or the last one. And then make a 3 ping tests over this IP, reporting the failure or succcess of the tests.
 
 ## Script 40 
 
-Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned increasingly. (*1,2,3,4,....123,...*).
+Code a Shell Script that test if the arguments given (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned increasingly. (*1,2,3,4,....123,...*).
 
 ## Script 41
 
-Code a Shell Script that test if the arguments givens (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned decreasingly. (*254,253,252,...,2,1*).
+Code a Shell Script that test if the arguments given (2) is a valid host IP with the Mask given. And then, shows how many IPs available remaining in the network assuming that the IPs are assigned decreasingly. (*254,253,252,...,2,1*).
 
 \newpage
+# Miscelaneous
 ## Script 42 (Value x4)
 
 In Japan, the country is splitted in 47 prefectures (provinces), for us (*European People*), all of them are similar, but for the japaneses is said that exists 4 kind of prefectures:
@@ -295,6 +298,8 @@ Some examples:
  [ KEN ]: Postal code from Rural Japan
 ```
 
+\newpage
+# More Networking
 ## Script 43
 
 Code a Shell Script that test if all the Ethernet Cards in the machine has Link. Displaying a summary of the status of all of them.
