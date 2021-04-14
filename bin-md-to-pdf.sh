@@ -61,10 +61,27 @@ cd ..
 
 }
 
+make-UD05(){
+    
+    echo " * UD 05 -> FileSystems and Permissions "
+    cd UD05-FileSystems-and-Permissions
+
+    for f in $(find . -name  "*.md" | sort ); do
+        echo "Procesando : ${f}"
+        DESTPDF=$(basename $f| cut -d "." -f1).pdf
+        pandoc ${f} -o ../PDFS/${DESTPDF} --from markdown --template ../rsrc/templates/eisvogel.tex --listings
+
+    done
+
+    cd ..
+
+}
+
 # Main
 
 clean-pdfs
-make-UD04
+#make-UD04
+make-UD05
 #make-UD0X
 
 
