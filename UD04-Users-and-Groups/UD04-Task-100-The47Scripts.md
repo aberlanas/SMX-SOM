@@ -55,7 +55,7 @@ Code a Shell Script that uses the first argument given in order show all the use
 
 ## Script 08 
 
-Code a Shell Scrip that list from all groups on the systems each user that belongs to that group. Each group with their members.
+Code a Shell Script that list from all groups on the systems each user that belongs to that group. Each group with their members.
 
 # The continuum improving
 
