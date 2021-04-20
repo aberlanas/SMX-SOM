@@ -7,10 +7,10 @@ lang: "en"
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
 titlepage: true,
-titlepage-text-color: "FFFFFF"
+titlepage-text-color: "111111"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
+titlepage-background: "../rsrc/backgrounds/background-ronin.pdf"
 ---
 
 # Scripts about Users and Groups
@@ -259,20 +259,22 @@ Code a Shell Script that test if the arguments givens (2) is a valid host IP wit
 
 In Japan, the country is splitted in 47 prefectures (provinces), for us (*European People*), all of them are similar, but for the japaneses is said that exists 4 kind of prefectures:
 
-- 1 To (*Tokio*)
-- 1 Do (*Hokkaido*)
-- 2 Fu (*Osaka and Kioto*)
-- 43 Ken (from the **Rural contries**)
+- TO (*Tokio*) 
+- DO (*Hokkaido*)
+- FU (*Osaka and Kioto*)
+- KEN (from the **Rural Regions**) 
 
 ![Japan Prefectures](imgs/japan.jpg)\
 
-Make a Shell Script that ask the user for a Valid ZIP Number (Postal code of Japan), in the format NNN-NNNN, after validate that the format is correct, the Script must say if the Prefecture is *To*, *Do*, *Fu* or *Ken*. If the Prefecture is one of the 43 ken is not necessary to indicate the name of the Prefecture, if the Prefecture is *To*, *Do* or *Fu*, the name of the Prefecture must be listed.
+The ZIP Numbers (Postal code) in Japan are numbers in the format NNN-NNNN, the first numbers indicates the Prefecture of the Postal Code. 
 
-The script must check the Postal Code from the Real Postal Codes of Japan.
+We must make a Shell Script that after validate that the format is correct, the Script must say if the Prefecture is *To*, *Do*, *Fu* or *Ken*. If the Prefecture is one of the 43 ken is not necessary to indicate the name of the Prefecture, if the Prefecture is *To*, *Do* or *Fu*, the name of the Prefecture must be listed. The script must check the Postal Code from the *Real Postal Codes of Japan*.
 
 The list of Postal Codes and their number can be found here:
 
 - https://en.wikipedia.org/wiki/Postal_codes_in_Japan
+- https://japan-postcode.810popo.net/
+
 
 *Warning!*: Some Japan Prefectures have more than one number to identify them. For example Tokyo has from 10 to 20.
 
@@ -311,7 +313,7 @@ Improve the Script 43 with the Maximun Speed of each link.
 
 ## Script 45 
 
-Improve the Script 44 with the negotated Speed of each Link.
+Improve the Script 44 with the negotiated Speed of each Link.
 
 ## Script 46
 
