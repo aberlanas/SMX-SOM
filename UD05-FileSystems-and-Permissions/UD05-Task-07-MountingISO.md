@@ -1,5 +1,5 @@
 ---
-title: "[ Unit 05 ] : mounting isos "
+title: "[ Unit 05 ] : Mounting ISOs"
 author: [Angel Berlanas Vicente]
 subject: "Markdown"
 keywords: [Markdown, Permissions, Files]
@@ -17,11 +17,11 @@ All of these tasks must be answered in English.
 
 # Task 01
 
-Using the `mount` command, mount the *iso* content from a Ubuntu Image File (or Windows Image File). Try to create a folder or a file in the mounted filesystem. What happens? Explain it in your own words.
+Using the `mount` command, mount the *iso* content from the iso of *task 03* or Ubuntu Image File (or Windows Image File). Try to create a folder or a file in the mounted filesystem. What happens? Explain it in your own words.
 
 # Task 02
 
-Using the `mount` command, mount the *iso* content from a Ubuntu Image File (or Windows Image File). Now use the `mount` command whithout arguments. Can you see the new "**mountpoint**"? What are the filesystem used in order to access the iso contents?. 
+Using the `mount` command, mount the *iso* content from the iso of *task 03* or Ubuntu Image File (or Windows Image File). Now use the `mount` command whithout arguments. Can you see the new "**mountpoint**"? What are the filesystem used in order to access the iso contents?. 
 
 # Task 03
 
