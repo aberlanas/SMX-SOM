@@ -77,11 +77,29 @@ make-UD05(){
 
 }
 
+make-UD0P(){
+    
+    echo " * UD 0P -> DevOps"
+    cd UD0P-DevOps
+
+    for f in $(find . -name  "*.md" | sort ); do
+        echo "Procesando : ${f}"
+        DESTPDF=$(basename $f| cut -d "." -f1).pdf
+        pandoc ${f} -o ../PDFS/${DESTPDF} --from markdown --template ../rsrc/templates/eisvogel.tex --listings
+
+    done
+
+    cd ..
+
+}
+
+
 # Main
 
 clean-pdfs
 #make-UD04
-make-UD05
+#make-UD05
+make-UD0P
 #make-UD0X
 
 
