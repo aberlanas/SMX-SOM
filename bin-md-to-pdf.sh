@@ -98,7 +98,7 @@ make-UD0P(){
 
 clean-pdfs
 #make-UD04
-#make-UD05
+make-UD05
 make-UD0P
 #make-UD0X
 
