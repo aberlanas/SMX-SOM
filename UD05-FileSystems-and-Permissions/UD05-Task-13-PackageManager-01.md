@@ -15,9 +15,27 @@ titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 
 All of these tasks must be answered in English.
 
+# Help Charts
+
+On the `Shell Scripts` you must be taking into account:
+
+| Scripts Points of Interest Table |
+|--------------------------|
+|If the script accepts parameters, you must test the number and the form of them.|
+|If the script can show an error message, this message must be clear and customized by ourselves.|
+|The output of the script must be *exactly* as the task says.|
+
+On the *Pure Writing Questions*:
+
+| Writing clues |
+|---------------|
+|Use your own words.|
+|Not use the Google Translator or other stuff to writing the sentences from Spanish|
+|Not write anything that you don't understand|
+
 # Task 01
 
-Create a shell script that show the version installed of a package that will be passed as the first argument. If the package not exists, must show the next error messange:
+Create a shell script that shows the installed version of a package that will be passed as the first argument. If the package not exists, must show the next error messange:
 
 ```shell
 * Unknown package
@@ -47,7 +65,7 @@ apt list upgradable
 
 # Task 05
 
-What is the purpose of the package `kitty-terminfo`? 
+What is the purpose of the package `kitty-terminfo`? *Answer this question reading only the apt info of the package, in this case Internet is not allowed.*
 
 # Task 06
 
