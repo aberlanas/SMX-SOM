@@ -59,7 +59,11 @@ The script must be placed at `/usr/bin/` when it becomes tested in order to be a
 
 # Isaac, Ronal
 
-Studio Gibli
+Studio Ghibli Workstation
+
+## Users from the Films
+
+- 2 users at least with usernames from the characters of our films.
 
 ## Software installed 
 
@@ -68,6 +72,18 @@ Graphical design
 ## Disks
 
 3 Disks with 3 partitions each one. Diferent FileSystems for each partition.
+
+The mount points will be:
+
+- `/ghibli/mononoke`
+- `/ghibli/totoro`
+- `/ghibli/cliff`
+- `/ghibli/chihiro`
+- `/ghibli/arrietty`
+- `/ghibli/castle`
+- `/ghibli/winds`
+- `/ghibli/firefly`
+- `/ghibli/kiki`
 
 ## Scripting
 
@@ -169,7 +185,7 @@ The script must be placed at `/usr/bin/` when it becomes tested in order to be a
 \newpage
 
 
-# Abellan, Javi
+# Abellan, Los Javis 
 
 Comic creation Software 
 
@@ -255,19 +271,13 @@ With the next ips :
 - MASK /24
 - GW 192.168.100.1
 
-## Scripting
+## Infraestructure
 
-```shell
+You need to install a OpenMediaVault machine with additional disk of 10GBs. This disk must be shared by this machine to the network and mounted by the Xubuntu Machine on `/printer/` permanently.
 
-# Using a URL given as a FIRST Argument (With " ")
-# Generates a ".desktop" file on desktop that opens the URL given..
+You need to configure a Shared folder mounted from an OpenMediaVault OS (installed in other VM). Using `GlusterFS`.
 
-# USAGE:
-# ./script.sh URL NAME-OF-DESKTOP-THAT-MUST-BE-SHOWN.
-
-```
-
-The script must be placed at `/usr/bin/` when it becomes tested in order to be available for all users.
+This shared folder must store al the PDFS printed by the CUPS on the Xubuntu Machine. 
 
 \newpage 
 
