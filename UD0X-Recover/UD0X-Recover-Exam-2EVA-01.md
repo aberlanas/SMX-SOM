@@ -22,6 +22,7 @@ Bienvenidos al Examen de Recuperación *Extraordinario* de la Evaluación 2.
 Tenéis 3 sesiónes para la realización del mismo.
 
 \newpage
+
 # Tarea 01 : Algoritmos de Planificación (2 puntos)
 
 Dados los siguientes procesos, rellenad la tabla siguiente, indicando
@@ -105,7 +106,7 @@ usuario@maquina:~$./script-recuperacion-03.sh
  * Cada cuantos kilometros vigilamos : 110
  * Cuantos tanques dejamos vigilando : 6
  --- CALCULOS ---
- -- ¡ ASALTAMOS Tobruk ! --
+ -- ASALTAMOS Tobruk --
  -- Quedarian : 360 tanques para asaltar Tobruk.
 
 ```

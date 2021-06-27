@@ -41,10 +41,9 @@ make-UD(){
 clean-pdfs
 #make-UD04
 #make-UD $UD05_FOLDER
-
 #make-UD $UD06_FOLDER
-make-UD $UD09_FOLDER
-#make-UD0X
+#make-UD $UD09_FOLDER
+make-UD $UD0X_FOLDER
 #make-UD $UD0P_FOLDER
 
 
